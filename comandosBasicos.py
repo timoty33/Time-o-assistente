@@ -9,6 +9,7 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import requests
+import random
 
 engine = pyttsx3.init()
 
@@ -33,6 +34,19 @@ def ouvir():
         
 executado = ""
 
+def aumentarVelocidade():
+    rate = engine.getProperty('rate')
+
+    # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
+    engine.setProperty('rate', rate + 50)
+    falar("Agora eu falo mais rápido, o que achou?")
+
+def diminuirVelocidade():
+    rate = engine.getProperty('rate')
+
+    # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
+    engine.setProperty('rate', rate - 50)
+    falar("Agora eu falo menos rápido, o que achou?")
 
 def horas():
     #horas
@@ -46,10 +60,10 @@ def ver_dia_da_semana():
     dia_da_semana = dias[hoje.weekday()]  # weekday() retorna 0 (segunda) até 6 (domingo)
     return dia_da_semana
 
-def data():
-    #Data de Hoje
-    data = datetime.now().strftime("%d/%m/%y")
-    falar(f"Hoje é {data}, {ver_dia_da_semana()}")
+def hoje():
+    # Data de Hoje
+    data_atual = datetime.now().strftime("%d/%m/%y")  # Renomeando a variável
+    falar(f"Hoje é {data_atual}, {ver_dia_da_semana()}")  # Usando a nova variável
     executado = True
 
 def abrirGPT():
@@ -64,35 +78,6 @@ def tocarLofi():
     falar("Tocando música relaxante!")
     executado = True
 
-def ver_clima(cidade):
-    falar("Consultando o clima, aguarde...")
-    URL = "http://api.weatherapi.com/v1/current.json"
-
-    params = {
-        "key": "9481508873674635bde140320252304Y",
-        "q": cidade,
-        "lang": "pt"
-    }
-
-    resposta = requests.get(URL, params=params)
-
-    if resposta.status_code == 200:
-        dados = resposta.json()
-        cidade_nome = dados['location']['name']
-        estado = dados['location']['region']
-        temp = dados['current']['temp_c']
-        condicao = dados['current']['condition']['text']
-        sensacao = dados['current']['feelslike_c']
-
-        previsao = (f"Agora em {cidade_nome} - {estado}: {condicao}, "
-                    f"{temp}°C com sensação de {sensacao}°C.")
-        falar(previsao)
-        return previsao
-    else:
-        erro = "Não consegui obter o clima agora. Verifique a cidade ou sua conexão."
-        falar(erro)
-        return erro
-
 
 
 def cronometro():
@@ -101,7 +86,7 @@ def cronometro():
     inicio = time()
 
     while True: 
-        comando = ouvir().lower().strip()
+        comando = input("Digite 'parar' para parar: ")
 
         if "pare" in comando or "parar" in comando:
 
@@ -177,6 +162,22 @@ def diminuir_volume():
     novo_volume = max(current_volume - 0.1, 0.0)  # diminui 10%, sem ficar negativo
     volume.SetMasterVolumeLevelScalar(novo_volume, None)
     print(f"Volume diminuído para {int(novo_volume * 100)}%")
+
+moeda = ["cara", "coroa"]
+def jogarMoeda():
+
+    falar("Vamos jogar cara ou coroa, você escolhe!")
+
+    escolha = input("Digite: ['cara' ou 'coroa'] ")
+    
+    jogada = random.choice(moeda)
+
+    if escolha == jogada:
+        falar(f"Caiu {jogada}, você ganhou!")
+
+    else:
+        falar(f"Caiu {jogada}, você perdeu!")
+
 
 def naoEntendi():
     #Se não reconhecer
