@@ -7,11 +7,12 @@ from time import sleep, time
 import re
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import requests
 import random
 
 engine = pyttsx3.init()
+rate = engine.getProperty('rate')
+engine.setProperty('rate', rate + 40)
 
 def falar(texto):
     print(texto)
@@ -28,6 +29,20 @@ def ouvir():
             comando = reconhecedor.recognize_google(audio, language='pt-BR')
             falar("Você disse:", comando)
             return comando.lower()
+        except:
+            falar("Não entendi")
+            return ""
+        
+def ouvirMoeda():
+    reconhecedor = sr.Recognizer()
+    with sr.Microphone() as source:
+        reconhecedor.adjust_for_ambient_noise(source, duration=1)
+        falar("Ouvindo...")
+        audio = reconhecedor.listen(source)
+        try:
+            escolha = reconhecedor.recognize_google(audio, language='pt-BR')
+            falar("Você disse:", comando)
+            return escolha.lower()
         except:
             falar("Não entendi")
             return ""
@@ -78,7 +93,31 @@ def tocarLofi():
     falar("Tocando música relaxante!")
     executado = True
 
+API_KEY_CLIMA = "b1c447602ac1733630ac465ec871d141"
+cityname = "brasília" #piçarras, joinville, rio de janeiro, são paulo
+linkClima = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY_CLIMA}"
 
+def clima():
+    requisicao = requests.get(linkClima) 
+    requisicao_dic = requisicao.json()
+
+    tempo = requisicao_dic["weather"][0]["main"]
+
+    sensacao = requisicao_dic["main"]["feels_like"]
+    sensacao = sensacao - 273.15
+
+    max_temperatura = requisicao_dic["main"]["temp_max"]
+    max_temperatura = max_temperatura - 273.15
+
+    min_temperatura = requisicao_dic["main"]["temp_min"]
+    min_temperatura = min_temperatura - 273.15
+
+    umidade = requisicao_dic["main"]["humidity"]
+
+
+    fala = f"O tempo em {cityname} é: descrição: {tempo},\nsensação térmica: {sensacao:.1f} graus\na temperatura máxima será de: {max_temperatura:.1f} graus célsius,\ne a mínima de : {min_temperatura:.1f} graus,\na umidade está em: {umidade}%".replace(".", ",")
+
+    falar(fala)
 
 def cronometro():
     #cronometro
@@ -143,32 +182,12 @@ def obrigado():
     falar("De nada, você é brabo!")
     executado = True
 
-def get_volume_interface():
-    devices = AudioUtilities.GetSpeakers()
-    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-    volume = cast(interface, POINTER(IAudioEndpointVolume))
-    return volume
-
-def aumentar_volume():
-    volume = get_volume_interface()
-    current_volume = volume.GetMasterVolumeLevelScalar()  # valor de 0.0 a 1.0
-    novo_volume = min(current_volume + 0.1, 1.0)  # aumenta 10%, sem passar de 100%
-    volume.SetMasterVolumeLevelScalar(novo_volume, None)
-    print(f"Volume aumentado para {int(novo_volume * 100)}%")
-
-def diminuir_volume():
-    volume = get_volume_interface()
-    current_volume = volume.GetMasterVolumeLevelScalar()
-    novo_volume = max(current_volume - 0.1, 0.0)  # diminui 10%, sem ficar negativo
-    volume.SetMasterVolumeLevelScalar(novo_volume, None)
-    print(f"Volume diminuído para {int(novo_volume * 100)}%")
-
 moeda = ["cara", "coroa"]
 def jogarMoeda():
 
     falar("Vamos jogar cara ou coroa, você escolhe!")
 
-    escolha = input("Digite: ['cara' ou 'coroa'] ")
+    escolha = input("Digite a sua escolha ['cara' ou 'coroa']: ")
     
     jogada = random.choice(moeda)
 

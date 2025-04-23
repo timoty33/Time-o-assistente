@@ -1,37 +1,42 @@
 import speech_recognition as sr
 import time
+import keyboard
 from comandosBasicos import (
     falar, horas, hoje, abrirGPT, tocarLofi,
     cronometro, lembrete, obrigado,
-    aumentarVelocidade, diminuirVelocidade, jogarMoeda, naoEntendi
+    aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
 )
+import estado
 
 recognizer = sr.Recognizer()
 
+ligar = True
+
 def ouvir_comando_continuamente():
+    ligar = True
+    recognizer = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Assistente ouvindo o tempo todo...")
         recognizer.adjust_for_ambient_noise(source, duration=1)
+        if keyboard.is_pressed("f10"):
+            estado.ligar = not estado.ligar
+            print("Assistente:", "Ligado" if estado.ligar else "Desligado")
+            keyboard.wait("f10")
+        while estado.ligar:
 
-        while True:
             try:
-                audio = recognizer.listen(source, phrase_time_limit=6)
-                comando = recognizer.recognize_google(audio, language="pt-BR").strip()
-                if not comando:
-                    print("Silêncio detectado. Ignorando...")
-                    continue
-
-                print(f"Comando reconhecido: {comando}")
-                processar_comando(comando)
-                time.sleep(1)
-
+                print("Escutando...")
+                audio = recognizer.listen(source, timeout=5)
+                texto = recognizer.recognize_google(audio, language="pt-BR")
+                print(f"Você disse: {texto}")
+                if texto.strip() != "":
+                    processar_comando(texto)
             except sr.UnknownValueError:
-                print("Não entendi o que foi dito.")
+                print("Não entendi.")
+            except sr.WaitTimeoutError:
+                pass
             except sr.RequestError:
-                print("Erro ao conectar ao serviço de reconhecimento de fala.")
-                falar("Erro de conexão.")
-            except Exception as e:
-                print(f"Erro inesperado: {e}")
+                print("Erro de conexão.")
+                break
 
 def processar_comando(comando):
 
@@ -53,6 +58,8 @@ def processar_comando(comando):
             aumentarVelocidade()
         elif "devagar" in comando or "lento" in comando:
             diminuirVelocidade()
+        elif "clima" in comando:
+            clima()
         elif "moeda" in comando:
             jogarMoeda()
         elif "obrigado" in comando:
@@ -60,5 +67,8 @@ def processar_comando(comando):
         elif "sair" in comando:
             falar("Encerrando. Até logo!")
             exit()
+        elif "dormir" in comando or "descansar" in comando:
+            falar("Modo repouso")
+            estado.ligar = False
         else:
             naoEntendi()
