@@ -5,8 +5,17 @@ from datetime import datetime
 import os
 from time import sleep, time
 import re
+from comandosBasicos import horas, data, abrirGPT, tocarLofi, cronometro, lembrete, aumentar_volume, diminuir_volume
 
 engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')
+    
+engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_PAULO_11.0')
+
+engine.setProperty('rate', 250)
+
+engine.setProperty('volume', 0.6)
 
 def falar(texto):
     engine.say(texto)
@@ -25,111 +34,41 @@ def ouvir():
         except:
             falar("Não entendi")
             return ""
-        
-def executar_comando(comando):
 
-    if "time" in comando:
+while True:
+    comando = input("Digite o comando: ").lower().strip() #ouvir()
+    #if comando != "":
+        #print("Comando detectado:", comando)
+            
+    if "time" in comando or "timi" in comando:
 
-        #horas
-        if "horas" in comando or "horario" in comando or "horário" in comando:
-            agora = datetime.now().strftime("%H:%M")
-            falar(f"Agora são {agora}")
-            executado = True
+        if "horas" in comando or "hora" in comando or "horário" in comando or "horario" in comando:
+            horas()
 
-        #Data de Hoje
-        if "data" in comando:
-            data = datetime.now().strftime("%d/%m/%y")
-            falar(f"Hoje é {data}")
-            executado = True
+        elif "data" in comando or "dia" in comando or "hoje" in comando:
+            data()
 
-        #GPT
-        elif "gpt" in comando:
-            webbrowser.open("https://chatgpt.com/")
-            falar("Abrindo o GPT")
-            executado = True
+        elif "gpt" in comando or "GPT" in comando: 
+            abrirGPT()
 
-        #Tocar lofi
-        elif "música" in comando or "musica" in comando and "relaxante" in comando or "calma" in comando:
-            webbrowser.open("https://www.youtube.com/watch?v=28KRPhVzCus")
-            falar("Tocando música relaxante!")
-            executado = True
+        elif "musica" in comando or "música" in comando or "lofi" in comando or "calma" in comando or "relaxante" in comando:
+            tocarLofi()
 
-        #cronometro
         elif "cronometro" in comando or "crônometro" in comando:
+            cronometro()
 
-            falar("Iniciando o cronômetro, diga 'parar' para parar")
-            inicio = time()
-
-            while True: 
-                comando = input("Digite 'pare' para parar o cronômetro: ").lower().strip()
-
-                if "pare" in comando or "parar" in comando:
-
-                    fim = time()
-                    tempo = fim - inicio
-                    tempo_formatado = f"{tempo:.0f}"
-
-                    falar(f"Foram {tempo_formatado} segundos")
-                    break
-                executado = True
-
-        #lembrete
         elif "lembrete" in comando or "lembre" in comando:
+            lembrete(comando)
 
-            numeros = re.findall(r"\d+(?:\.\d+)?", comando)
+        elif "aumentar" in comando or "mais" in comando and "volume" in comando or "som" in comando:
+            aumentar_volume()
 
-            falar("Para que é o lembrete?")
-            mensagem = input("Para que é o lembrete: ")
+        elif "diminuir" in comando or "menos" in comando and "volume" in comando or "som" in comando:
+            diminuir_volume()
 
-            if numeros:
-
-                minutos = float(numeros[0])
-                segundos = minutos * 60
-
-                falar(f"Ok, vou te lembrar em {minutos:.1f} minutos!")
-
-                sleep(segundos / 2)
-
-                print(segundos / 2)
-                falar("Já se passou metade!")
-
-                sleep(segundos / 2)
-                falar(f"O tempo acabou. Esse é o seu lembrete para {mensagem}!")
-
-            else: 
-
-                falar("Um lembrete para daqui a quantos minutos?")
-
-                minutos = float(input(">> "))
-                segundos = minutos * 60
-
-                falar(f"Ok, vou te lembrar em {minutos:.1f} minutos!")
-
-                sleep(segundos / 2)
-
-                print(segundos / 2)
-                falar("Já se passou metade!")
-
-                sleep(segundos / 2)
-                falar(f"O tempo acabou. Este é seu lembrete para {mensagem}!")
-                executado = True
-
-        elif "obrigado" in comando:
-            falar("De nada, você é brabo!")
-            executado = True
-
-        #Não entedi
-        if not executado:
-            falar("Desculpe, não entendi o comando.")
-
-while True:        
-    comando = input("Digite o comando: ").strip().lower()
-    executar_comando(comando)
-    sleep(2)
-
-
-# while True: 
-#   comando = ouvir()
-#   if comando == "":
-#       continue
-#   sleep(2)
+        elif "sair" in comando:
+            falar("Encerrando assistente...")
+            break
+    #else:
+        # Não faz nada se não entendeu, apenas continua ouvindo
+        #pass
