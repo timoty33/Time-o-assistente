@@ -128,8 +128,8 @@ while True:
     sleep(2)
 
 
-#while True: 
+# while True: 
 #   comando = ouvir()
-#   if comando = "":
+#   if comando == "":
 #       continue
 #   sleep(2)
