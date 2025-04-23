@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 from time import sleep, time
 import re
-from comandosBasicos import horas, data, abrirGPT, tocarLofi, cronometro, lembrete, aumentar_volume, diminuir_volume
+from comandosBasicos import horas, data, abrirGPT, tocarLofi, cronometro, lembrete, aumentar_volume, diminuir_volume, ver_dia_da_semana
 
 engine = pyttsx3.init()
 
@@ -18,6 +18,7 @@ engine.setProperty('rate', 250)
 engine.setProperty('volume', 0.6)
 
 def falar(texto):
+    print(texto)
     engine.say(texto)
     engine.runAndWait()
 
@@ -47,6 +48,9 @@ while True:
 
         elif "data" in comando or "dia" in comando or "hoje" in comando:
             data()
+
+        elif "dia" in comando and "semana" in comando:
+            ver_dia_da_semana
 
         elif "gpt" in comando or "GPT" in comando: 
             abrirGPT()

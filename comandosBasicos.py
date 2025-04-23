@@ -12,6 +12,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 engine = pyttsx3.init()
 
 def falar(texto):
+    print(texto)
     engine.say(texto)
     engine.runAndWait()
 
@@ -38,10 +39,16 @@ def horas():
     falar(f"Agora são {agora}")
     executado = True
 
+def ver_dia_da_semana():
+    dias = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
+    hoje = datetime.now()
+    dia_da_semana = dias[hoje.weekday()]  # weekday() retorna 0 (segunda) até 6 (domingo)
+    return dia_da_semana
+
 def data():
     #Data de Hoje
     data = datetime.now().strftime("%d/%m/%y")
-    falar(f"Hoje é {data}")
+    falar(f"Hoje é {data}, {ver_dia_da_semana()}")
     executado = True
 
 def abrirGPT():
