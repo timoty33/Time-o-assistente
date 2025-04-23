@@ -8,6 +8,7 @@ import re
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+import requests
 
 engine = pyttsx3.init()
 
@@ -63,13 +64,44 @@ def tocarLofi():
     falar("Tocando música relaxante!")
     executado = True
 
+def ver_clima(cidade):
+    falar("Consultando o clima, aguarde...")
+    URL = "http://api.weatherapi.com/v1/current.json"
+
+    params = {
+        "key": "9481508873674635bde140320252304Y",
+        "q": cidade,
+        "lang": "pt"
+    }
+
+    resposta = requests.get(URL, params=params)
+
+    if resposta.status_code == 200:
+        dados = resposta.json()
+        cidade_nome = dados['location']['name']
+        estado = dados['location']['region']
+        temp = dados['current']['temp_c']
+        condicao = dados['current']['condition']['text']
+        sensacao = dados['current']['feelslike_c']
+
+        previsao = (f"Agora em {cidade_nome} - {estado}: {condicao}, "
+                    f"{temp}°C com sensação de {sensacao}°C.")
+        falar(previsao)
+        return previsao
+    else:
+        erro = "Não consegui obter o clima agora. Verifique a cidade ou sua conexão."
+        falar(erro)
+        return erro
+
+
+
 def cronometro():
     #cronometro
     falar("Iniciando o cronômetro, diga 'parar' para parar")
     inicio = time()
 
     while True: 
-        comando = input("Digite 'pare' para parar o cronômetro: ").lower().strip()
+        comando = ouvir().lower().strip()
 
         if "pare" in comando or "parar" in comando:
 
@@ -86,7 +118,7 @@ def lembrete(comando):
     numeros = re.findall(r"\d+(?:\.\d+)?", comando)
 
     falar("Para que é o lembrete?")
-    mensagem = input("Para que é o lembrete: ")
+    mensagem = ouvir()
 
     if numeros:
 
