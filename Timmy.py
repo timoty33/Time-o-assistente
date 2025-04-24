@@ -2,18 +2,17 @@ import speech_recognition as sr
 import time
 import keyboard
 from comandosBasicos import (
-    falar, horas, hoje, abrirGPT, tocarLofi,
+    falar, horas, hoje, aumentarVolume, diminuirVolume, abrirGPT, tocarLofi,
     cronometro, lembrete, obrigado,
     aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
 )
+from comandosIA import (fraseMotivacional, chatBot)
 import estado
+from plyer import notification
 
 recognizer = sr.Recognizer()
 
-ligar = True
-
 def ouvir_comando_continuamente():
-    ligar = True
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source, duration=1)
@@ -28,7 +27,7 @@ def ouvir_comando_continuamente():
                 audio = recognizer.listen(source, timeout=5)
                 texto = recognizer.recognize_google(audio, language="pt-BR")
                 print(f"Você disse: {texto}")
-                if texto.strip() != "":
+                if texto.strip().lower() != "":
                     processar_comando(texto)
             except sr.UnknownValueError:
                 print("Não entendi.")
@@ -46,6 +45,10 @@ def processar_comando(comando):
             horas()
         elif "data" in comando or "hoje" in comando:
             hoje()
+        elif "aumentar" in comando and ("volume" in comando or "som" in comando):
+            aumentarVolume(passo=0.1)
+        elif "diminuir" in comando and ("volume" in comando or "som" in comando):
+            diminuirVolume(passo=0.1)
         elif "abrir gpt" in comando:
             abrirGPT()
         elif "lofi" in comando or "música relaxante" in comando:
@@ -62,13 +65,22 @@ def processar_comando(comando):
             clima()
         elif "moeda" in comando:
             jogarMoeda()
+        elif "frase motivacional" in comando:
+            fraseMotivacional()
+        elif "inteligente" in comando:
+            chatBot()
         elif "obrigado" in comando:
             obrigado()
         elif "sair" in comando:
             falar("Encerrando. Até logo!")
             exit()
-        elif "dormir" in comando or "descansar" in comando:
+        elif "dormir" in comando or "descansar" in comando or "repouso" in comando:
             falar("Modo repouso")
             estado.ligar = False
+            notification.notify(
+                title="💤🛏️ Modo repouso",
+                message=f"O modo repouso está ativo mas o assistente ainda fará suas tarefas, para ativá-lo, aperte f10 2 vezes",
+                timeout=10
+            )
         else:
             naoEntendi()

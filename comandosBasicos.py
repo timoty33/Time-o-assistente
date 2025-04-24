@@ -5,48 +5,46 @@ from datetime import datetime
 import os
 from time import sleep, time
 import re
-from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
 import requests
 import random
+from plyer import notification
+import threading
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+from ctypes import cast, POINTER
+from comtypes import CLSCTX_ALL
+
+devices = AudioUtilities.GetSpeakers()
+interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+volume = cast(interface, POINTER(IAudioEndpointVolume))
 
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', rate + 40)
 
 def falar(texto):
-    print(texto)
     engine.say(texto)
     engine.runAndWait()
+
 
 def ouvir():
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:
         reconhecedor.adjust_for_ambient_noise(source, duration=1)
-        falar("Ouvindo...")
-        audio = reconhecedor.listen(source)
+        print("Ouvindo...")
+
         try:
-            comando = reconhecedor.recognize_google(audio, language='pt-BR')
-            falar("Você disse:", comando)
-            return comando.lower()
-        except:
-            falar("Não entendi")
-            return ""
-        
-def ouvirMoeda():
-    reconhecedor = sr.Recognizer()
-    with sr.Microphone() as source:
-        reconhecedor.adjust_for_ambient_noise(source, duration=1)
-        falar("Ouvindo...")
-        audio = reconhecedor.listen(source)
-        try:
-            escolha = reconhecedor.recognize_google(audio, language='pt-BR')
-            falar("Você disse:", comando)
-            return escolha.lower()
-        except:
-            falar("Não entendi")
-            return ""
-        
+            audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=6)
+            texto = reconhecedor.recognize_google(audio, language='pt-BR').lower()
+            print(f"Você disse: {texto}")
+            return texto
+        except sr.UnknownValueError:
+            print("Não entendi.")
+        except sr.WaitTimeoutError:
+            print("Tempo esgotado.")
+        except sr.RequestError:
+            print("Erro ao acessar serviço de reconhecimento.")
+        return ""
+
 executado = ""
 
 def aumentarVelocidade():
@@ -68,6 +66,24 @@ def horas():
     agora = datetime.now().strftime("%H:%M")
     falar(f"Agora são {agora}")
     executado = True
+
+def aumentarVolume(passo=0.1):
+
+    volume_atual = volume.GetMasterVolumeLevelScalar()  # valor entre 0.0 e 1.0
+    novo_volume = min(volume_atual + passo, 1.0)  # máximo 1.0
+    volume.SetMasterVolumeLevelScalar(novo_volume, None)
+
+    print(f"Volume aumentado para: {int(novo_volume * 100)}%")
+    falar(f"Volume aumentado para: {int(novo_volume * 100)}%")
+
+def diminuirVolume(passo=0.1):
+
+    volume_atual = volume.GetMasterVolumeLevelScalar()  # valor entre 0.0 e 1.0
+    novo_volume = min(volume_atual - passo, 1.0)  # máximo 1.0
+    volume.SetMasterVolumeLevelScalar(novo_volume, None)
+
+    print(f"Volume diminuido para: {int(novo_volume * 100)}%")
+    falar(f"Volume diminuido para: {int(novo_volume * 100)}%")
 
 def ver_dia_da_semana():
     dias = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
@@ -151,13 +167,21 @@ def lembrete(comando):
 
         falar(f"Ok, vou te lembrar em {minutos:.1f} minutos!")
 
-        sleep(segundos / 2)
-
-        print(segundos / 2)
-        falar("Já se passou metade!")
-
-        sleep(segundos / 2)
-        falar(f"O tempo acabou. Esse é o seu lembrete para {mensagem}!")
+        def lembrar():
+            sleep(segundos / 2)
+            notification.notify(
+                title="⏰ Lembrete do Assistente",
+                message=f"Já passou metade do tempo para: {mensagem}",
+                timeout=10
+            )
+            
+            sleep(segundos / 2)
+            notification.notify(
+                title="⏰ Lembrete do Assistente",
+                message=f"Seu lembrete para: {mensagem}",
+                timeout=10
+            )
+            falar("Hora de", mensagem)
 
     else: 
 
@@ -168,14 +192,27 @@ def lembrete(comando):
 
         falar(f"Ok, vou te lembrar em {minutos:.1f} minutos!")
 
-        sleep(segundos / 2)
-
-        print(segundos / 2)
-        falar("Já se passou metade!")
-
-        sleep(segundos / 2)
-        falar(f"O tempo acabou. Este é seu lembrete para {mensagem}!")
+        def lembrar():
+            sleep(segundos / 2)
+            notification.notify(
+                title="⏰ Lembrete do Assistente",
+                message=f"Já passou metade do tempo para: {mensagem}",
+                timeout=10
+            )
+            
+            sleep(segundos / 2)
+            notification.notify(
+                title="⏰ Lembrete do Assistente",
+                message=f"Seu lembrete para: {mensagem}",
+                timeout=10
+            )
+            falar("Hora de", mensagem)
+    
         executado = True
+
+    # Cria e inicia a thread
+    thread = threading.Thread(target=lembrar)
+    thread.start()
 
 def obrigado():
     #Obrigado
