@@ -15,23 +15,22 @@ def ouvir():
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:
         reconhecedor.adjust_for_ambient_noise(source, duration=1)
-        falar("Ouvindo...")
+        print("Ouvindo...")
 
         try:
-            audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=8)
-            texto = reconhecedor.recognize_google(audio, language='pt-BR')
-            falar(f"Você disse: {texto}")
+            audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=6)
+            texto = reconhecedor.recognize_google(audio, language='pt-BR').lower()
+            texto = texto.lower()
+            print(f"Você disse: {texto}")
             return texto.lower()
-        except sr.WaitTimeoutError:
-            falar("Você não falou nada.")
         except sr.UnknownValueError:
-            falar("Não entendi o que você disse.")
-        except sr.RequestError as e:
-            falar(f"Erro ao se conectar ao serviço de reconhecimento: {e}")
-        except Exception as e:
-            falar(f"Ocorreu um erro: {e}")
-
+            print("Não entendi.")
+        except sr.WaitTimeoutError:
+            print("Tempo esgotado.")
+        except sr.RequestError:
+            print("Erro ao acessar serviço de reconhecimento.")
         return ""
+
         
 API_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
 genai.configure(api_key=API_KEY)
@@ -44,11 +43,40 @@ def fraseMotivacional():
 
     falar(resposta)
 
+def curiosidade():
+
+    resposta = model.generate_content("Me diga uma curiosidade interessante, mas preciso que todas as mensagens que você criar não podem ter asteríscos(*)")
+    resposta = resposta.text
+
+    falar(resposta)
+
+def piadas():
+    continuar = True
+
+    while continuar:
+        resposta = model.generate_content(
+            "Agora você é um humorista muito experiente e sabe as melhores piadas do mundo, você irá dizer uma piada muito criativa e que seja bem fácil de entender, elas não podem ficar repetindo. Importante: lembre de que não pode usar asteríscos(*) na mensagem"
+        )
+        resposta = resposta.text
+
+        falar(resposta)
+        falar("Quer mais uma?")
+
+        mais = ouvir().lower()
+
+        if "sim" in mais or "quero" in mais:
+            continuar = True
+        else:
+            falar("Tudo bem! Se quiser mais piadas depois, é só pedir.")
+            continuar = False
+
+    return ""  # Isso garante que a função termina normalmente, sem quebrar o fluxo principal   
+
 def chatBot():
     
     chat = model.start_chat(history=[])
 
-    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: !!!você nunca pode usar asteríscos na mensagem!!!, você tem que saber que por ser de um assistente virtual a mensagem pode chegar um pouco 'estranha' por isso você irá precisar entender  a intenção do usuário."
+    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: !!!você nunca pode usar asteríscos(*) na mensagem!!!, você tem que saber que por ser de um assistente virtual a mensagem pode chegar um pouco 'estranha' por isso você irá precisar entender  a intenção do usuário."
     chat.send_message(sistema)
 
     mensagem = ""

@@ -2,11 +2,11 @@ import speech_recognition as sr
 import time
 import keyboard
 from comandosBasicos import (
-    falar, horas, hoje, aumentarVolume, diminuirVolume, abrirGPT, tocarLofi,
-    cronometro, lembrete, obrigado,
+    falar, horas, hoje, aumentarVolume, diminuirVolume, alternar_mudo, 
+    abrirGPT, tocarLofi, cronometro, lembrete, obrigado,
     aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
 )
-from comandosIA import (fraseMotivacional, chatBot)
+from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
 import estado
 from plyer import notification
 
@@ -39,7 +39,7 @@ def ouvir_comando_continuamente():
 
 def processar_comando(comando):
 
-    if "assistente" in comando:
+    if "assistente" in comando or "Tente":
 
         if "hora" in comando or "horas" in comando:
             horas()
@@ -49,6 +49,8 @@ def processar_comando(comando):
             aumentarVolume(passo=0.1)
         elif "diminuir" in comando and ("volume" in comando or "som" in comando):
             diminuirVolume(passo=0.1)
+        elif "silenciar" in comando or "silencio" in comando:
+            alternar_mudo()
         elif "abrir gpt" in comando:
             abrirGPT()
         elif "lofi" in comando or "música relaxante" in comando:
@@ -67,6 +69,10 @@ def processar_comando(comando):
             jogarMoeda()
         elif "frase motivacional" in comando:
             fraseMotivacional()
+        elif "curiosidade" in comando:
+            curiosidade()
+        elif "piada" in comando or "piadas" in comando:
+            piadas()
         elif "inteligente" in comando:
             chatBot()
         elif "obrigado" in comando:

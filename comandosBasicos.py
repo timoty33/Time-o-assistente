@@ -35,8 +35,9 @@ def ouvir():
         try:
             audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=6)
             texto = reconhecedor.recognize_google(audio, language='pt-BR').lower()
+            texto = texto.lower()
             print(f"Você disse: {texto}")
-            return texto
+            return texto.lower()
         except sr.UnknownValueError:
             print("Não entendi.")
         except sr.WaitTimeoutError:
@@ -84,6 +85,18 @@ def diminuirVolume(passo=0.1):
 
     print(f"Volume diminuido para: {int(novo_volume * 100)}%")
     falar(f"Volume diminuido para: {int(novo_volume * 100)}%")
+
+def alternar_mudo():
+
+    estado_atual = volume.GetMute()
+    volume.SetMute(not estado_atual, None)
+
+    if not estado_atual:
+        print("🔇 Som mutado.")
+        falar("Som mutado")
+    else:
+        print("🔊 Som desmutado.")
+        falar("Som desmutado")
 
 def ver_dia_da_semana():
     dias = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
