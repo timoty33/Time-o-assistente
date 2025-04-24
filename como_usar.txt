@@ -37,12 +37,12 @@ Depois, abra o arquivo denovo e faça a instalação com bastante atenção para
 1.1 Ative as opções do ambiente:
 
 ```cmd (powershell)
-"Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+"Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned"
 
 2. Ative o ambiente
 
 ```cmd(powershell)
-.\venv\Scripts\Activate.ps1
+".\venv\Scripts\Activate.ps1"
 
 3. Instale as dependências do projeto com o seguinte comando:
 

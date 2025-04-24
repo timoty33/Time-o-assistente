@@ -3,7 +3,7 @@ import time
 import keyboard
 from comandosBasicos import (
     falar, horas, hoje, aumentarVolume, diminuirVolume, alternar_mudo, 
-    abrirGPT, tocarLofi, cronometro, lembrete, obrigado,
+    diminuirBrilho, aumentarBrilho, abrirGPT, tocarLofi, cronometro, lembrete, obrigado,
     aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
 )
 from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
@@ -51,7 +51,11 @@ def processar_comando(comando):
             diminuirVolume(passo=0.1)
         elif "silenciar" in comando or "silencio" in comando:
             alternar_mudo()
-        elif "abrir gpt" in comando:
+        elif "aumentar" in comando or "mais" in comando and("brilho" in comando):
+            aumentarBrilho()
+        elif "diminuir" in comando or "menos" in comando and("brilho" in comando):
+            diminuirBrilho()
+        elif "abrir chat" in comando:
             abrirGPT()
         elif "lofi" in comando or "música relaxante" in comando:
             tocarLofi()

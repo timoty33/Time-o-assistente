@@ -9,6 +9,7 @@ import requests
 import random
 from plyer import notification
 import threading
+import screen_brightness_control as sbc
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
@@ -26,7 +27,6 @@ def falar(texto):
     engine.say(texto)
     engine.runAndWait()
 
-# COMANDOS
 def ouvir():
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:
@@ -49,6 +49,7 @@ def ouvir():
 
 executado = ""
 
+# COMANDOS
 def aumentarVelocidade():
     rate = engine.getProperty('rate')
 
@@ -98,6 +99,14 @@ def alternar_mudo():
     else:
         print("🔊 Som desmutado.")
         falar("Som desmutado")
+    
+def aumentarBrilho():
+    sbc.set_brightness('+10')
+    falar("Brilho aumentado")
+
+def diminuirBrilho():
+    sbc.set_brightness('-10')
+    falar("Brilho diminuido")
 
 def ver_dia_da_semana():
     dias = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]

@@ -3,10 +3,18 @@ from comandosBasicos import falar
 import keyboard
 import estado
 from plyer import notification
+import pyttsx3
 
-ligar = False
+def listar_vozes_disponiveis():
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+
+    print("🔊 Vozes disponíveis:")
+    for index, voice in enumerate(voices):
+        print(f"{index} - {voice.name} ({voice.id})")
 
 def main():
+    listar_vozes_disponiveis()
     falar("Olá Mestre, como posso te ajudar hoje?")
     ouvir_comando_continuamente()
 
