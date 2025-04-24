@@ -11,7 +11,7 @@ Este projeto é um assistente virtual com comandos de voz. Ele pode executar tar
 - Acesso à internet para comandos que usam APIs externas(Como IA, clima, notícias, entre outros...);
 - Microfone funcionando;
 
--- Instale o python abrindo (❗clique duas vezes❗) o arquivo: '' (pode ficar tranquilo que este trabalho é livre de qualquer vírus ou malware, ele é totalmente código aberto)
+0. Instale o python abrindo (❗clique duas vezes❗) o arquivo: '' dentro da pasta 'downloads' (pode ficar tranquilo que este trabalho é livre de qualquer vírus ou malware, ele é totalmente código aberto)
 
 ✅ ‼️‼️ Ao instalar o Python, marque a opção ❗"Add Python to PATH"❗ na primeira tela da instalação.
 
@@ -45,7 +45,9 @@ Depois, abra o arquivo denovo e faça a instalação com bastante atenção para
 
 3. Instale as dependências do projeto com o seguinte comando:
 
-```bash
+Importante: enquanto ele estiver fazendo o download, você não pode realizar QUALQUER coisa em seu computador, espere ele terminar para você poder usar.
+
+```cmd (powershell)
 "pip install -r requirements.txt"
 
 4. 
