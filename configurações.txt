@@ -1,0 +1,76 @@
+# Assistente Virtual em Python
+
+Este projeto é um assistente virtual com comandos de voz. Ele pode executar tarefas como tocar músicas, dizer a hora, informar o clima, criar lembretes, entre outras funções.
+
+‼️‼️Quando aparecer alguma coisa para digitar digite apenas o que está dentro das aspas, apenas o que está dentro, ignore as aspas
+
+## Pré-requisitos
+
+- Python 3.10 ou superior instalado;
+- Python configurado no terminal;
+- Acesso à internet para comandos que usam APIs externas(Como IA, clima, notícias, entre outros...);
+- Microfone funcionando;
+
+-- Instale o python abrindo (❗clique duas vezes❗) o arquivo: '' (pode ficar tranquilo que este trabalho é livre de qualquer vírus ou malware, ele é totalmente código aberto)
+
+✅ ‼️‼️ Ao instalar o Python, marque a opção ❗"Add Python to PATH"❗ na primeira tela da instalação.
+
+Aperte 'windows' + 'r' e digite cmd, dentro do cmd digite: "python"
+
+Se aparecer algo como 
+    'Python 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.', 
+está tudo certo.
+
+❗ Caso o comando não funcione, é provável que o Python não esteja no PATH do sistema. Para resolver abra o arquivo: '' denovo e clique em uninstall
+Depois, abra o arquivo denovo e faça a instalação com bastante atenção para marcar
+
+## Instalação
+
+1. Crie um ambiente virtual ❗CASO NÃO TENHE UM ❗(para saber se tem verifique se existe a pasta 'venv' dentro da pasta do projeto):
+
+ -- Para criar o ambiente, digite:
+```cmd (powershell)
+"python -m venv venv"
+
+1.1 Ative as opções do ambiente:
+
+```cmd (powershell)
+"Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+
+2. Ative o ambiente
+
+```cmd(powershell)
+.\venv\Scripts\Activate.ps1
+
+3. Instale as dependências do projeto com o seguinte comando:
+
+```bash
+"pip install -r requirements.txt"
+
+4. 
+Agora está tudo pronto, para usar o assistente abra (❗clique duas vezes em❗) arquivo: 'main.py'
+De lá você poderá ligar o assistente e quando quiser parar diga: "Assistente, descansar", ele irá parar de receber os comandos, para executar novamente, aperte 'f10' duas vezes.
+
+#Configurações:
+
+Para mudar o nome de chamada do assistente (o normal é 'mago'), abra (❗clique duas vezes em❗) arquivo: 'Timmy.py'
+
+Você precisa ir na seguinte parte do código (linha: 42):
+
+40 - def processar_comando(comando):
+41 - 
+42 - if "assistente" in comando: <<----
+43 - 
+44 -    if "hora" in comando or "horas" in comando:
+
+E na linha 42 você pode mudar "assistente" para qualquer outra palavra do português (a palavra precisa estar entre "aspas"):
+
+Palavras que funcionam:
+
+"assistente"
+"Jarvis"
+"mago"
+"mestre"
+
+❗Lembre-se: quando for utilizar algum nome: precisa colocar a primeira letra em caixa alta (ex = "Jarvis")

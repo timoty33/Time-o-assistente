@@ -18,14 +18,14 @@ interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
 engine = pyttsx3.init()
-rate = engine.getProperty('rate')
-engine.setProperty('rate', rate + 40)
+engine.setProperty("rate", 240)
+engine.setProperty("volume", 1)
 
 def falar(texto):
     engine.say(texto)
     engine.runAndWait()
 
-
+# COMANDOS
 def ouvir():
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:

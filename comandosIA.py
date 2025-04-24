@@ -1,36 +1,11 @@
 import speech_recognition as sr
 import pyttsx3
 import google.generativeai as genai
+from comandosBasicos import falar, ouvir
 
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', rate + 40)
-
-def falar(texto):
-    print(texto)
-    engine.say(texto)
-    engine.runAndWait()
-
-def ouvir():
-    reconhecedor = sr.Recognizer()
-    with sr.Microphone() as source:
-        reconhecedor.adjust_for_ambient_noise(source, duration=1)
-        print("Ouvindo...")
-
-        try:
-            audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=6)
-            texto = reconhecedor.recognize_google(audio, language='pt-BR').lower()
-            texto = texto.lower()
-            print(f"Você disse: {texto}")
-            return texto.lower()
-        except sr.UnknownValueError:
-            print("Não entendi.")
-        except sr.WaitTimeoutError:
-            print("Tempo esgotado.")
-        except sr.RequestError:
-            print("Erro ao acessar serviço de reconhecimento.")
-        return ""
-
         
 API_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
 genai.configure(api_key=API_KEY)

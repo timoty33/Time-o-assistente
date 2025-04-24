@@ -39,7 +39,7 @@ def ouvir_comando_continuamente():
 
 def processar_comando(comando):
 
-    if "assistente" in comando or "Tente":
+    if "assistente" in comando:
 
         if "hora" in comando or "horas" in comando:
             horas()
