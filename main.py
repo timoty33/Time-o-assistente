@@ -14,7 +14,6 @@ def listar_vozes_disponiveis():
         print(f"{index} - {voice.name} ({voice.id})")
 
 def main():
-    listar_vozes_disponiveis()
     falar("Olá Mestre, como posso te ajudar hoje?")
     ouvir_comando_continuamente()
 
@@ -50,6 +49,3 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"\n❗ Ocorreu um erro: {e}")
-
-    finally:
-        input("\n✅ Execução encerrada. Pressione ENTER para sair...")
