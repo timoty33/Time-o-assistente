@@ -2,11 +2,12 @@ import speech_recognition as sr
 import time
 import keyboard
 from comandosBasicos import (
-    falar, horas, hoje, aumentarVolume, diminuirVolume, alternar_mudo, 
-    diminuirBrilho, aumentarBrilho, abrirGPT, tocarLofi, cronometro, lembrete, obrigado,
+    falar, horas, hoje, aumentarVolume, diminuirVolume, alternar_mudo, comoEsta,
+    diminuirBrilho, aumentarBrilho, abrirGPT, tocarLofi, tocarMusicaAnimada, cronometro, lembrete, obrigado,
     aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
 )
 from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
+from rotinas import (bomDia, boaNoite)
 import estado
 from plyer import notification
 
@@ -39,8 +40,9 @@ def ouvir_comando_continuamente():
 
 def processar_comando(comando):
 
-    if "assistente" in comando:
+    if "assistente" in comando or "Assistente" in comando:
 
+        #basico
         if "hora" in comando or "horas" in comando:
             horas()
         elif "data" in comando or "hoje" in comando:
@@ -59,6 +61,8 @@ def processar_comando(comando):
             abrirGPT()
         elif "lofi" in comando or "música relaxante" in comando:
             tocarLofi()
+        elif "música" in comando and "animada" in comando:
+            tocarMusicaAnimada()
         elif "cronômetro" in comando:
             cronometro()
         elif "lembrete" in comando:
@@ -71,6 +75,12 @@ def processar_comando(comando):
             clima()
         elif "moeda" in comando:
             jogarMoeda()
+        elif "obrigado" in comando:
+            obrigado()
+        elif "como" in comando and "está" in comando:
+            comoEsta()
+
+        #IA
         elif "frase motivacional" in comando:
             fraseMotivacional()
         elif "curiosidade" in comando:
@@ -79,8 +89,14 @@ def processar_comando(comando):
             piadas()
         elif "inteligente" in comando:
             chatBot()
-        elif "obrigado" in comando:
-            obrigado()
+
+        #rotinas
+        elif "Bom dia" in comando:
+            bomDia()
+        elif "boa noite" in comando:
+            boaNoite()
+
+        #outros
         elif "sair" in comando:
             falar("Encerrando. Até logo!")
             exit()
@@ -92,5 +108,7 @@ def processar_comando(comando):
                 message=f"O modo repouso está ativo mas o assistente ainda fará suas tarefas, para ativá-lo, aperte f10 2 vezes",
                 timeout=10
             )
+        elif "assistente" in comando or "Assistente" in comando:
+            falar("Olá, me chamou")
         else:
             naoEntendi()

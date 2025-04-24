@@ -1,15 +1,7 @@
-import keyboard
+import requests
+from comandosBasicos import falar
 
-estado = False
+link = "https://economia.awesomeapi.com.br/json/last/:moedas"
 
-print("Pressione a tecla 'f10' para alternar o estado. Pressione 'esc' para sair.")
+requisicao = link.get(json())
 
-while True:
-    if keyboard.is_pressed("f10"):
-        estado = not estado
-        print("Estado:", estado)
-        keyboard.wait("f10")  # espera soltar a tecla para evitar múltiplos toques
-
-    if keyboard.is_pressed("esc"):
-        print("Encerrando...")
-        break

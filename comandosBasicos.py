@@ -3,7 +3,7 @@ import pyttsx3
 import webbrowser
 from datetime import datetime
 import os
-from time import sleep, time
+from time import time, sleep
 import re
 import requests
 import random
@@ -14,6 +14,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 import estado
+import keyboard
 
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -25,12 +26,13 @@ engine.setProperty("volume", estado.volumeFala)
 
 def falar(texto):
     engine.say(texto)
+    print(texto)
     engine.runAndWait()
 
 def ouvir():
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:
-        reconhecedor.adjust_for_ambient_noise(source, duration=1)
+        reconhecedor.adjust_for_ambient_noise(source, duration=3)
         print("Ouvindo...")
 
         try:
@@ -56,6 +58,7 @@ def aumentarVelocidade():
     # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
     engine.setProperty('rate', rate + 50)
     falar("Agora eu falo mais rápido, o que achou?")
+    executado = True
 
 def diminuirVelocidade():
     rate = engine.getProperty('rate')
@@ -63,6 +66,7 @@ def diminuirVelocidade():
     # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
     engine.setProperty('rate', rate - 50)
     falar("Agora eu falo menos rápido, o que achou?")
+    executado = True
 
 def horas():
     #horas
@@ -76,8 +80,9 @@ def aumentarVolume(passo=0.1):
     novo_volume = min(volume_atual + passo, 1.0)  # máximo 1.0
     volume.SetMasterVolumeLevelScalar(novo_volume, None)
 
-    print(f"Volume aumentado para: {int(novo_volume * 100)}%")
     falar(f"Volume aumentado para: {int(novo_volume * 100)}%")
+
+    executado = True
 
 def diminuirVolume(passo=0.1):
 
@@ -85,8 +90,8 @@ def diminuirVolume(passo=0.1):
     novo_volume = min(volume_atual - passo, 1.0)  # máximo 1.0
     volume.SetMasterVolumeLevelScalar(novo_volume, None)
 
-    print(f"Volume diminuido para: {int(novo_volume * 100)}%")
     falar(f"Volume diminuido para: {int(novo_volume * 100)}%")
+    executado = True
 
 def alternar_mudo():
 
@@ -99,20 +104,24 @@ def alternar_mudo():
     else:
         print("🔊 Som desmutado.")
         falar("Som desmutado")
+    executado = True
     
 def aumentarBrilho():
     sbc.set_brightness('+10')
     falar("Brilho aumentado")
+    executado = True
 
 def diminuirBrilho():
     sbc.set_brightness('-10')
     falar("Brilho diminuido")
+    executado = True
 
 def ver_dia_da_semana():
     dias = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
     hoje = datetime.now()
     dia_da_semana = dias[hoje.weekday()]  # weekday() retorna 0 (segunda) até 6 (domingo)
     return dia_da_semana
+    executado = True    
 
 def hoje():
     # Data de Hoje
@@ -130,6 +139,18 @@ def tocarLofi():
     #Tocar lofi
     webbrowser.open("https://www.youtube.com/watch?v=28KRPhVzCus&autoplay=1")
     falar("Tocando música relaxante!")
+    executado = True
+
+def tocarMusicaAnimada():
+    
+    musicas = [
+        "https://www.youtube.com/watch?v=ru0K8uYEZWw&autoplay=1",
+        "https://www.youtube.com/watch?v=OPf0YbXqDm0&autoplay=1",
+        "https://www.youtube.com/watch?v=ZbZSe6N_BXs&autoplay=1"
+        ]
+    musica = random.choice(musicas)
+    webbrowser.open(musica)
+    falar("Tocando música animada!")
     executado = True
 
 API_KEY_CLIMA = "b1c447602ac1733630ac465ec871d141"
@@ -157,6 +178,7 @@ def clima():
     fala = f"O tempo em {cityname} é: descrição: {tempo},\nsensação térmica: {sensacao:.1f} graus\na temperatura máxima será de: {max_temperatura:.1f} graus célsius,\ne a mínima de : {min_temperatura:.1f} graus,\na umidade está em: {umidade}%".replace(".", ",")
 
     falar(fala)
+    executado = True
 
 def cronometro():
     #cronometro
@@ -242,12 +264,15 @@ def obrigado():
     falar("De nada, você é brabo!")
     executado = True
 
+def comoEsta():
+    falar("Estou bem, obrigado pela pergunta. E você?")
+
 moeda = ["cara", "coroa"]
 def jogarMoeda():
 
     falar("Vamos jogar cara ou coroa, você escolhe!")
 
-    escolha = input("Digite a sua escolha ['cara' ou 'coroa']: ")
+    escolha = ouvir()
     
     jogada = random.choice(moeda)
 
@@ -256,6 +281,8 @@ def jogarMoeda():
 
     else:
         falar(f"Caiu {jogada}, você perdeu!")
+
+    executado = True
 
 
 def naoEntendi():

@@ -48,19 +48,21 @@ def piadas():
     return ""  # Isso garante que a função termina normalmente, sem quebrar o fluxo principal   
 
 def chatBot():
-    
+    # Inicia uma conversa com histórico
     chat = model.start_chat(history=[])
 
-    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: !!!você nunca pode usar asteríscos(*) na mensagem!!!, você tem que saber que por ser de um assistente virtual a mensagem pode chegar um pouco 'estranha' por isso você irá precisar entender  a intenção do usuário."
+    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: você nunca pode usar asteriscos (*) na mensagem! Entenda que, por ser de um assistente virtual, a mensagem pode chegar um pouco 'estranha', então você deve interpretar a intenção do usuário."
+    
     chat.send_message(sistema)
 
     mensagem = ""
 
-    while mensagem != "sair":
+    while True:
+        mensagem = ouvir().strip().lower()
 
-        mensagem = ouvir()
+        if mensagem == "sair":
+            falar("Encerrando o chat. Até logo!")
+            break
 
-        resposta = model.generate_content(mensagem)
-        resposta = resposta.text
-
-        falar(resposta)
+        resposta = chat.send_message(mensagem)
+        falar(resposta.text)
