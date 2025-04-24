@@ -11,10 +11,11 @@ Este projeto é um assistente virtual com comandos de voz. Ele pode executar tar
 - Acesso à internet para comandos que usam APIs externas(Como IA, clima, notícias, entre outros...);
 - Microfone funcionando;
 
-0. Instale o python abrindo (❗clique duas vezes❗) o arquivo: '' dentro da pasta 'downloads' (pode ficar tranquilo que este trabalho é livre de qualquer vírus ou malware, ele é totalmente código aberto)
+0. Instale o python abrindo (❗clique duas vezes❗) o arquivo: 'python-3.13.3-amd64.exe' dentro da pasta 'downloads' (pode ficar tranquilo que este trabalho é livre de qualquer vírus ou malware, ele é totalmente código aberto)
 
 ✅ ‼️‼️ Ao instalar o Python, marque a opção ❗"Add Python to PATH"❗ na primeira tela da instalação.
 
+Para saber se o download funcionou:
 Aperte 'windows' + 'r' e digite cmd, dentro do cmd digite: "python"
 
 Se aparecer algo como 
@@ -56,7 +57,9 @@ De lá você poderá ligar o assistente e quando quiser parar diga: "Assistente,
 
 #Configurações:
 
-Para mudar o nome de chamada do assistente (o normal é 'mago'), abra (❗clique duas vezes em❗) arquivo: 'Timmy.py'
+ - Para mudar o nome de chamada do assistente (o normal é 'assistente'), edite (❗clique com o botão direito e abrir com IDLE (python)❗) arquivo: 'Timmy.py'
+
+ Caso não apareça o IDLE, aperte: 'windows' e procure: "idle", entre no app (Você precisa estar com python já baixado)
 
 Você precisa ir na seguinte parte do código (linha: 42):
 
@@ -76,3 +79,14 @@ Palavras que funcionam:
 "mestre"
 
 ❗Lembre-se: quando for utilizar algum nome: precisa colocar a primeira letra em caixa alta (ex = "Jarvis")
+
+ - Para mudar a velocidade da fala ou o volume da fala, edite (❗clique com o botão direito e abrir com python IDLE❗) arquivo: 'estado.py'
+
+4 - #Aqui estão suas configurações:
+5 - 
+6 - velocidadeFala = 250 #mínimo 50, máximo: 400 <<------
+7 - volumeFala = 1.0 #mínimo: 0, máximo: 1, lembre que a altura do som é relativo ao som do computador, ou seja se estiver 1, ele será 100% igual ao volume do sistema <<------
+8 - 
+
+
+

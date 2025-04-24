@@ -12,14 +12,15 @@ import threading
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
+import estado
 
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
 engine = pyttsx3.init()
-engine.setProperty("rate", 240)
-engine.setProperty("volume", 1)
+engine.setProperty("rate", estado.velocidadeFala)
+engine.setProperty("volume", estado.volumeFala)
 
 def falar(texto):
     engine.say(texto)
