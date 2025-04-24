@@ -20,25 +20,31 @@ def main():
 
 print("Pressione F10 para ligar/desligar o assistente. ESC para sair.")
 
-while True:
-    if keyboard.is_pressed("f10"):
-        estado.ligar = not estado.ligar
-        print("Assistente:", "Ligado" if estado.ligar else "Desligado")
-        keyboard.wait("f10")
-        if estado.ligar:
+try:
+    while True:
+        if keyboard.is_pressed("f10"):
+            estado.ligar = not estado.ligar
+            print("Assistente:", "Ligado" if estado.ligar else "Desligado")
+            keyboard.wait("f10")  # Espera soltar e pressionar novamente
+
+            if estado.ligar:
+                notification.notify(
+                    title="🥸 Estou ativo!",
+                    message=f"Você ativou o Timmy, seu assistente",
+                    timeout=10
+                )
+                main()  # Chama main enquanto ligado
+
+        if keyboard.is_pressed("esc"):
+            print("Saindo...")
+            estado.ligar = False
             notification.notify(
-                title="🥸 Estou ativo!",
-                message=f"Você ativou o Timmy, seu assistente",
+                title="🫂 Assistente desativado",
+                message="Tchau até a próxima",
                 timeout=10
             )
-            main()  # Chama main enquanto ligado
+            break
 
-    if keyboard.is_pressed("esc"):
-        print("Saindo...")
-        estado.ligar = False
-        notification.notify(
-            title="🫂 Assistente desativado",
-            message="Tchau até a próxima",
-            timeout=10
-        )
-        break
+except Exception as e:
+    print("❗ Ocorreu um erro:", e)
+    input("Pressione ENTER para sair...")  # Mantém a janela aberta para ver o erro
