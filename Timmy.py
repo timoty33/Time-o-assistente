@@ -37,13 +37,11 @@ def ouvir_comando_continuamente():
             except sr.RequestError:
                 print("Erro de conexão.")
                 break
-
 def processar_comando(comando):
 
     if "assistente" in comando or "Assistente" in comando:
 
-        #basico
-        if "hora" in comando or "horas" in comando:
+        if "hora" in comando or "horas" in comando: #basico
             horas()
         elif "data" in comando or "hoje" in comando:
             hoje()
@@ -99,6 +97,11 @@ def processar_comando(comando):
         #outros
         elif "sair" in comando:
             falar("Encerrando. Até logo!")
+            notification.notify(
+                title="🥺 Assistente Desligado",
+                message=f"O assistente está desligado, para ligar ele de novo, você precisa executar: 'main.py'",
+                timeout=10
+            )
             exit()
         elif "dormir" in comando or "descansar" in comando or "repouso" in comando:
             falar("Modo repouso")

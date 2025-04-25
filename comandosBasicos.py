@@ -155,27 +155,38 @@ def tocarMusicaAnimada():
 
 API_KEY_CLIMA = "b1c447602ac1733630ac465ec871d141"
 cityname = "brasília" #piçarras, joinville, rio de janeiro, são paulo
-linkClima = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY_CLIMA}"
+linkClima = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY_CLIMA}&units=metric&lang=pt_br"
+linkPrevisao = f"http://api.openweathermap.org/data/2.5/forecast?q={cityname}&appid={API_KEY_CLIMA}&units=metric&lang=pt_br"
 
 def clima():
+
+    resposta = requests.get(linkPrevisao)
+    dados = resposta.json()
+
     requisicao = requests.get(linkClima) 
     requisicao_dic = requisicao.json()
 
     tempo = requisicao_dic["weather"][0]["main"]
 
     sensacao = requisicao_dic["main"]["feels_like"]
-    sensacao = sensacao - 273.15
 
     max_temperatura = requisicao_dic["main"]["temp_max"]
-    max_temperatura = max_temperatura - 273.15
 
     min_temperatura = requisicao_dic["main"]["temp_min"]
-    min_temperatura = min_temperatura - 273.15
 
     umidade = requisicao_dic["main"]["humidity"]
 
+    for previsao in dados["list"][:5]:  # próximas 24h (3h x 5)
+        hora_completa = previsao["dt_txt"]  # exemplo: '2025-04-25 15:00:00'
+        hora_obj = datetime.strptime(hora_completa, "%Y-%m-%d %H:%M:%S")
+        hora_formatada = f"{hora_obj.hour}h"
 
-    fala = f"O tempo em {cityname} é: descrição: {tempo},\nsensação térmica: {sensacao:.1f} graus\na temperatura máxima será de: {max_temperatura:.1f} graus célsius,\ne a mínima de : {min_temperatura:.1f} graus,\na umidade está em: {umidade}%".replace(".", ",")
+        clima = previsao["weather"][0]["description"]
+        chuva = previsao.get("rain", {}).get("3h", 0)
+
+        falar(f"{hora_formatada}: {clima} | Chuva: {chuva} mm")
+
+    fala = f"O clima em {cityname} é: {tempo},\nsensação térmica: {sensacao:.1f} graus\na temperatura máxima será de: {max_temperatura:.1f} graus célsius,\ne a mínima de : {min_temperatura:.1f} graus,\na umidade está em: {umidade}%".replace(".", ",")
 
     falar(fala)
     executado = True
