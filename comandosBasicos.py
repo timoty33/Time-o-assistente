@@ -1,4 +1,4 @@
-import speech_recognition as sr
+import speech_recognition as sr #codigosBasicos
 import pyttsx3 
 import webbrowser
 from datetime import datetime
@@ -15,6 +15,38 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 import estado
 import keyboard
+import google.generativeai as genai
+
+API_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel("gemini-2.0-flash")
+
+def traduzirTexto(texto):
+    
+    chat = model.start_chat(history=[])
+
+    sistema = "Você será um tradutor, o tradutor precisa ser doutor em TODOS os idiomas do mundo, ele vai receber um texto, vai precisar descobrir que língua que é, porém, NUNCA vai dizer isso, porque ele precisa que as pessoas venham até ele, quando você receber o texto você precisa traduzir com a melhor qualidade possível, e identificar partes informais, para quando traduzir também deixe um pouco informal. Eu preciso que o que você traduzir seja apenas o que te mandaram, não adicione nada nem remova nada"
+
+    chat.send_message(sistema)
+
+    resposta = chat.send_message(texto)
+    resposta = resposta.text.replace("*", "")
+
+    falar(resposta)
+
+def traduzirTextoAutomatico(texto):
+    
+    chat = model.start_chat(history=[])
+
+    sistema = "Você será um tradutor, o tradutor precisa ser doutor em TODOS os idiomas do mundo, ele vai receber um texto, vai precisar descobrir que língua que é, porém, NUNCA vai dizer isso, porque ele precisa que as pessoas venham até ele, quando você receber o texto você precisa traduzir com a melhor qualidade possível, e identificar partes informais, para quando traduzir também deixe um pouco informal. Eu preciso que o que você traduzir seja apenas o que te mandaram, não adicione nada nem remova nada"
+
+    chat.send_message(sistema)
+
+    resposta = chat.send_message(texto)
+    resposta = resposta.text.replace("*", "")
+
+    return resposta
+
 
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -208,6 +240,98 @@ def cronometro():
             falar(f"Foram {tempo_formatado} segundos")
             break
     executado = True
+
+def obter_cotacoes():
+    moedas = {
+        "bitcoin": "Bitcoin",
+        "ripple": "XRP",
+        "usd": "Dólar"
+    }
+
+    # Cotação de Bitcoin e XRP
+    url_cripto = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ripple&vs_currencies=brl"
+    resposta_cripto = requests.get(url_cripto)
+
+    # Cotação do dólar usando AwesomeAPI
+    url_dolar = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+    resposta_dolar = requests.get(url_dolar)
+
+    if resposta_cripto.status_code == 200 and resposta_dolar.status_code == 200:
+        dados_cripto = resposta_cripto.json()
+        dados_dolar = resposta_dolar.json()
+
+        bitcoin_brl = dados_cripto.get("bitcoin", {}).get("brl", 0)
+        xrp_brl = dados_cripto.get("ripple", {}).get("brl", 0)
+        usd_brl = float(dados_dolar["USDBRL"]["bid"])
+
+        resultado = f"""Cotações atuais:
+- {moedas["usd"]}: {usd_brl:.2f} reais
+- {moedas["bitcoin"]}: {bitcoin_brl:.2f} reais
+- {moedas["ripple"]}: {xrp_brl:.2f} reais
+"""
+        falar(resultado)
+    else:
+        falar("Erro ao acessar as cotações.")
+        return "Erro ao acessar as cotações."
+
+def receitaDrink(nome):
+    url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}"
+    try:
+        resposta = requests.get(url)
+        resposta.raise_for_status()  # Verifica se houve erro na requisição (404, 500, etc.)
+        
+        dados = resposta.json()
+        drinks = dados.get("drinks")
+        
+        if drinks:  # Se a lista de drinks não estiver vazia
+            drink = drinks[0]  # Pega o primeiro drink encontrado
+            nome = drink.get("strDrink")
+            instrucoes = drink.get("strInstructions")
+            instrucoes = traduzirTextoAutomatico(instrucoes) 
+
+            ingredientes = []
+            for i in range(1, 16):  # Pode ter até 15 ingredientes
+                ing = drink.get(f"strIngredient{i}")
+                if ing:
+                    ing = traduzirTextoAutomatico(ing)
+                    ingredientes.append(ing)
+
+            receita = (
+                f"\n🍹 {nome}\n"
+                f"Instruções: {instrucoes}\n"
+                f"Ingredientes: {', '.join(ingredientes)}"
+            )
+            falar(receita)
+            return receita
+        else:
+            falar("Não encontrado!")
+            return "❗ Drink não encontrado."
+    
+    except requests.exceptions.RequestException as e:
+        # Trata erros de requisição (como erro de rede, 404, etc.)
+        falar("Erro ao acessar a API de drinks.")
+        print(f"Erro na requisição: {e}")
+        return f"❗ Ocorreu um erro na requisição: {e}"
+    
+    except Exception as erro:
+        # Trata qualquer outro erro
+        falar("Erro ao processar o drink.")
+        print(f"Erro ao processar a resposta: {erro}")
+        return f"❗ Ocorreu um erro: {erro}"
+    
+def abrir_imagem_de_gato():
+    url = "https://api.thecatapi.com/v1/images/search"
+    try:
+        resposta = requests.get(url, timeout=5)
+        if resposta.status_code == 200:
+            dados = resposta.json()
+            link_imagem = dados[0]["url"]
+            print("Abrindo nova imagem de gato fofo 😻:", link_imagem)
+            webbrowser.open(link_imagem)
+        else:
+            print("Não consegui pegar a imagem agora. 😿")
+    except requests.exceptions.RequestException as e:
+        print("❗ Erro ao acessar a API:", e)
 
 def lembrete(comando):
     #lembrete

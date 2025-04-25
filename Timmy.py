@@ -1,11 +1,7 @@
-import speech_recognition as sr
+import speech_recognition as sr #Timmy.py
 import time
 import keyboard
-from comandosBasicos import (
-    falar, horas, hoje, aumentarVolume, diminuirVolume, alternar_mudo, comoEsta,
-    diminuirBrilho, aumentarBrilho, abrirGPT, tocarLofi, tocarMusicaAnimada, cronometro, lembrete, obrigado,
-    aumentarVelocidade, diminuirVelocidade, jogarMoeda, clima, naoEntendi
-)
+from comandosBasicos import *
 from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
 from rotinas import (bomDia, boaNoite)
 import estado
@@ -63,6 +59,13 @@ def processar_comando(comando):
             tocarMusicaAnimada()
         elif "cronômetro" in comando:
             cronometro()
+        elif "receita" in comando and ("bebida" in comando or "drink" in comando):
+            nome = input("Digite o nome da bebida: ")
+            receitaDrink(nome)
+        elif "cotação" in comando or "cotações" in comando:
+            obter_cotacoes()
+        elif "gato" in comando:
+            abrir_imagem_de_gato()
         elif "lembrete" in comando:
             lembrete(comando)
         elif "rápido" in comando:
