@@ -7,8 +7,8 @@ engine = pyttsx3.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', rate + 40)
         
-API_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
-genai.configure(api_key=API_KEY)
+GEMINI_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
+genai.configure(api_key=GEMINI_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 def fraseMotivacional():
