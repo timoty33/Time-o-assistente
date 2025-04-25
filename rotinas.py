@@ -1,9 +1,13 @@
 from comandosBasicos import *
 from comandosIA import *
-import time
+from time import sleep
 import pygame
+from plyer import notification
+import threading
 
 pygame.mixer.init()
+
+pausas = True
 
 def bomDia():
     pygame.mixer.music.load("audios/galo_cantando.mp3")
@@ -31,3 +35,22 @@ def boaNoite():
 
     falar("Ativando modo noite!")
     tocarLofi()
+
+def hidratacao():
+    falar("Lembretes de hidratação ativados!")
+    def rotina_hidratacao():
+        while pausas:
+            sleep(20)  # Espera 35 minutos (2100 segundos)
+            pygame.mixer.music.load("audios/dry_notification.wav")
+            pygame.mixer.music.play()
+            notification.notify(
+                title="🏋️‍♂️🫗 Beba água",
+                message="Faça uma pausa, você precisa beber água, descanse um pouco, aproveite o momento!",
+                timeout=15
+            )
+            print("Faça uma pausa, se alongue um pouco!")
+
+    # Criando e iniciando a thread dentro da função
+    hidratacao_thread = threading.Thread(target=rotina_hidratacao)
+    hidratacao_thread.daemon = True  # A thread é daemon, encerrará com o programa
+    hidratacao_thread.start()

@@ -3,7 +3,7 @@ import time
 import keyboard
 from comandosBasicos import *
 from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
-from rotinas import (bomDia, boaNoite)
+from rotinas import (bomDia, boaNoite, hidratacao, pausas)
 import estado
 from plyer import notification
 
@@ -21,7 +21,7 @@ def ouvir_comando_continuamente():
 
             try:
                 print("Escutando...")
-                audio = recognizer.listen(source, timeout=5)
+                audio = recognizer.listen(source, timeout=10)
                 texto = recognizer.recognize_google(audio, language="pt-BR")
                 print(f"Você disse: {texto}")
                 if texto.strip().lower() != "":
@@ -35,7 +35,7 @@ def ouvir_comando_continuamente():
                 break
 def processar_comando(comando):
 
-    if "assistente" in comando or "Assistente" in comando:
+    if "assistente" in comando or "Assistente" in comando or "tente" in comando:
 
         if "hora" in comando or "horas" in comando: #basico
             horas()
@@ -59,6 +59,9 @@ def processar_comando(comando):
             tocarMusicaAnimada()
         elif "cronômetro" in comando:
             cronometro()
+        elif "traduzir" in comando or "tradução" in comando:
+            texto = input("Digite o texto")
+            traduzirTexto(texto)
         elif "receita" in comando and ("bebida" in comando or "drink" in comando):
             nome = input("Digite o nome da bebida: ")
             receitaDrink(nome)
@@ -96,6 +99,11 @@ def processar_comando(comando):
             bomDia()
         elif "boa noite" in comando:
             boaNoite()
+        elif ("ativar" in comando or "iniciar" in comando) and "hidratação" in comando:
+            hidratacao()
+        elif ("desligar" in comando or "parar" in comando) and "hidratação" in comando:
+            pausas = False
+            falar("Hidratação interrompida!")
 
         #outros
         elif "sair" in comando:
