@@ -10,8 +10,6 @@ pygame.mixer.init()
 pausas = True
 
 def bomDia():
-    pygame.mixer.music.load("audios/galo_cantando.mp3")
-    pygame.mixer.music.play()
     sleep(4)
     falar("Bom dia mago! Como você dormiu hoje? Vamos começar o dia com uma música animada!")
     tocarMusicaAnimada()
@@ -41,8 +39,6 @@ def hidratacao():
     def rotina_hidratacao():
         while pausas:
             sleep(20)  # Espera 35 minutos (2100 segundos)
-            pygame.mixer.music.load("audios/dry_notification.wav")
-            pygame.mixer.music.play()
             notification.notify(
                 title="🏋️‍♂️🫗 Beba água",
                 message="Faça uma pausa, você precisa beber água, descanse um pouco, aproveite o momento!",
