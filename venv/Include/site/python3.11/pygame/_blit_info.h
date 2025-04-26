@@ -19,3 +19,5 @@ typedef struct {
     SDL_BlendMode src_blend;
     SDL_BlendMode dst_blend;
 } SDL_BlitInfo;
+
+

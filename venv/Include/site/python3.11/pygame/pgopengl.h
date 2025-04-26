@@ -18,3 +18,5 @@ typedef void(GL_APIENTRY *GL_glReadPixels_Func)(int, int, int, int,
 typedef void(GL_APIENTRY *GL_glViewport_Func)(int, int, unsigned int,
                                               unsigned int);
 #endif
+
+

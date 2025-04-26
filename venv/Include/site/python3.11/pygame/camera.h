@@ -216,3 +216,5 @@ v4l2_open_device(pgCameraObject *self);
 #endif
 
 #endif /* !CAMERA_H */
+
+

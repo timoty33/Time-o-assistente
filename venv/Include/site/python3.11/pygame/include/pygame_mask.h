@@ -43,3 +43,5 @@ PYGAMEAPI_DEFINE_SLOTS(mask);
 #endif /* ~PYGAMEAPI_MASK_INTERNAL */
 
 #endif /* ~PGMASK_H */
+
+

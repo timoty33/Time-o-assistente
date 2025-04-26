@@ -54,3 +54,5 @@ PYGAMEAPI_DEFINE_SLOTS(bufferproxy);
 #endif /* ~PYGAMEAPI_BUFPROXY_INTERNAL */
 
 #endif /* ~defined(PG_BUFPROXY_HEADER) */
+
+

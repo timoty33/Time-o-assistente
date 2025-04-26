@@ -40,3 +40,5 @@ PYGAMEAPI_DEFINE_SLOTS(_freetype);
 #endif /* PYGAME_FREETYPE_INTERNAL */
 
 #endif /* PYGAME_FREETYPE_H_ */
+
+

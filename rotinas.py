@@ -50,3 +50,5 @@ def hidratacao():
     hidratacao_thread = threading.Thread(target=rotina_hidratacao)
     hidratacao_thread.daemon = True  # A thread é daemon, encerrará com o programa
     hidratacao_thread.start()
+
+

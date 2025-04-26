@@ -169,3 +169,5 @@ bitmask_convolve(const bitmask_t *a, const bitmask_t *b, bitmask_t *o,
 #endif
 
 #endif
+
+

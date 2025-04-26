@@ -126,3 +126,5 @@ def processar_comando(comando):
             falar("Olá, me chamou")
         else:
             naoEntendi()
+
+

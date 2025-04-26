@@ -424,3 +424,5 @@ def naoEntendi():
     #Se não reconhecer
     if not executado:
         falar("Desculpe, não entendi o comando.")
+
+

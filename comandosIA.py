@@ -67,3 +67,5 @@ def chatBot():
         resposta = chat.send_message(mensagem)
         resposta = resposta.text.replace("*", "")
         falar(resposta)
+
+
