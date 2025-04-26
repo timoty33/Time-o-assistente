@@ -119,7 +119,7 @@ def aumentarVolume(passo=0.1):
 def diminuirVolume(passo=0.1):
 
     volume_atual = volume.GetMasterVolumeLevelScalar()  # valor entre 0.0 e 1.0
-    novo_volume = min(volume_atual - passo, 1.0)  # máximo 1.0
+    novo_volume = max(volume_atual - passo, 1.0)  # máximo 1.0
     volume.SetMasterVolumeLevelScalar(novo_volume, None)
 
     falar(f"Volume diminuido para: {int(novo_volume * 100)}%")
