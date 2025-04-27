@@ -96,7 +96,8 @@ def processar_comando(comando):
 
         #rotinas
         elif "Bom dia" in comando:
-            bomDia()
+            diretorio_base = os.path.dirname(os.path.abspath(__file__))
+            bomDia(diretorio_base)
         elif "boa noite" in comando:
             boaNoite()
         elif ("ativar" in comando or "iniciar" in comando) and "hidratação" in comando:

@@ -4,12 +4,18 @@ from time import sleep
 import pygame
 from plyer import notification
 import threading
+import os
 
 pygame.mixer.init()
 
+
+diretorio_base = os.path.dirname(os.path.abspath(__file__))
+
 pausas = True
 
-def bomDia():
+def bomDia(diretorio_base):
+    pygame.mixer.music.load(os.path.join(diretorio_base, 'audios', 'galo_cantando.mp3'))
+    pygame.mixer.music.play()
     sleep(4)
     falar("Bom dia mago! Como você dormiu hoje? Vamos começar o dia com uma música animada!")
     tocarMusicaAnimada()
@@ -50,5 +56,3 @@ def hidratacao():
     hidratacao_thread = threading.Thread(target=rotina_hidratacao)
     hidratacao_thread.daemon = True  # A thread é daemon, encerrará com o programa
     hidratacao_thread.start()
-
-
