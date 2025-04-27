@@ -1,5 +1,5 @@
-from comandosBasicos import *
-from comandosIA import *
+from comandos.comandosBasicos import *
+from comandos.comandosIA import *
 from time import sleep
 import pygame
 from plyer import notification

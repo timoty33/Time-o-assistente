@@ -1,9 +1,9 @@
 import speech_recognition as sr #Timmy.py
 import time
 import keyboard
-from comandosBasicos import *
-from comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
-from rotinas import (bomDia, boaNoite, hidratacao, pausas)
+from comandos.comandosBasicos import *
+from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
+from comandos.rotinas import (bomDia, boaNoite, hidratacao, pausas)
 import estado
 from plyer import notification
 

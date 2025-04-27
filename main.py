@@ -1,5 +1,5 @@
 from Timmy import ouvir_comando_continuamente
-from comandosBasicos import falar
+from comandos.comandosBasicos import falar
 import keyboard
 import estado
 from plyer import notification

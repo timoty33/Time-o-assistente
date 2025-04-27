@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
 import google.generativeai as genai
-from comandosBasicos import falar, ouvir
+from comandos.comandosBasicos import falar, ouvir
 
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')
