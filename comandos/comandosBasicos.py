@@ -17,7 +17,7 @@ import estado
 import keyboard
 import google.generativeai as genai
 
-API_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
+API_KEY = estado.API_GEMINI
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
@@ -185,7 +185,7 @@ def tocarMusicaAnimada():
     falar("Tocando música animada!")
     executado = True
 
-API_KEY_CLIMA = "b1c447602ac1733630ac465ec871d141"
+API_KEY_CLIMA = estado.API_CLIMA
 cityname = "brasília" #piçarras, joinville, rio de janeiro, são paulo
 linkClima = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY_CLIMA}&units=metric&lang=pt_br"
 linkPrevisao = f"http://api.openweathermap.org/data/2.5/forecast?q={cityname}&appid={API_KEY_CLIMA}&units=metric&lang=pt_br"

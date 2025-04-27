@@ -2,12 +2,13 @@ import speech_recognition as sr
 import pyttsx3
 import google.generativeai as genai
 from comandos.comandosBasicos import falar, ouvir
+import estado
 
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', rate + 40)
         
-GEMINI_KEY = "AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s"
+GEMINI_KEY = estado.API_GEMINI
 genai.configure(api_key=GEMINI_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
