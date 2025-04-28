@@ -44,7 +44,7 @@ def hidratacao():
     falar("Lembretes de hidratação ativados!")
     def rotina_hidratacao():
         while pausas:
-            sleep(20)  # Espera 35 minutos (2100 segundos)
+            sleep(2100)  # Espera 35 minutos (2100 segundos)
             notification.notify(
                 title="🏋️‍♂️🫗 Beba água",
                 message="Faça uma pausa, você precisa beber água, descanse um pouco, aproveite o momento!",
@@ -56,3 +56,9 @@ def hidratacao():
     hidratacao_thread = threading.Thread(target=rotina_hidratacao)
     hidratacao_thread.daemon = True  # A thread é daemon, encerrará com o programa
     hidratacao_thread.start()
+
+def modoCinema():
+    falar("Modo cinema ativado!")
+    webbrowser.open("https://www.netflix.com/browse")
+    diminuirBrilho()
+    aumentarVolume()

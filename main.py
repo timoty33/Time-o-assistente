@@ -17,7 +17,7 @@ def main():
     falar(f"Olá {estado.USER}, como posso te ajudar hoje?")
     ouvir_comando_continuamente()
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     print("Pressione F10 para ligar/desligar o assistente. ESC para sair.")
 
     try:

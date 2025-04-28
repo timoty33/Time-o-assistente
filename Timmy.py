@@ -3,7 +3,7 @@ import time
 import keyboard
 from comandos.comandosBasicos import *
 from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
-from comandos.rotinas import (bomDia, boaNoite, hidratacao, pausas)
+from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
 import estado
 from plyer import notification
 
@@ -107,6 +107,8 @@ def processar_comando(comando):
         elif ("desligar" in comando or "parar" in comando) and "hidratação" in comando:
             pausas = False
             falar("Hidratação interrompida!")
+        elif "modo cinema" in comando:
+            modoCinema()
 
         #outros
         elif "sair" in comando:

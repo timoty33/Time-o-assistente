@@ -4,7 +4,6 @@ from time import sleep
 
 ligar = False #Não mude nada aqui
 
-
 #Aqui estão suas configurações:
 
 velocidadeFala = 250 #mínimo 50, máximo: 400
