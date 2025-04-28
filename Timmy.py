@@ -43,7 +43,7 @@ def processar_comando(comando):
             horas()
         elif "data" in comando or "hoje" in comando:
             hoje()
-        elif "aumentar" in comando and ("volume" in comando or "som" in comando):
+        elif "aumentar" in comando or "Aumente" and ("volume" in comando or "som" in comando):
             aumentarVolume(passo=0.1)
         elif "diminuir" in comando and ("volume" in comando or "som" in comando):
             diminuirVolume(passo=0.1)
