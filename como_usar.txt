@@ -23,8 +23,8 @@ Se aparecer algo como
     Type "help", "copyright", "credits" or "license" for more information.', 
 está tudo certo.
 
-❗ Caso o comando não funcione, é provável que o Python não esteja no PATH do sistema. Para resolver abra o arquivo: '' denovo e clique em uninstall
-Depois, abra o arquivo denovo e faça a instalação com bastante atenção para marcar
+❗ Caso o comando não funcione, é provável que o Python não esteja no PATH do sistema. Para resolver abra o arquivo: 'python-3.13.3-amd64.exe' dentro da pasta: 'downloads' denovo e clique em uninstall
+Depois, abra o arquivo denovo e faça a instalação com bastante atenção para marcar❗"Add Python to PATH"❗na primeira tela da instalação.
 
 ## Instalação
 
