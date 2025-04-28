@@ -26,6 +26,8 @@ def ouvir_comando_continuamente():
                 print(f"Você disse: {texto}")
                 if texto.strip().lower() != "":
                     processar_comando(texto)
+                else:
+                    print("Fala vazia!")
             except sr.UnknownValueError:
                 print("Não entendi.")
             except sr.WaitTimeoutError:

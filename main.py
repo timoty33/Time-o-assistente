@@ -14,7 +14,7 @@ def listar_vozes_disponiveis():
         print(f"{index} - {voice.name} ({voice.id})")
 
 def main():
-    falar("Olá Mestre, como posso te ajudar hoje?")
+    falar(f"Olá {estado.USER}, como posso te ajudar hoje?")
     ouvir_comando_continuamente()
 
 if __name__ == "__main__":

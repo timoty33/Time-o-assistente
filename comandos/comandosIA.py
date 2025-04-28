@@ -49,6 +49,8 @@ def piadas():
     return ""  # Isso garante que a função termina normalmente, sem quebrar o fluxo principal   
 
 def chatBot():
+
+    falar("Chat de IA ativado!")
     # Inicia uma conversa com histórico
     chat = model.start_chat(history=[])
 
@@ -59,6 +61,7 @@ def chatBot():
     mensagem = ""
 
     while True:
+        falar("Ouvindo!")
         mensagem = ouvir().strip().lower()
 
         if mensagem == "sair":
