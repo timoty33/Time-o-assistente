@@ -37,7 +37,7 @@ def ouvir_comando_continuamente():
                 break
 def processar_comando(comando):
 
-    if "assistente" in comando or "Assistente" in comando or "tente" in comando:
+    if "assistente" in comando or "Assistente" in comando or "tente" in comando: # Nome do seu assistente
 
         if "hora" in comando or "horas" in comando: #basico
             horas()
