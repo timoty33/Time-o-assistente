@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #89aba8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Alfa Slab One", sans-serif;
+  font-weight: 500;
+  font-size: 78px;
+
+  color: #1d3445;
+
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.25);
+}
+
+.box {
+  background-color: #6d8b89;
+  border-radius: 40px;
+
+  width: 80vw;
+  height: 30vh;
+  padding: 10px 20px;
+}
+
+.box .title {
+  font-family: "Inter", sans-serif;
+  font-size: 33px;
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.buttons {
+  position: absolute;
+  bottom: 15px;
+
+  width: 95vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.buttons .play {
+  width: 10%;
+  height: 100%;
+  border-radius: 20px;
+
+  border: solid 4px #4f6e6c;
+  border-bottom: solid 10px #4f6e6c;
+  background-color: #789997;
+
+  cursor: pointer;
+
+  transition: 0.5s ease;
+}
+
+.buttons .mic {
+  width: 10%;
+  height: 100%;
+  border-radius: 20px;
+
+  border: solid 4px #4f6e6c;
+  border-bottom: solid 10px #4f6e6c;
+  background-color: #789997;
+
+  cursor: pointer;
+
+  transition: 0.5s ease;
+}
+
+.buttons button i {
+  font-size: 180%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.buttons button:hover {
+  border-bottom: solid 10px #4f6e6c;
+  transform: translateY(-4px);
+}
+
+.buttons button:active {
+  border-bottom: solid 4px #4f6e6c;
+  transform: translateY(6px) scale(0.95);
+}
