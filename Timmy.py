@@ -1,11 +1,21 @@
 import speech_recognition as sr 
-import time
+import threading
 import keyboard
 from comandos.comandosBasicos import *
 from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
 from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
 import estado
 from plyer import notification
+import os
+
+def modoRepouso():
+    falar("Modo repouso")
+    estado.ligar = False
+    notification.notify(
+        title="💤🛏️ Modo repouso",
+        message=f"O modo repouso está ativo mas o assistente ainda fará suas tarefas, para ativá-lo, aperte f10 2 vezes",
+        timeout=10
+    )
 
 recognizer = sr.Recognizer()
 
@@ -13,15 +23,26 @@ def ouvir_comando_continuamente():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source, duration=1)
-        if keyboard.is_pressed("f10"):
-            estado.ligar = not estado.ligar
-            print("Assistente:", "Ligado" if estado.ligar else "Desligado")
-            keyboard.wait("f10")
-        while estado.ligar:
+
+        while True:  # Mudei de 'while estado.ligar' para 'while True' para garantir que a escuta continue.
+            if not estado.ligar:
+                print("🛑 Escuta interrompida!")
+                break  # Sai do loop apenas se o assistente for desligado explicitamente.
+
+            print("Escutando...")
+
+            audio = None
+            for _ in range(100):  # Tentando ouvir por 10 segundos no total.
+                try:
+                    audio = recognizer.listen(source, timeout=0.1)
+                    break  # Escuta válida, quebramos o loop interno e continuamos.
+                except sr.WaitTimeoutError:
+                    continue
+
+            if not estado.ligar or audio is None:
+                continue  # Se o estado for 'ligar' é False ou não há áudio, continua escutando.
 
             try:
-                print("Escutando...")
-                audio = recognizer.listen(source, timeout=10)
                 texto = recognizer.recognize_google(audio, language="pt-BR")
                 print(f"Você disse: {texto}")
                 if texto.strip().lower() != "":
@@ -30,11 +51,15 @@ def ouvir_comando_continuamente():
                     print("Fala vazia!")
             except sr.UnknownValueError:
                 print("Não entendi.")
-            except sr.WaitTimeoutError:
-                pass
             except sr.RequestError:
                 print("Erro de conexão.")
-                break
+                break  # Se houver erro de conexão, saímos do loop.
+
+def iniciarThread():
+    thread = threading.Thread(target=ouvir_comando_continuamente)
+    thread.start()
+    estado.ligar = True
+
 def processar_comando(comando):
 
     if "assistente" in comando or "Assistente" in comando or "tente" in comando: # Nome do seu assistente
@@ -120,13 +145,7 @@ def processar_comando(comando):
             )
             exit()
         elif "dormir" in comando or "descansar" in comando or "repouso" in comando:
-            falar("Modo repouso")
-            estado.ligar = False
-            notification.notify(
-                title="💤🛏️ Modo repouso",
-                message=f"O modo repouso está ativo mas o assistente ainda fará suas tarefas, para ativá-lo, aperte f10 2 vezes",
-                timeout=10
-            )
+            modoRepouso()
         elif "assistente" in comando or "Assistente" in comando:
             falar("Olá, me chamou")
         else:

@@ -1,10 +1,13 @@
-from Timmy import ouvir_comando_continuamente
+from Timmy import iniciarThread, modoRepouso
 from comandos.comandosBasicos import falar
-import keyboard
 import estado
 from plyer import notification
 import pyttsx3
 import time
+import eel
+
+# Inicializa o Eel
+eel.init("www")
 
 def listar_vozes_disponiveis():
     engine = pyttsx3.init()
@@ -13,41 +16,29 @@ def listar_vozes_disponiveis():
     for index, voice in enumerate(voices):
         print(f"{index} - {voice.name} ({voice.id})")
 
-def main():
-    falar(f"Olá {estado.USER}, como posso te ajudar hoje?")
-    ouvir_comando_continuamente()
+@eel.expose
+def iniciar_assistente():
+    if not estado.ligar:
+        estado.ligar = True
+        print(f"Olá {estado.USER}, como você está hoje?")
+        notification.notify(
+            title="🥸 Estou ativo!",
+            message="Você ativou o Timmy, seu assistente",
+            timeout=10
+        )
+        falar(f"Olá {estado.USER}, como posso te ajudar hoje?")
+        iniciarThread()
+
+@eel.expose
+def parar_assistente():
+    modoRepouso()
 
 if __name__ == "__main__": 
-    print("Pressione F10 para ligar/desligar o assistente. ESC para sair.")
+    print("Inicializando Timmy...")
+    eel.start("templates/index.html", port=8765)
 
     try:
         while True:
-            if keyboard.is_pressed("f10"):
-                estado.ligar = not estado.ligar
-                print("Assistente:", "Ligado" if estado.ligar else "Desligado")
-                keyboard.wait("f10")
-
-                if estado.ligar:
-                    notification.notify(
-                        title="🥸 Estou ativo!",
-                        message="Você ativou o Timmy, seu assistente",
-                        timeout=10
-                    )
-                    main()
-
-            if keyboard.is_pressed("esc"):
-                print("Saindo...")
-                estado.ligar = False
-                notification.notify(
-                    title="🫂 Assistente desativado",
-                    message="Tchau até a próxima",
-                    timeout=10
-                )
-                break
-
-            time.sleep(0.1)  # Evita travar o CPU
-
+            time.sleep(1)  # Mantém o app rodando
     except Exception as e:
         print(f"\n❗ Ocorreu um erro: {e}")
-
-

@@ -7,10 +7,12 @@ function trocarPlay() {
     iconPlay.classList.replace("fa-play", "fa-pause");
     circle.classList.add("active");
     status.textContent = "Ativado";
+    eel.iniciar_assistente()();
   } else {
     iconPlay.classList.replace("fa-pause", "fa-play");
     circle.classList.remove("active");
     status.textContent = "Desativado";
+    eel.parar_assistente()();
   }
 }
 

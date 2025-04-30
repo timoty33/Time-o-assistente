@@ -2,7 +2,6 @@ import speech_recognition as sr #codigosBasicos
 import pyttsx3 
 import webbrowser
 from datetime import datetime
-import os
 from time import time, sleep
 import re
 import requests
@@ -14,7 +13,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 import estado
-import keyboard
+import queue
 import google.generativeai as genai
 
 API_KEY = estado.API_GEMINI
@@ -56,10 +55,29 @@ engine = pyttsx3.init()
 engine.setProperty("rate", estado.velocidadeFala)
 engine.setProperty("volume", estado.volumeFala)
 
-def falar(texto):
-    engine.say(texto)
-    print(texto)
-    engine.runAndWait()
+# Criar uma fila para armazenar as mensagens a serem faladas
+message_queue = queue.Queue()
+
+# Função para falar
+def falar(text):
+    while True:
+        text = message_queue.get()  # Pega uma mensagem da fila
+        if text == "STOP":
+            break  # Para o loop quando a mensagem STOP for recebida
+        engine.say(text)
+        engine.runAndWait()
+
+# Função para adicionar uma mensagem na fila
+def add_to_speak(text):
+    message_queue.put(text)
+
+# Iniciar o thread de fala
+def start_speaking_thread():
+    speaking_thread = threading.Thread(target=falar, daemon=True)
+    speaking_thread.start()
+
+# Iniciar o thread (executa uma vez no início do programa)
+start_speaking_thread()
 
 def ouvir():
     reconhecedor = sr.Recognizer()
