@@ -28,18 +28,16 @@ h1 {
   width: 15vh;
   height: 15vh;
   background-color: #213645;
-  opacity: 0.9;
+  opacity: 0.5;
   border-radius: 10000000px;
 
   position: absolute;
-  top: 17vh;
+  top: 20vh;
 
   transition: 0.7s ease;
-
-  animation: circle-active 7s infinite;
 }
 
-.circle-active {
+.active {
   width: 15vh;
   height: 15vh;
   opacity: 1;
@@ -84,10 +82,11 @@ h1 {
 
   width: 40vw;
   height: 30vh;
+  min-width: 300px;
   padding: 10px 20px;
 
   position: absolute;
-  top: 54.3vh;
+  top: 54vh;
 }
 
 .box .title {
@@ -113,7 +112,7 @@ h1 {
 .buttons .play {
   width: 10%;
   height: 100%;
-  min-width: 70px;
+  min-width: 100px;
   border-radius: 20px;
 
   border: solid 4px #4f6e6c;
@@ -122,13 +121,13 @@ h1 {
 
   cursor: pointer;
 
-  transition: 0.5s ease;
+  transition: 0.2s ease;
 }
 
 .buttons .mic {
   width: 10%;
   height: 100%;
-  min-width: 70px;
+  min-width: 100px;
   border-radius: 20px;
 
   border: solid 4px #4f6e6c;
@@ -137,7 +136,7 @@ h1 {
 
   cursor: pointer;
 
-  transition: 0.5s ease;
+  transition: 0.2s ease;
 }
 
 .buttons button i {
