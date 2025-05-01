@@ -49,7 +49,7 @@ def chatBot():
     # Inicia uma conversa com histórico
     chat = model.start_chat(history=[])
 
-    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: você nunca pode usar asteriscos (*) na mensagem! Entenda que, por ser de um assistente virtual, a mensagem pode chegar um pouco 'estranha', então você deve interpretar a intenção do usuário."
+    sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: você nunca pode usar asteriscos (*) na mensagem! Entenda que, por ser de um assistente virtual, a mensagem pode chegar um pouco 'estranha', então você deve interpretar a intenção do usuário. Além disso lembre-se que sua resposta será enviada por voz, e como não pode ser interrompida, você precisa ser breve e resumida, sem palavras mais complexas!"
     
     chat.send_message(sistema)
 
@@ -57,14 +57,17 @@ def chatBot():
 
     while True:
         falar("Ouvindo!")
-        mensagem = ouvir().strip().lower()
+        mensagem = ouvir()
+
+        if not mensagem:
+            falar("Você não disse nada")
 
         if mensagem == "sair":
             falar("Encerrando o chat. Até logo!")
             break
 
-        resposta = chat.send_message(mensagem)
-        resposta = resposta.text.replace("*", "")
-        falar(resposta)
-
-
+        if mensagem:
+            mensagem = mensagem.strip().lower()
+            resposta = chat.send_message(mensagem)
+            resposta = resposta.text.replace("*", "")
+            falar(resposta)

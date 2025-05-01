@@ -27,7 +27,7 @@ def parar_assistente():
 
 if __name__ == "__main__": 
     print("Inicializando Timmy...")
-    eel.start("templates/index.html", port=8765, size=(600, 1000))
+    eel.start("templates/index.html", port=8765, size=(450, 750))
 
     try:
         while True:

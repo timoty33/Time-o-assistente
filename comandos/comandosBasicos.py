@@ -68,6 +68,7 @@ engine.Rate = 2
 engine.Volume = 70
 
 def ouvir():
+    estado.ligar = False
     reconhecedor = sr.Recognizer()
     with sr.Microphone() as source:
         reconhecedor.adjust_for_ambient_noise(source, duration=3)
@@ -75,10 +76,13 @@ def ouvir():
 
         try:
             audio = reconhecedor.listen(source, timeout=5, phrase_time_limit=6)
-            texto = reconhecedor.recognize_google(audio, language='pt-BR').lower()
-            texto = texto.lower()
-            print(f"Você disse: {texto}")
-            return texto.lower()
+            texto = reconhecedor.recognize_google(audio, language='pt-BR')
+            if not texto:
+                falar("Você não disse nada!")
+            if texto:
+                texto = texto.lower()
+                falar(f"Você disse: {texto}")
+                return texto.lower()
         except sr.UnknownValueError:
             print("Não entendi.")
         except sr.WaitTimeoutError:

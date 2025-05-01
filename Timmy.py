@@ -1,6 +1,5 @@
 import speech_recognition as sr 
 import threading
-import keyboard
 from comandos.comandosBasicos import *
 from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
 from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
