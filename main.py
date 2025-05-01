@@ -2,19 +2,11 @@ from Timmy import iniciarThread, modoRepouso
 from comandos.comandosBasicos import falar
 import estado
 from plyer import notification
-import pyttsx3
 import time
 import eel
 
 # Inicializa o Eel
 eel.init("www")
-
-def listar_vozes_disponiveis():
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    print("🔊 Vozes disponíveis:")
-    for index, voice in enumerate(voices):
-        print(f"{index} - {voice.name} ({voice.id})")
 
 @eel.expose
 def iniciar_assistente():
@@ -35,7 +27,7 @@ def parar_assistente():
 
 if __name__ == "__main__": 
     print("Inicializando Timmy...")
-    eel.start("templates/index.html", port=8765)
+    eel.start("templates/index.html", port=8765, size=(600, 1000))
 
     try:
         while True:

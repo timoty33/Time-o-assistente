@@ -98,10 +98,6 @@ def processar_comando(comando):
             abrir_imagem_de_gato()
         elif "lembrete" in comando:
             lembrete(comando)
-        elif "rápido" in comando:
-            aumentarVelocidade()
-        elif "devagar" in comando or "lento" in comando:
-            diminuirVelocidade()
         elif "clima" in comando:
             clima()
         elif "moeda" in comando:

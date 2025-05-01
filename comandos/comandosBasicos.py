@@ -1,5 +1,5 @@
 import speech_recognition as sr #codigosBasicos
-import pyttsx3 
+import comtypes.client
 import webbrowser
 from datetime import datetime
 from time import time, sleep
@@ -13,8 +13,8 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 import estado
-import queue
 import google.generativeai as genai
+import eel
 
 API_KEY = estado.API_GEMINI
 genai.configure(api_key=API_KEY)
@@ -51,33 +51,21 @@ devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
-engine = pyttsx3.init()
-engine.setProperty("rate", estado.velocidadeFala)
-engine.setProperty("volume", estado.volumeFala)
+texto_para_exibir = ""
 
-# Criar uma fila para armazenar as mensagens a serem faladas
-message_queue = queue.Queue()
+@eel.expose
+def enviarTexto():
+    return texto_para_exibir
 
-# Função para falar
-def falar(text):
-    while True:
-        text = message_queue.get()  # Pega uma mensagem da fila
-        if text == "STOP":
-            break  # Para o loop quando a mensagem STOP for recebida
-        engine.say(text)
-        engine.runAndWait()
+def falar(texto):
+    global texto_para_exibir
+    texto_para_exibir = texto
+    print(texto)
+    engine.Speak(texto)
 
-# Função para adicionar uma mensagem na fila
-def add_to_speak(text):
-    message_queue.put(text)
-
-# Iniciar o thread de fala
-def start_speaking_thread():
-    speaking_thread = threading.Thread(target=falar, daemon=True)
-    speaking_thread.start()
-
-# Iniciar o thread (executa uma vez no início do programa)
-start_speaking_thread()
+engine = comtypes.client.CreateObject("SAPI.SpVoice")
+engine.Rate = 2
+engine.Volume = 70
 
 def ouvir():
     reconhecedor = sr.Recognizer()
@@ -102,22 +90,6 @@ def ouvir():
 executado = ""
 
 # COMANDOS
-def aumentarVelocidade():
-    rate = engine.getProperty('rate')
-
-    # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
-    engine.setProperty('rate', rate + 50)
-    falar("Agora eu falo mais rápido, o que achou?")
-    executado = True
-
-def diminuirVelocidade():
-    rate = engine.getProperty('rate')
-
-    # Aumenta a velocidade (por exemplo, para 250 palavras por minuto)
-    engine.setProperty('rate', rate - 50)
-    falar("Agora eu falo menos rápido, o que achou?")
-    executado = True
-
 def horas():
     #horas
     agora = datetime.now().strftime("%H:%M")
