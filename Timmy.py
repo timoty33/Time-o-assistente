@@ -1,7 +1,7 @@
 import speech_recognition as sr 
 import threading
 from comandos.comandosBasicos import *
-from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas)
+from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas, chatBotAutomatico)
 from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
 import estado
 from plyer import notification
@@ -146,4 +146,20 @@ def processar_comando(comando):
         else:
             naoEntendi()
 
+    elif "Time" in comando or "time" in comando:
 
+        falar("Assistente inteligente")
+
+        textoFormatado1 = comando.find("assistente")
+        textoFormatado2 = comando.find("Assistente")
+        textoFormatado3 = comando.find("tente")
+
+        texto = ""
+
+        if textoFormatado1:
+            texto = comando.replace("assistente", "")
+        elif textoFormatado2:
+            texto = comando.replace("Assistente", "")
+        elif textoFormatado3:
+            texto = comando.replace("tente", "")
+        chatBotAutomatico(texto)

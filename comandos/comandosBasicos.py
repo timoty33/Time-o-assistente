@@ -62,6 +62,8 @@ def falar(texto):
     texto_para_exibir = texto
     print(texto)
     engine.Speak(texto)
+    sleep(2)
+    texto_para_exibir = ""
 
 engine = comtypes.client.CreateObject("SAPI.SpVoice")
 engine.Rate = 2

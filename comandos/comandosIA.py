@@ -62,7 +62,7 @@ def chatBot():
         if not mensagem:
             falar("Você não disse nada")
 
-        if mensagem == "sair":
+        if "sair" in mensagem:
             falar("Encerrando o chat. Até logo!")
             break
 
@@ -71,3 +71,25 @@ def chatBot():
             resposta = chat.send_message(mensagem)
             resposta = resposta.text.replace("*", "")
             falar(resposta)
+
+contagem = 0
+
+def chatBotAutomatico(mensagem):
+
+    global contagem, chat
+
+    contagem += 1
+
+    if contagem == 1:
+
+        chat = model.start_chat(history=[])
+
+        sistema = "Você será um chatbot simpático de um assistente virtual. IMPORTANTE: você nunca pode usar asteriscos (*) na mensagem! Entenda que, por ser de um assistente virtual, a mensagem pode chegar um pouco 'estranha', então você deve interpretar a intenção do usuário. Além disso lembre-se que sua resposta será enviada por voz, e como não pode ser interrompida, você precisa ser breve e resumida, sem palavras mais complexas, mas sem ser tão resumido!"
+        
+        chat.send_message(sistema)
+
+    if mensagem:
+        mensagem = mensagem.strip().lower()
+        resposta = chat.send_message(mensagem)
+        resposta = resposta.text.replace("*", "")
+        falar(resposta)
