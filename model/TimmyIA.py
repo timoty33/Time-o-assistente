@@ -10,10 +10,10 @@ pipeline_svm = joblib.load(os.path.join(diretorio_modelos, 'assistente_svm_model
 label_encoder = joblib.load(os.path.join(diretorio_modelos, 'label_encoder.pkl'))
 
 # Função para prever a intenção do comando
-def prever_intencao(frase, modelo='svm'):
-    if modelo == 'svm':
+def prever_intencao(frase, modelo='lr'):
+    if modelo == 'lr':
         model = pipeline_svm
-    elif modelo == 'lr':
+    elif modelo == 'svm':
         model = pipeline_lr
     else:
         print("Modelo não reconhecido")

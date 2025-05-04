@@ -21,7 +21,7 @@ label_encoder = LabelEncoder()
 y_encoded = label_encoder.fit_transform(y)
 
 # Dividir os dados em treino e teste
-X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.3, random_state=42)
 
 # Criar o pipeline com vetorização e modelo de classificação (Logistic Regression e SVM)
 pipeline_lr = make_pipeline(CountVectorizer(), LogisticRegression())
