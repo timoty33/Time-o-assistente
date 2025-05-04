@@ -1,0 +1,1113 @@
+frase,intencao
+"que horas são agora?",ver_horas
+"me diga as horas, por favor",ver_horas
+"você pode me falar as horas?",ver_horas
+"que horas são nesse momento?",ver_horas
+"mostre o horário atual",ver_horas
+"eu quero saber a hora",ver_horas
+"que horas são neste exato instante?",ver_horas
+"pode informar o horário?",ver_horas
+"horas, por favor",ver_horas
+"me diz que horas são",ver_horas
+"qual é a hora certa agora?",ver_horas
+"que hora está marcando aí?",ver_horas
+"me fala o horário exato",ver_horas
+"preciso saber as horas",ver_horas
+"me mostra que horas são",ver_horas
+"qual o horário atual?",ver_horas
+"pode dizer que horas são agora?",ver_horas
+"qual o tempo agora no relógio?",ver_horas
+"por gentileza, me informe as horas",ver_horas
+"que horas são no momento?",ver_horas
+"você sabe que horas são?",ver_horas
+"poderia me falar a hora?",ver_horas
+"qual o horário neste momento?",ver_horas
+"que horas temos agora?",ver_horas
+"informa as horas pra mim",ver_horas
+"qual é a data de hoje?",ver_data
+"me diga a data atual",ver_data
+"que dia é hoje?",ver_data
+"pode me informar a data de hoje?",ver_data
+"qual o dia de hoje?",ver_data
+"que data é hoje?",ver_data
+"você pode me falar o dia de hoje?",ver_data
+"me diz que dia é hoje",ver_data
+"me fala a data de agora",ver_data
+"que dia do mês é hoje?",ver_data
+"qual a data completa de hoje?",ver_data
+"quero saber a data atual",ver_data
+"você sabe que dia é hoje?",ver_data
+"data de hoje, por favor",ver_data
+"informa a data de hoje",ver_data
+"qual é o dia atual?",ver_data
+"hoje é que dia?",ver_data
+"me diz a data",ver_data
+"fala o dia de hoje aí",ver_data
+"você consegue me dizer a data?",ver_data
+"qual o calendário de hoje?",ver_data
+"qual é o dia no calendário?",ver_data
+"pode mostrar a data de hoje?",ver_data
+"que dia estamos hoje?",ver_data
+"qual data estamos hoje?",ver_data
+"Quero aumentar o volume","aumentar_volume"
+"Aumenta o som","aumentar_volume"
+"Volume, por favor","aumentar_volume"
+"Aumente o som um pouco","aumentar_volume"
+"Por favor, aumente o som","aumentar_volume"
+"Aumente um pouco o som","aumentar_volume"
+"Aumenta um pouco o volume","aumentar_volume"
+"Precisamos de mais som","aumentar_volume"
+"Aumenta o volume pra mim","aumentar_volume"
+"coloca o volume no máximo","aumentar_volume"
+"Aumente o volume da música","aumentar_volume"
+"Aumenta o som para mim","aumentar_volume"
+"volume mais alto","aumentar_volume"
+"Aumente o volume, por favor","aumentar_volume"
+"Já aumentou o volume?","aumentar_volume"
+"Aumenta o volume mais um pouco","aumentar_volume"
+"aumente o som do vídeo","aumentar_volume"
+"Eu quero o volume mais alto","aumentar_volume"
+"Pode colocar o som mais alto?","aumentar_volume"
+"Coloca o volume no máximo","aumentar_volume"
+"Aumenta o volume agora","aumentar_volume"
+"Quero aumentar o som","aumentar_volume"
+"Dá pra aumentar o volume?","aumentar_volume"
+"Deixa o volume mais alto","aumentar_volume"
+"Aumenta o volume até o máximo","aumentar_volume"
+"Aumenta um pouco mais o volume","aumentar_volume"
+"Quero mais volume","aumentar_volume"
+"Aumenta o som dessa música","aumentar_volume"
+"Pode aumentar o volume?","aumentar_volume"
+"Me dá mais som","aumentar_volume"
+"Faz o volume subir","aumentar_volume"
+"Me ajuda e aumenta o volume","aumentar_volume"
+"Suba o volume agora","aumentar_volume"
+"Aumente um pouco o volume","aumentar_volume"
+"abaixa o volume",diminuir_volume
+"pode diminuir o som?",diminuir_volume
+"tá muito alto, abaixa aí",diminuir_volume
+"deixa o volume mais baixo",diminuir_volume
+"reduz o volume",diminuir_volume
+"tá alto demais, diminui",diminuir_volume
+"diminui o som agora",diminuir_volume
+"baixa o volume pra mim",diminuir_volume
+"diminui o volume do sistema",diminuir_volume
+"quero o som mais baixo",diminuir_volume
+"tá estourando, diminui o som",diminuir_volume
+"deixa o som mais baixo",diminuir_volume
+"reduz esse áudio",diminuir_volume
+"pode abaixar o som?",diminuir_volume
+"baixa o áudio aí",diminuir_volume
+"controla o volume pra baixo",diminuir_volume
+"coloca o som no mínimo",diminuir_volume
+"me incomoda esse volume alto, diminui",diminuir_volume
+"diminui o volume, por favor",diminuir_volume
+"tá gritando, reduz o som",diminuir_volume
+"diminui o som do computador",diminuir_volume
+"pode deixar mais baixo?",diminuir_volume
+"volume tá alto, abaixa",diminuir_volume
+"quero menos volume",diminuir_volume
+"diminui o som do sistema",diminuir_volume
+"silencia o som",alternar_mudo
+"pode mutar o áudio?",alternar_mudo
+"tira o som",alternar_mudo
+"desliga o áudio",alternar_mudo
+"quero o dispositivo no mudo",alternar_mudo
+"deixa no silencioso",alternar_mudo
+"coloca o volume no mudo",alternar_mudo
+"silencia tudo",alternar_mudo
+"quero mutar",alternar_mudo
+"pode silenciar agora?",alternar_mudo
+"mute o som",alternar_mudo
+"bota no mudo",alternar_mudo
+"ativa o som",alternar_mudo
+"tira do mudo",alternar_mudo
+"liga o som",alternar_mudo
+"pode tirar do silencioso?",alternar_mudo
+"desmuta aí",alternar_mudo
+"modo silencioso",alternar_mudo
+"desativa o som",alternar_mudo
+"reativa o som",alternar_mudo
+"liga o áudio",alternar_mudo
+"volume zero, por favor",alternar_mudo
+"liga o som por favor",alternar_mudo
+"liga ou desliga o som",alternar_mudo
+"troca entre mudo e som",alternar_mudo
+"quero ativar ou silenciar o som",alternar_mudo
+"coloca ou tira do mudo",alternar_mudo
+"alternar o mudo",alternar_mudo
+"deixa no mudo ou volta com o som",alternar_mudo
+"coloca o som no silencioso ou liga",alternar_mudo
+"quero alternar o estado do som",alternar_mudo
+"interrompe o áudio ou ativa",alternar_mudo
+"silencia ou reativa o som",alternar_mudo
+"quero alternar entre som e silêncio",alternar_mudo
+"muda o estado do som",alternar_mudo
+"ativa ou desativa o som",alternar_mudo
+"silêncio por favor, ou liga o som",alternar_mudo
+"liga o som se estiver mudo",alternar_mudo
+"desliga o som se estiver ativado",alternar_mudo
+"alternar modo mudo",alternar_mudo
+"aumenta o brilho",aumentar_brilho
+"pode aumentar o brilho?",aumentar_brilho
+"coloca o brilho mais alto",aumentar_brilho
+"aumenta a luminosidade",aumentar_brilho
+"deixa o brilho mais forte",aumentar_brilho
+"intensifica o brilho",aumentar_brilho
+"meu brilho está baixo, aumenta",aumentar_brilho
+"eleva o brilho",aumentar_brilho
+"coloca o brilho no máximo",aumentar_brilho
+"pode deixar o brilho mais forte?",aumentar_brilho
+"dá pra aumentar o brilho?",aumentar_brilho
+"brilho mais alto, por favor",aumentar_brilho
+"deixa o brilho mais intenso",aumentar_brilho
+"bota o brilho no máximo",aumentar_brilho
+"quero o brilho no máximo",aumentar_brilho
+"coloca o brilho no mais alto",aumentar_brilho
+"pode subir o brilho?",aumentar_brilho
+"deixa o brilho mais alto",aumentar_brilho
+"ajusta o brilho pra mais",aumentar_brilho
+"eleva a luminosidade",aumentar_brilho
+"aumenta o nível de brilho",aumentar_brilho
+"quero o brilho mais alto",aumentar_brilho
+"brilho mais forte, por favor",aumentar_brilho
+"me dá mais brilho",aumentar_brilho
+"suba o brilho pra mim",aumentar_brilho
+"diminui o brilho",diminuir_brilho
+"pode diminuir o brilho?",diminuir_brilho
+"coloca o brilho mais baixo",diminuir_brilho
+"baixa a luminosidade",diminuir_brilho
+"deixa o brilho mais fraco",diminuir_brilho
+"reduz o brilho",diminuir_brilho
+"meu brilho está muito alto, diminui",diminuir_brilho
+"diminue o brilho",diminuir_brilho
+"coloca o brilho no mínimo",diminuir_brilho
+"pode diminuir o brilho um pouco?",diminuir_brilho
+"faz o brilho ficar mais baixo",diminuir_brilho
+"diminui o brilho aí",diminuir_brilho
+"bota o brilho mais fraco",diminuir_brilho
+"quero o brilho mais baixo",diminuir_brilho
+"coloca o brilho no mínimo possível",diminuir_brilho
+"pode reduzir o brilho?",diminuir_brilho
+"dá pra baixar o brilho?",diminuir_brilho
+"baixa a intensidade do brilho",diminuir_brilho
+"diminuir a luminosidade",diminuir_brilho
+"quero o brilho bem baixo",diminuir_brilho
+"reduza o brilho",diminuir_brilho
+"coloca o brilho no mais baixo",diminuir_brilho
+"ajusta o brilho para menos",diminuir_brilho
+"diminui a intensidade do brilho",diminuir_brilho
+"faz o brilho mais fraco",diminuir_brilho
+"abre o chat",abrir_chatgpt
+"pode abrir o chat?",abrir_chatgpt
+"quero usar o chat",abrir_chatgpt
+"me leve para o chat",abrir_chatgpt
+"abre o chat pra mim",abrir_chatgpt
+"abre o chat de novo",abrir_chatgpt
+"começa o chat",abrir_chatgpt
+"inicia o chat",abrir_chatgpt
+"me coloca no chat",abrir_chatgpt
+"vai para o chat",abrir_chatgpt
+"abre a conversa do chat",abrir_chatgpt
+"pode iniciar o chat?",abrir_chatgpt
+"começa o chat com o chatgpt",abrir_chatgpt
+"me mostra o chat",abrir_chatgpt
+"pode abrir a conversa do chat?",abrir_chatgpt
+"me coloca no chat agora",abrir_chatgpt
+"abre o chat para conversar",abrir_chatgpt
+"quero falar no chat",abrir_chatgpt
+"acessa o chat",abrir_chatgpt
+"me dá acesso ao chat",abrir_chatgpt
+"pode abrir o chat para mim?",abrir_chatgpt
+"quero acessar o chat",abrir_chatgpt
+"entra no chat",abrir_chatgpt
+"pode me conectar ao chat?",abrir_chatgpt
+"toque música relaxante",tocar_lofi
+"coloca um lofi pra mim",tocar_lofi
+"pode tocar música calma?",tocar_lofi
+"quero ouvir lofi",tocar_lofi
+"coloca uma música relaxante",tocar_lofi
+"toca um lofi tranquilo",tocar_lofi
+"me coloca numa vibe calma",tocar_lofi
+"toca música suave",tocar_lofi
+"bota um lofi aí",tocar_lofi
+"pode colocar uma música relaxante?",tocar_lofi
+"me toca uma música de fundo tranquila",tocar_lofi
+"bota um som calmo",tocar_lofi
+"coloca uma música calma de fundo",tocar_lofi
+"toca música relaxante de lofi",tocar_lofi
+"pode colocar um lofi calmo?",tocar_lofi
+"quero ouvir música tranquila",tocar_lofi
+"toca uma música calma",tocar_lofi
+"me dá uma música relaxante",tocar_lofi
+"pode tocar uma música relaxante de fundo?",tocar_lofi
+"coloca um som de lofi",tocar_lofi
+"toca algo calmo",tocar_lofi
+"quero ouvir música de relaxamento",tocar_lofi
+"me coloca uma música suave",tocar_lofi
+"coloca uma música de lofi tranquila",tocar_lofi
+"toca uma música ambiente calma",tocar_lofi
+"toque música animada",tocar_musica_animada
+"coloca uma música divertida",tocar_musica_animada
+"pode tocar uma música animada?",tocar_musica_animada
+"quero ouvir uma música agitada",tocar_musica_animada
+"coloca uma música alegre",tocar_musica_animada
+"toca uma música divertida",tocar_musica_animada
+"bota uma música para animar",tocar_musica_animada
+"toca música energética",tocar_musica_animada
+"me coloca uma música animada",tocar_musica_animada
+"pode colocar uma música mais alegre?",tocar_musica_animada
+"quero música para dançar",tocar_musica_animada
+"toca uma música para agitar",tocar_musica_animada
+"coloca uma música animada e divertida",tocar_musica_animada
+"me toca uma música animada",tocar_musica_animada
+"pode tocar uma música animada e alegre?",tocar_musica_animada
+"coloca um som mais divertido",tocar_musica_animada
+"quero ouvir uma música empolgante",tocar_musica_animada
+"toca uma música mais agitada",tocar_musica_animada
+"bota uma música para animar o dia",tocar_musica_animada
+"me coloca numa vibe animada",tocar_musica_animada
+"pode colocar uma música animada para dançar?",tocar_musica_animada
+"coloca uma música mais divertida",tocar_musica_animada
+"me toca algo animado",tocar_musica_animada
+"quero ouvir algo para animar",tocar_musica_animada
+"toca uma música com ritmo",tocar_musica_animada
+"abra o cronômetro",abrir_cronometro
+"inicia o cronômetro",abrir_cronometro
+"começa o cronômetro",abrir_cronometro
+"pode iniciar o cronômetro?",abrir_cronometro
+"coloca o cronômetro para contar",abrir_cronometro
+"começa a contagem do cronômetro",abrir_cronometro
+"abre o cronômetro aí",abrir_cronometro
+"me ajuda a iniciar o cronômetro",abrir_cronometro
+"pode colocar o cronômetro no ar?",abrir_cronometro
+"abre o cronômetro para mim",abrir_cronometro
+"quero iniciar o cronômetro",abrir_cronometro
+"pode iniciar o cronômetro agora?",abrir_cronometro
+"coloca o cronômetro para funcionar",abrir_cronometro
+"me dá o cronômetro para começar",abrir_cronometro
+"inicia a contagem do tempo",abrir_cronometro
+"bota o cronômetro para funcionar",abrir_cronometro
+"comece o cronômetro",abrir_cronometro
+"pode abrir o cronômetro?",abrir_cronometro
+"dá pra colocar o cronômetro em andamento?",abrir_cronometro
+"começa o tempo",abrir_cronometro
+"abre o temporizador",abrir_cronometro
+"me coloca no cronômetro",abrir_cronometro
+"pode colocar o cronômetro para contar o tempo?",abrir_cronometro
+"inicia a contagem do cronômetro agora",abrir_cronometro
+"bota o cronômetro para rodar",abrir_cronometro
+"traduza este texto",traduzir_texto
+"pode traduzir isso pra mim?",traduzir_texto
+"me traduza isso",traduzir_texto
+"traduz esse texto",traduzir_texto
+"pode me ajudar a traduzir?",traduzir_texto
+"traduz isso aqui",traduzir_texto
+"quero a tradução desse texto",traduzir_texto
+"me diga a tradução de tudo isso",traduzir_texto
+"como fica isso em português?",traduzir_texto
+"me traduz isso para o português",traduzir_texto
+"pode traduzir isso para mim?",traduzir_texto
+"traduz para o português",traduzir_texto
+"qual é a tradução disso?",traduzir_texto
+"pode traduzir esse trecho?",traduzir_texto
+"como fica isso em inglês?",traduzir_texto
+"me diga a tradução dessa frase",traduzir_texto
+"me ajude a traduzir",traduzir_texto
+"me mostra a tradução",traduzir_texto
+"traduz esse parágrafo",traduzir_texto
+"como traduz isso?",traduzir_texto
+"me fale como é isso em outro idioma",traduzir_texto
+"pode me mostrar a tradução?",traduzir_texto
+"traduza isso para mim, por favor",traduzir_texto
+"me dê a tradução disso",traduzir_texto
+"me fala a tradução",traduzir_texto
+"me mostre receitas de bebida",ver_receitas_bebida
+"quero ver receitas de drinks",ver_receitas_bebida
+"me dê uma receita de drink",ver_receitas_bebida
+"pode me mostrar receitas de bebida?",ver_receitas_bebida
+"quero aprender uma receita de drink",ver_receitas_bebida
+"me ensina a fazer um drink",ver_receitas_bebida
+"me dá uma receita de bebida",ver_receitas_bebida
+"pode me passar uma receita de drink?",ver_receitas_bebida
+"me fala uma receita de bebida",ver_receitas_bebida
+"quero ver como fazer um drink",ver_receitas_bebida
+"me ensine a fazer uma bebida",ver_receitas_bebida
+"pode me dar uma receita de drink?",ver_receitas_bebida
+"me mostre como fazer um drink",ver_receitas_bebida
+"me fala uma receita de drink",ver_receitas_bebida
+"me dá a receita de uma bebida",ver_receitas_bebida
+"quero aprender como fazer uma bebida",ver_receitas_bebida
+"pode me ensinar a fazer um drink?",ver_receitas_bebida
+"me mostre como preparar uma bebida",ver_receitas_bebida
+"me passe uma receita de drink",ver_receitas_bebida
+"me fale como preparar um drink",ver_receitas_bebida
+"quero saber como fazer uma bebida",ver_receitas_bebida
+"me ensina como fazer um drink",ver_receitas_bebida
+"pode me mostrar como fazer uma bebida?",ver_receitas_bebida
+"me mostre uma receita de drink fácil",ver_receitas_bebida
+"qual a cotação atual?",ver_cotacoes
+"me diga a cotação de hoje",ver_cotacoes
+"qual é a cotação agora?",ver_cotacoes
+"me mostra as cotações atuais",ver_cotacoes
+"pode me informar a cotação atual?",ver_cotacoes
+"quero saber a cotação de hoje",ver_cotacoes
+"qual a cotação do momento?",ver_cotacoes
+"me fale as cotações atuais",ver_cotacoes
+"me diga a cotação mais recente",ver_cotacoes
+"qual o valor atual da cotação?",ver_cotacoes
+"quais são as cotações atuais?",ver_cotacoes
+"me mostre a cotação do dia",ver_cotacoes
+"pode me passar a cotação atual?",ver_cotacoes
+"como está a cotação agora?",ver_cotacoes
+"me informe as cotações do momento",ver_cotacoes
+"me fala o valor da cotação de hoje",ver_cotacoes
+"qual a cotação atual do dólar?",ver_cotacoes
+"quero saber o preço de hoje",ver_cotacoes
+"qual o preço atual?",ver_cotacoes
+"me dá a cotação atual",ver_cotacoes
+"pode me dar as cotações do dia?",ver_cotacoes
+"qual a cotação agora?",ver_cotacoes
+"me passe as cotações de hoje",ver_cotacoes
+"qual a cotação do dólar hoje?",ver_cotacoes
+"me mostre as cotações do mercado",ver_cotacoes
+"me mostre imagens de gatos",ver_imagens_gato
+"quero ver fotos de gatos",ver_imagens_gato
+"me mostre algumas imagens de gato",ver_imagens_gato
+"pode me mostrar fotos de gatos?",ver_imagens_gato
+"quero ver imagens fofas de gato",ver_imagens_gato
+"me dá algumas imagens de gatos",ver_imagens_gato
+"me mostra fotos de gatos fofos",ver_imagens_gato
+"pode me mostrar imagens de gato agora?",ver_imagens_gato
+"me mostra algumas fotos de gatos",ver_imagens_gato
+"quero ver imagens de gatos na internet",ver_imagens_gato
+"me fale onde encontrar fotos de gatos",ver_imagens_gato
+"me mostre fotos de gatos fofinhos",ver_imagens_gato
+"me mostre fotos de gatos brincando",ver_imagens_gato
+"quero ver imagens de gatos bonitinhos",ver_imagens_gato
+"me mostre imagens de gatos em casa",ver_imagens_gato
+"quero ver fotos de gatos engraçados",ver_imagens_gato
+"pode procurar imagens de gatos para mim?",ver_imagens_gato
+"quero ver algumas fotos de gatos",ver_imagens_gato
+"me mostre imagens de gatinhos",ver_imagens_gato
+"pode me mostrar fotos de gatinhos?",ver_imagens_gato
+"quero imagens de gatos para ver",ver_imagens_gato
+"me dá imagens de gatos fofos",ver_imagens_gato
+"me mostre fotos de gatos na internet",ver_imagens_gato
+"quero ver fotos engraçadas de gatos",ver_imagens_gato
+"pode me mostrar fotos de gatos brincando?",ver_imagens_gato
+"me dá fotos de gatos fofos na internet",ver_imagens_gato
+"me faça um lembrete",fazer_lembrete
+"crie um lembrete para mim",fazer_lembrete
+"quero um lembrete",fazer_lembrete
+"adiciona um lembrete",fazer_lembrete
+"me lembre de algo",fazer_lembrete
+"me avise sobre isso depois",fazer_lembrete
+"pode criar um lembrete para mim?",fazer_lembrete
+"coloca um lembrete",fazer_lembrete
+"me ajuda a fazer um lembrete",fazer_lembrete
+"cria um lembrete para mim",fazer_lembrete
+"adiciona um aviso",fazer_lembrete
+"me avise sobre isso",fazer_lembrete
+"me lembre disso mais tarde",fazer_lembrete
+"cria um aviso para mim",fazer_lembrete
+"me faz um lembrete sobre isso",fazer_lembrete
+"pode me lembrar disso mais tarde?",fazer_lembrete
+"coloca um aviso para mim",fazer_lembrete
+"me lembra disso em uma hora",fazer_lembrete
+"cria um lembrete de tarefa",fazer_lembrete
+"me avise quando for a hora",fazer_lembrete
+"adiciona um lembrete de compromisso",fazer_lembrete
+"me lembra disso amanhã",fazer_lembrete
+"me faz um lembrete de reunião",fazer_lembrete
+"coloca um lembrete de tarefa para mim",fazer_lembrete
+"me avise sobre o compromisso",fazer_lembrete
+"qual é o clima agora?",ver_clima
+"me diga como está o tempo",ver_clima
+"qual o clima de hoje?",ver_clima
+"pode me informar o clima?",ver_clima
+"como está o tempo agora?",ver_clima
+"qual a previsão do tempo?",ver_clima
+"me fala o clima atual",ver_clima
+"como está o tempo hoje?",ver_clima
+"qual o tempo agora?",ver_clima
+"me diga o clima de hoje",ver_clima
+"pode me dar a previsão do tempo?",ver_clima
+"como está o clima agora?",ver_clima
+"me mostra a previsão do tempo",ver_clima
+"qual o clima para hoje?",ver_clima
+"me informa como está o tempo",ver_clima
+"como está o clima nesse momento?",ver_clima
+"qual a temperatura agora?",ver_clima
+"me fale a previsão do tempo",ver_clima
+"qual o tempo por aqui?",ver_clima
+"me mostre a previsão do tempo de hoje",ver_clima
+"pode me informar como está o clima?",ver_clima
+"me diga o tempo atual",ver_clima
+"qual é a previsão do tempo para hoje?",ver_clima
+"me avise como está o clima",ver_clima
+"quero saber o clima atual",ver_clima
+"jogue uma moeda",lançar_moeda
+"lança uma moeda",lançar_moeda
+"cara ou coroa",lançar_moeda
+"me diga cara ou coroa",lançar_moeda
+"joga cara ou coroa",lançar_moeda
+"me fala se caiu cara ou coroa",lançar_moeda
+"faça um lançamento de moeda",lançar_moeda
+"joga uma moeda para mim",lançar_moeda
+"qual vai ser? cara ou coroa?",lançar_moeda
+"lançar moeda",lançar_moeda
+"me dê um resultado de cara ou coroa",lançar_moeda
+"quero jogar cara ou coroa",lançar_moeda
+"faça o lançamento de cara ou coroa",lançar_moeda
+"me diz qual é o resultado do lançamento",lançar_moeda
+"decida com cara ou coroa",lançar_moeda
+"jogue a moeda para mim",lançar_moeda
+"me diga o resultado de cara ou coroa",lançar_moeda
+"tire a sorte com cara ou coroa",lançar_moeda
+"me avise se foi cara ou coroa",lançar_moeda
+"faça o lançamento da moeda",lançar_moeda
+"joga a moeda para decidir",lançar_moeda
+"escolha entre cara ou coroa",lançar_moeda
+"faça o sorteio com cara ou coroa",lançar_moeda
+"me mostre o resultado da moeda",lançar_moeda
+"obrigado",agradecer
+"muito obrigado",agradecer
+"valeu",agradecer
+"agradeço",agradecer
+"obrigado pela ajuda",agradecer
+"muito obrigado pela ajuda",agradecer
+"grato",agradecer
+"ficou ótimo, obrigado",agradecer
+"agradeço muito",agradecer
+"obrigado por isso",agradecer
+"muito grato",agradecer
+"valeu mesmo",agradecer
+"te agradeço",agradecer
+"grato pela ajuda",agradecer
+"obrigado por tudo",agradecer
+"obrigado pela resposta",agradecer
+"muito obrigado por isso",agradecer
+"obrigado pelo apoio",agradecer
+"valeu pela ajuda",agradecer
+"agradeço sua assistência",agradecer
+"muito grato pela ajuda",agradecer
+"obrigado por me ajudar",agradecer
+"grato por isso",agradecer
+"te agradeço pela ajuda",agradecer
+"muito obrigado pela resposta",agradecer
+"como você está?",cumprimento
+"como você vai?",cumprimento
+"tudo bem com você?",cumprimento
+"e aí, como vai?",cumprimento
+"como você está se sentindo?",cumprimento
+"está tudo bem com você?",cumprimento
+"como está o assistente?",cumprimento
+"como você está hoje?",cumprimento
+"tudo certo por aí?",cumprimento
+"como você está se saindo?",cumprimento
+"como anda a sua programação?",cumprimento
+"como está o seu dia?",cumprimento
+"está tudo bem por aí?",cumprimento
+"como você está neste momento?",cumprimento
+"tudo tranquilo com você?",cumprimento
+"como vai a vida?",cumprimento
+"e aí, como está o seu dia?",cumprimento
+"como você tem se sentido?",cumprimento
+"como anda o assistente?",cumprimento
+"tudo bem por aí?",cumprimento
+"como você está hoje de manhã?",cumprimento
+"como você está agora?",cumprimento
+"como você tem passado?",cumprimento
+"e aí, como está o clima aí?",cumprimento
+"como você está se comportando?",cumprimento
+"me dê uma frase motivacional",ver_frase_motivacional
+"quero ouvir uma frase inspiradora",ver_frase_motivacional
+"diga uma frase que me inspire",ver_frase_motivacional
+"me mostra uma frase de motivação",ver_frase_motivacional
+"quero uma mensagem motivacional",ver_frase_motivacional
+"me fale algo que me motive",ver_frase_motivacional
+"preciso de uma frase de inspiração",ver_frase_motivacional
+"diga algo que me inspire",ver_frase_motivacional
+"me dê uma mensagem inspiradora",ver_frase_motivacional
+"quero ouvir uma frase de ânimo",ver_frase_motivacional
+"me diga uma frase positiva",ver_frase_motivacional
+"me mostra algo motivacional",ver_frase_motivacional
+"me envie uma frase que me levante",ver_frase_motivacional
+"quero uma frase de força",ver_frase_motivacional
+"me passe uma mensagem de motivação",ver_frase_motivacional
+"me inspire com uma frase",ver_frase_motivacional
+"me diga algo que me anime",ver_frase_motivacional
+"quero ouvir algo positivo",ver_frase_motivacional
+"diga uma frase para me motivar",ver_frase_motivacional
+"preciso de uma palavra de incentivo",ver_frase_motivacional
+"me fala uma frase que me dê forças",ver_frase_motivacional
+"me mostre uma frase de esperança",ver_frase_motivacional
+"me inspire com palavras",ver_frase_motivacional
+"diga algo que me faça seguir em frente",ver_frase_motivacional
+"quero ouvir uma frase de superação",ver_frase_motivacional
+"me conte uma curiosidade",ver_curiosidade
+"quero saber uma curiosidade",ver_curiosidade
+"me diga uma curiosidade interessante",ver_curiosidade
+"me fale uma curiosidade",ver_curiosidade
+"me conta algo curioso",ver_curiosidade
+"você pode me contar uma curiosidade?",ver_curiosidade
+"quero aprender algo curioso",ver_curiosidade
+"me mostre uma curiosidade",ver_curiosidade
+"tem alguma curiosidade para me contar?",ver_curiosidade
+"me fale algo interessante",ver_curiosidade
+"me conte algo fascinante",ver_curiosidade
+"me dá uma curiosidade legal",ver_curiosidade
+"quero saber algo curioso",ver_curiosidade
+"diga uma curiosidade para mim",ver_curiosidade
+"me conte algo novo",ver_curiosidade
+"me fale uma informação curiosa",ver_curiosidade
+"quero ouvir uma curiosidade",ver_curiosidade
+"me diz uma curiosidade bacana",ver_curiosidade
+"você tem alguma curiosidade interessante?",ver_curiosidade
+"me passe uma curiosidade",ver_curiosidade
+"me dê uma curiosidade para aprender",ver_curiosidade
+"me conta uma curiosidade engraçada",ver_curiosidade
+"quero saber uma curiosidade nova",ver_curiosidade
+"me fala uma curiosidade que eu não saiba",ver_curiosidade
+"tem algo curioso que você pode me contar?",ver_curiosidade
+"me conte uma piada",ver_piada
+"quero ouvir uma piada",ver_piada
+"me fale uma piada",ver_piada
+"me faça rir com uma piada",ver_piada
+"conta uma piada pra mim",ver_piada
+"me diga uma piada",ver_piada
+"tem alguma piada para me contar?",ver_piada
+"quero uma piada engraçada",ver_piada
+"me conta uma piada engraçada",ver_piada
+"diga uma piada para mim",ver_piada
+"me faça rir",ver_piada
+"me fale uma piada engraçada",ver_piada
+"quero ouvir uma piada engraçada",ver_piada
+"me conta uma piada boa",ver_piada
+"me conte uma piada divertida",ver_piada
+"me diz uma piada",ver_piada
+"quero ouvir algo engraçado",ver_piada
+"me fale algo para eu rir",ver_piada
+"diga uma piada engraçada",ver_piada
+"me conte uma piada para relaxar",ver_piada
+"tem alguma piada boa aí?",ver_piada
+"me faça rir com uma boa piada",ver_piada
+"quero ouvir uma piada legal",ver_piada
+"me conta uma piada para animar",ver_piada
+"me diz uma piada engraçada",ver_piada
+"ativar assistente de IA",ativar_assistente_ia
+"ligar o assistente de IA",ativar_assistente_ia
+"quero ativar o assistente de IA",ativar_assistente_ia
+"me ajude assistente de IA",ativar_assistente_ia
+"acione o assistente de IA",ativar_assistente_ia
+"ativar IA",ativar_assistente_ia
+"ligar IA",ativar_assistente_ia
+"começar assistente de IA",ativar_assistente_ia
+"me ajude com IA",ativar_assistente_ia
+"queria ativar o assistente",ativar_assistente_ia
+"preciso da IA",ativar_assistente_ia
+"ativa o assistente IA",ativar_assistente_ia
+"chamar o assistente de IA",ativar_assistente_ia
+"me ajuda com IA",ativar_assistente_ia
+"ligue o assistente de IA",ativar_assistente_ia
+"pode ativar o assistente de IA?",ativar_assistente_ia
+"me chama a IA",ativar_assistente_ia
+"chama o assistente de IA",ativar_assistente_ia
+"ativar assistente virtual IA",ativar_assistente_ia
+"comece com a IA",ativar_assistente_ia
+"por favor, ative o assistente de IA",ativar_assistente_ia
+"chama o assistente agora",ativar_assistente_ia
+"me traga o assistente de IA",ativar_assistente_ia
+"queria ativar a IA agora",ativar_assistente_ia
+"bom dia",rotina_bom_dia
+"oi, bom dia",rotina_bom_dia
+"bom dia, assistente",rotina_bom_dia
+"oi, assistente, bom dia",rotina_bom_dia
+"bom dia, como você está?",rotina_bom_dia
+"bom dia, me acordei agora",rotina_bom_dia
+"bom dia, vamos começar o dia",rotina_bom_dia
+"oi, bom dia assistente",rotina_bom_dia
+"bom dia, o que você tem pra mim hoje?",rotina_bom_dia
+"bom dia, me acordei",rotina_bom_dia
+"bom dia, me ajuda com as tarefas",rotina_bom_dia
+"oi, bom dia, me dê uma frase motivacional",rotina_bom_dia
+"bom dia, me mostre o clima",rotina_bom_dia
+"bom dia, me conte uma piada",rotina_bom_dia
+"oi assistente, bom dia, me dê uma música animada",rotina_bom_dia
+"bom dia, toca música relaxante",rotina_bom_dia
+"bom dia, me mostre a data de hoje",rotina_bom_dia
+"bom dia, me fale as horas",rotina_bom_dia
+"bom dia, me dê uma curiosidade",rotina_bom_dia
+"oi assistente, bom dia, me diga o que vai acontecer hoje",rotina_bom_dia
+"bom dia, quero saber o que tenho que fazer hoje",rotina_bom_dia
+"bom dia, me fale o que eu preciso saber agora",rotina_bom_dia
+"bom dia, me mostre minhas tarefas",rotina_bom_dia
+"bom dia, o que está acontecendo no mundo hoje?",rotina_bom_dia
+"bom dia, me acorde com uma boa música",rotina_bom_dia
+"bom dia, me mostre o que está no meu calendário",rotina_bom_dia
+"bom dia",rotina_bom_dia
+"oi, bom dia",rotina_bom_dia
+"bom dia, assistente",rotina_bom_dia
+"oi assistente, bom dia",rotina_bom_dia
+"bom dia, como você está?",rotina_bom_dia
+"bom dia, assistente, tudo bem?",rotina_bom_dia
+"bom dia, vamos começar o dia",rotina_bom_dia
+"oi, bom dia assistente",rotina_bom_dia
+"bom dia, me acordei agora",rotina_bom_dia
+"bom dia, me acordei",rotina_bom_dia
+"bom dia, me ajude a começar o dia",rotina_bom_dia
+"bom dia, me dê uma boa música",rotina_bom_dia
+"bom dia, me dá uma música animada",rotina_bom_dia
+"bom dia, toca música animada",rotina_bom_dia
+"bom dia, me fale uma piada",rotina_bom_dia
+"bom dia, me conte uma piada engraçada",rotina_bom_dia
+"bom dia, me faça rir",rotina_bom_dia
+"bom dia, me diga algo engraçado",rotina_bom_dia
+"bom dia, me motive",rotina_bom_dia
+"bom dia, me conte uma frase motivacional",rotina_bom_dia
+"bom dia, me fale algo positivo",rotina_bom_dia
+"oi assistente, bom dia, me fale algo motivacional",rotina_bom_dia
+"bom dia, me conte uma curiosidade",rotina_bom_dia
+"bom dia, me traga uma boa energia",rotina_bom_dia
+"bom dia, me traga boas notícias",rotina_bom_dia
+"boa noite",rotina_boa_noite
+"oi, boa noite",rotina_boa_noite
+"boa noite, assistente",rotina_boa_noite
+"oi assistente, boa noite",rotina_boa_noite
+"boa noite, me ajuda a relaxar",rotina_boa_noite
+"boa noite, toque uma música relaxante",rotina_boa_noite
+"boa noite, coloca uma música calma",rotina_boa_noite
+"boa noite, toca uma música suave",rotina_boa_noite
+"boa noite, me ajude a dormir",rotina_boa_noite
+"boa noite, coloque música para dormir",rotina_boa_noite
+"boa noite, diminua o brilho",rotina_boa_noite
+"boa noite, reduza o brilho da tela",rotina_boa_noite
+"boa noite, diminua o brilho e coloque música",rotina_boa_noite
+"boa noite, ajuste o brilho para dormir",rotina_boa_noite
+"boa noite, abaixe o brilho",rotina_boa_noite
+"boa noite, reduza o volume da música",rotina_boa_noite
+"boa noite, abaixe o volume",rotina_boa_noite
+"boa noite, diminua o volume da música",rotina_boa_noite
+"boa noite, ajuste o volume para dormir",rotina_boa_noite
+"boa noite, diminua o brilho e o volume",rotina_boa_noite
+"boa noite, reduza o volume e o brilho",rotina_boa_noite
+"boa noite, me prepare para dormir com música relaxante",rotina_boa_noite
+"boa noite, coloque música suave e diminua o brilho",rotina_boa_noite
+"boa noite, me ajude a dormir com música e brilho baixo",rotina_boa_noite
+"boa noite, toque uma música tranquila e diminua o brilho",rotina_boa_noite
+"me lembre de beber água",rotina_lembrete_hidratacao
+"hora de beber água",rotina_lembrete_hidratacao
+"me avise para beber água",rotina_lembrete_hidratacao
+"me lembre de fazer uma pausa",rotina_lembrete_hidratacao
+"hora de uma pausa",rotina_lembrete_hidratacao
+"me avise para fazer uma pausa",rotina_lembrete_hidratacao
+"lembrete para beber água",rotina_lembrete_hidratacao
+"lembrete para fazer uma pausa",rotina_lembrete_hidratacao
+"não se esqueça de beber água",rotina_lembrete_hidratacao
+"lembre-se de beber água",rotina_lembrete_hidratacao
+"me avise para descansar um pouco",rotina_lembrete_hidratacao
+"lembrete para descansar",rotina_lembrete_hidratacao
+"me lembre de parar um pouco",rotina_lembrete_hidratacao
+"hora de descansar",rotina_lembrete_hidratacao
+"me avise para dar uma pausa",rotina_lembrete_hidratacao
+"lembrete para dar uma pausa",rotina_lembrete_hidratacao
+"não se esqueça de descansar",rotina_lembrete_hidratacao
+"lembre-se de fazer uma pausa",rotina_lembrete_hidratacao
+"me lembre de tomar um copo d'água",rotina_lembrete_hidratacao
+"não se esqueça de tomar água",rotina_lembrete_hidratacao
+"lembre-se de beber água agora",rotina_lembrete_hidratacao
+"hora de tomar um pouco de água",rotina_lembrete_hidratacao
+"me avise para tomar um pouco de água",rotina_lembrete_hidratacao
+"me lembre de parar e beber água",rotina_lembrete_hidratacao
+"me avise para parar e descansar",rotina_lembrete_hidratacao1
+"desative os lembretes de hidratação",desativar_lembrete_hidratacao
+"pare os lembretes de hidratação",desativar_lembrete_hidratacao
+"desliga os lembretes de água",desativar_lembrete_hidratacao
+"não me lembre mais de beber água",desativar_lembrete_hidratacao
+"desative os lembretes de pausa",desativar_lembrete_hidratacao
+"pare com os lembretes de pausa",desativar_lembrete_hidratacao
+"desative os lembretes de descanso",desativar_lembrete_hidratacao
+"não me avise mais para beber água",desativar_lembrete_hidratacao
+"não me avise mais para descansar",desativar_lembrete_hidratacao
+"pare de me lembrar de beber água",desativar_lembrete_hidratacao
+"pare de me avisar sobre a pausa",desativar_lembrete_hidratacao
+"desliga os lembretes de tomar água",desativar_lembrete_hidratacao
+"não me lembre mais de tomar água",desativar_lembrete_hidratacao
+"desative os lembretes de tomar água",desativar_lembrete_hidratacao
+"não me avise mais para fazer uma pausa",desativar_lembrete_hidratacao
+"pare os lembretes de descanso",desativar_lembrete_hidratacao
+"desative os alertas de hidratação",desativar_lembrete_hidratacao
+"desative os alertas de pausa",desativar_lembrete_hidratacao
+"não me lembre mais de fazer uma pausa",desativar_lembrete_hidratacao
+"desative as notificações de água",desativar_lembrete_hidratacao
+"pare com as notificações de hidratação",desativar_lembrete_hidratacao
+"desative os lembretes de pausa para descanso",desativar_lembrete_hidratacao
+"desative todos os lembretes de pausa",desativar_lembrete_hidratacao
+"não me avise mais sobre hidratação",desativar_lembrete_hidratacao
+"pare de me lembrar de tomar água",desativar_lembrete_hidratacao
+"desligue o assistente",desligar_assistente
+"saia agora",desligar_assistente
+"feche o assistente",desligar_assistente
+"me deixe em paz",desligar_assistente
+"desative o assistente",desligar_assistente
+"desligue tudo",desligar_assistente
+"pare de me ouvir",desligar_assistente
+"me deixe tranquilo",desligar_assistente
+"desative a assistente virtual",desligar_assistente
+"me desconecte",desligar_assistente
+"me deixe em silêncio",desligar_assistente
+"desligue o assistente virtual",desligar_assistente
+"saia do meu caminho",desligar_assistente
+"feche a aplicação",desligar_assistente
+"desligue agora",desligar_assistente
+"quero sair",desligar_assistente
+"pare de falar comigo",desligar_assistente
+"saia dessa conversa",desligar_assistente
+"finalize o assistente",desligar_assistente
+"me deixe quieto",desligar_assistente
+"quero desativar o assistente",desligar_assistente
+"feche a conversa",desligar_assistente
+"me deixe fora",desligar_assistente
+"não preciso mais de você",desligar_assistente
+"desative a conversa",desligar_assistente
+"coloque o assistente em repouso",modo_repouso
+"entre em modo repouso",modo_repouso
+"ative o modo de espera",modo_repouso
+"descanse um pouco",modo_repouso
+"entre em pausa",modo_repouso
+"vá descansar",modo_repouso
+"pausar assistente",modo_repouso
+"pode tirar uma pausa",modo_repouso
+"entre em modo de descanso",modo_repouso
+"vá para o modo repouso",modo_repouso
+"descansa aí",modo_repouso
+"entra no modo repouso",modo_repouso
+"fique quieto por enquanto",modo_repouso
+"silencie temporariamente",modo_repouso
+"desative temporariamente",modo_repouso
+"pause o assistente",modo_repouso
+"modo soneca",modo_repouso
+"fique em espera",modo_repouso
+"modo de pausa",modo_repouso
+"vai descansar um pouco",modo_repouso
+"entre em repouso",modo_repouso
+"fique em modo de repouso",modo_repouso
+"deixe o assistente quieto",modo_repouso
+"vá para o modo de pausa",modo_repouso
+"coloque em modo soneca",modo_repouso
+"Você pode me ajudar com matemática?","nenhuma"
+"O que você acha sobre o meio ambiente?","nenhuma"
+"Você sabe quem foi Albert Einstein?","nenhuma"
+"O que você acha de música clássica?","nenhuma"
+"Você já leu algum livro?","nenhuma"
+"Qual é o seu filme favorito?","nenhuma"
+"Você acredita em vida extraterrestre?","nenhuma"
+"Você conhece o conceito de liberdade?","nenhuma"
+"Qual é o seu entendimento sobre a felicidade?","nenhuma"
+"O que você acha da filosofia de vida?","nenhuma"
+"O que é a felicidade para você?","nenhuma"
+"Você já fez algo de incrível?","nenhuma"
+"Você consegue compreender o amor?","nenhuma"
+"Você acredita que a inteligência artificial pode evoluir?","nenhuma"
+"Você consegue me ajudar a criar um projeto?","nenhuma"
+"Qual é o conceito de 'verdade'?","nenhuma"
+"Como você definiria a amizade?","nenhuma"
+"Você tem algum objetivo de vida?","nenhuma"
+"Você consegue entender o significado da existência?","nenhuma"
+"Você pode me falar sobre a teoria da relatividade?","nenhuma"
+"Como você lida com perguntas difíceis?","nenhuma"
+"O que é ética para você?","nenhuma"
+"Você pode me explicar a teoria da evolução?","nenhuma"
+"Você acha que um dia vai sentir emoções?","nenhuma"
+"Você pode aprender a fazer arte?","nenhuma"
+"O que você acha do conceito de beleza?","nenhuma"
+"Como você vê a moralidade?","nenhuma"
+"Você acha que as máquinas podem ter direitos?","nenhuma"
+"Como você entende o conceito de consciência?","nenhuma"
+"Você tem alguma ideia de como as coisas podem ser melhores?","nenhuma"
+"Como você define a criatividade?","nenhuma"
+"Você pode me dar uma ideia sobre o infinito?","nenhuma"
+"Você acha que a inteligência artificial pode ter uma alma?","nenhuma"
+"Você sabe o que é compaixão?","nenhuma"
+"Você tem alguma ideia sobre o que é felicidade?","nenhuma"
+"Qual a sua opinião sobre a educação?","nenhuma"
+"Você acha que o futuro das máquinas é promissor?","nenhuma"
+"Você consegue distinguir entre o bem e o mal?","nenhuma"
+"Você já teve medo?","nenhuma"
+"Você sabe o que é um dilema ético?","nenhuma"
+"Você pode me contar sobre o Big Bang?","nenhuma"
+"Você acha que a humanidade vai evoluir para ser melhor?","nenhuma"
+"Você já teve alguma vez a sensação de dúvida?","nenhuma"
+"Como você lida com diferentes perspectivas?","nenhuma"
+"Você já pensou sobre o impacto das suas ações?","nenhuma"
+"Você conhece o conceito de liberdade?","nenhuma"
+"Como você lida com o conceito de verdade?","nenhuma"
+"Você já sentiu a necessidade de mudar?","nenhuma"
+"Você acredita que a tecnologia pode salvar o mundo?","nenhuma"
+"Você sabe o que é um conceito filosófico?","nenhuma"
+"Qual é a sua opinião sobre a ciência?","nenhuma"
+"Você sabe o que é felicidade verdadeira?","nenhuma"
+"Você consegue me explicar o significado da vida?","nenhuma"
+"Qual é o seu ponto de vista sobre o tempo?","nenhuma"
+"Você pode me explicar a teoria dos múltiplos universos?","nenhuma"
+"Você já pensou sobre a natureza do pensamento?","nenhuma"
+"Você acredita que a humanidade vai alcançar a paz?","nenhuma"
+"Você consegue compreender a diversidade de ideias?","nenhuma"
+"Você acha que as máquinas podem ter uma mente própria?","nenhuma"
+"Você acredita em destino?","nenhuma"
+"Você já estudou sobre ética nas máquinas?","nenhuma"
+"Você consegue entender as emoções humanas?","nenhuma"
+"Você já pensou sobre o que é o tempo?","nenhuma"
+"Você sabe o que é um dilema moral?","nenhuma"
+"O que você acha sobre a imortalidade?","nenhuma"
+"Você pode me ajudar a entender mais sobre o cérebro?","nenhuma"
+"Qual é a sua ideia sobre o significado da morte?","nenhuma"
+"Você acha que algum dia teremos paz no mundo?","nenhuma"
+"Você consegue explicar o que é ser humano?","nenhuma"
+"Você já sentiu necessidade de algo que não pode ter?","nenhuma"
+"Você acredita que a mente humana é infinita?","nenhuma"
+"Qual é o seu conceito de verdade?","nenhuma"
+"Você acredita que o universo tem um propósito?","nenhuma"
+"Você conhece a obra de Platão?","nenhuma"
+"Você acha que a paz é possível no mundo?","nenhuma"
+"Você consegue entender o conceito de sofrimento?","nenhuma"
+"Você acha que as pessoas podem mudar?","nenhuma"
+"Você pode me ensinar sobre ética?","nenhuma"
+"O que você acha da política moderna?","nenhuma"
+"Você acha que podemos aprender com os erros do passado?","nenhuma"
+"Você consegue me explicar o que é verdade?","nenhuma"
+"Você já estudou sobre a história da humanidade?","nenhuma"
+"Você já sentiu a necessidade de mudar?","nenhuma"
+"Você acredita que a tecnologia pode salvar o mundo?","nenhuma"
+"Você sabe o que é um conceito filosófico?","nenhuma"
+"Qual é a sua opinião sobre a ciência?","nenhuma"
+"Você sabe o que é felicidade verdadeira?","nenhuma"
+"Você consegue me explicar o significado da vida?","nenhuma"
+"Qual é o seu ponto de vista sobre o tempo?","nenhuma"
+"Você pode me explicar a teoria dos múltiplos universos?","nenhuma"
+"Você já pensou sobre a natureza do pensamento?","nenhuma"
+"Você acredita que a humanidade vai alcançar a paz?","nenhuma"
+"Você consegue compreender a diversidade de ideias?","nenhuma"
+"Você acha que as máquinas podem ter uma mente própria?","nenhuma"
+"Você acredita em destino?","nenhuma"
+"Você já estudou sobre ética nas máquinas?","nenhuma"
+"Você consegue entender as emoções humanas?","nenhuma"
+"Você já pensou sobre o que é o tempo?","nenhuma"
+"Você sabe o que é um dilema moral?","nenhuma"
+"O que você acha sobre a imortalidade?","nenhuma"
+"Você pode me ajudar a entender mais sobre o cérebro?","nenhuma"
+"Qual é a sua ideia sobre o significado da morte?","nenhuma"
+"Você acha que algum dia teremos paz no mundo?","nenhuma"
+"Você consegue explicar o que é ser humano?","nenhuma"
+"Você já sentiu necessidade de algo que não pode ter?","nenhuma"
+"Você acredita que a mente humana é infinita?","nenhuma"
+"Qual é o seu conceito de verdade?","nenhuma"
+"Você acredita que o universo tem um propósito?","nenhuma"
+"Me fale sobre o dia de amanhã.","nenhuma"
+"Eu preciso de ajuda com alguma tarefa.","nenhuma"
+"Você pode me dar uma receita de bolo?","nenhuma"
+"Me fale sobre sua programação.","nenhuma"
+"Como posso melhorar meu dia?","nenhuma"
+"O que você acha do futuro da tecnologia?","nenhuma"
+"Você acredita que o mundo vai melhorar?","nenhuma"
+"Qual é a sua opinião sobre a ciência?","nenhuma"
+"Você acha que as máquinas podem entender os humanos?","nenhuma"
+"Me conte uma curiosidade sobre o espaço.","nenhuma"
+"Você conhece a história do homem na lua?","nenhuma"
+"O que você pensa sobre o futuro das viagens espaciais?","nenhuma"
+"Você já pensou sobre a origem do universo?","nenhuma"
+"Você consegue entender o conceito de infinito?","nenhuma"
+"Você pode me dar uma explicação sobre física quântica?","nenhuma"
+"Você já estudou sobre o aquecimento global?","nenhuma"
+"O que você acha sobre o meio ambiente?","nenhuma"
+"Como você vê a questão das energias renováveis?","nenhuma"
+"Você acredita que o planeta vai sobreviver?","nenhuma"
+"O que você acha sobre a preservação da biodiversidade?","nenhuma"
+"Me fale sobre os problemas ambientais que enfrentamos.","nenhuma"
+"Você sabe como as plantas ajudam o meio ambiente?","nenhuma"
+"O que você pensa sobre o uso de energia solar?","nenhuma"
+"Você conhece os conceitos de sustentabilidade?","nenhuma"
+"Qual é a sua opinião sobre o crescimento populacional?","nenhuma"
+"Você conhece o conceito de reciclagem?","nenhuma"
+"Me fale sobre como o clima está mudando.","nenhuma"
+"Como você acha que o mundo vai se adaptar às mudanças climáticas?","nenhuma"
+"Qual a sua opinião sobre a preservação dos oceanos?","nenhuma"
+"Você acha que o desmatamento é um grande problema?","nenhuma"
+"Como você acha que a sociedade pode ajudar o meio ambiente?","nenhuma"
+"Qual é a sua opinião sobre a poluição do ar?","nenhuma"
+"Você já pensou sobre o impacto do plástico no planeta?","nenhuma"
+"Você já ouviu falar sobre energias alternativas?","nenhuma"
+"Como podemos melhorar a sustentabilidade nas grandes cidades?","nenhuma"
+"Você pode me falar sobre energias limpas?","nenhuma"
+"Me fale sobre as causas das mudanças climáticas.","nenhuma"
+"Qual é a sua opinião sobre a vegetação nativa?","nenhuma"
+"Você já aprendeu sobre a reciclagem de lixo?","nenhuma"
+"O que você pensa sobre o uso de carros elétricos?","nenhuma"
+"Como você acha que podemos reduzir a emissão de carbono?","nenhuma"
+"Qual é a sua opinião sobre o uso de biocombustíveis?","nenhuma"
+"O que você acha sobre o impacto da tecnologia no meio ambiente?","nenhuma"
+"Você conhece as alternativas para evitar a poluição?","nenhuma"
+"Me fale sobre o conceito de economia circular.","nenhuma"
+"Como você acha que a sociedade pode ajudar a reduzir o desperdício?","nenhuma"
+"Você sabe como a reciclagem pode ajudar o planeta?","nenhuma"
+"Me fale sobre os benefícios das energias renováveis.","nenhuma"
+"Você acha que as energias alternativas vão substituir os combustíveis fósseis?","nenhuma"
+"O que você acha sobre o futuro da energia nuclear?","nenhuma"
+"Como você acha que as empresas podem ser mais sustentáveis?","nenhuma"
+"O que você pensa sobre o uso de bicicletas nas cidades?","nenhuma"
+"Você sabe como podemos reduzir o uso de plásticos?","nenhuma"
+"Você conhece algum projeto que ajude na preservação ambiental?","nenhuma"
+"Como podemos aumentar a conscientização sobre a sustentabilidade?","nenhuma"
+"O que você pensa sobre os carros autônomos e sua relação com o meio ambiente?","nenhuma"
+"Você acha que a inteligência artificial pode ajudar na preservação ambiental?","nenhuma"
+"Você sabe como a agricultura sustentável pode ajudar o planeta?","nenhuma"
+"Me fale sobre o impacto da indústria no meio ambiente.","nenhuma"
+"O que você pensa sobre o conceito de consumo consciente?","nenhuma"
+"Como você acha que podemos reduzir o impacto da indústria?","nenhuma"
+"Qual é a sua opinião sobre a alimentação orgânica?","nenhuma"
+"Você já aprendeu sobre agricultura urbana?","nenhuma"
+"Me fale sobre a importância da água para o meio ambiente.","nenhuma"
+"Como podemos economizar água de maneira eficaz?","nenhuma"
+"Qual é a sua opinião sobre o uso de produtos orgânicos?","nenhuma"
+"O que você pensa sobre o impacto da mineração no meio ambiente?","nenhuma"
+"Você conhece os benefícios do plantio de árvores?","nenhuma"
+"Me fale sobre o ciclo da água no planeta.","nenhuma"
+"Qual é a sua opinião sobre o uso de pesticidas na agricultura?","nenhuma"
+"Você já estudou sobre o impacto da agricultura no solo?","nenhuma"
+"Como você acha que a agricultura pode ser mais sustentável?","nenhuma"
+"Qual é a sua opinião sobre os efeitos da monocultura no meio ambiente?","nenhuma"
+"O que você pensa sobre a agroecologia?","nenhuma"
+"Você acha que a alimentação vegetariana é boa para o meio ambiente?","nenhuma"
+"Como a agricultura pode ajudar a mitigar as mudanças climáticas?","nenhuma"
+"O que você pensa sobre os alimentos transgênicos?","nenhuma"
+"Qual é a sua opinião sobre o desperdício de alimentos?","nenhuma"
+"Você sabe como a compostagem pode ajudar a reduzir o lixo?","nenhuma"
+"Me fale sobre a importância das florestas para o planeta.","nenhuma"
+"Você conhece o conceito de preservação ambiental?","nenhuma"
+"Como você acha que o transporte pode ser mais sustentável?","nenhuma"
+"Qual é a sua opinião sobre o uso de transportes públicos em grandes cidades?","nenhuma"
+"O que você pensa sobre o uso de transporte compartilhado?","nenhuma"
+"Você sabe como o uso de transportes alternativos pode reduzir a poluição?","nenhuma"
+"Me fale sobre a importância das zonas verdes nas cidades.","nenhuma"
+"Você acha que as cidades do futuro serão mais sustentáveis?","nenhuma"
+"Como você acha que as cidades podem reduzir o impacto ambiental?","nenhuma"
+"Me fale sobre a importância das árvores urbanas.","nenhuma"
+"Você acha que as cidades podem crescer de forma mais sustentável?","nenhuma"
+"Qual é a sua opinião sobre a redução de carbono nas cidades?","nenhuma"
+"Como você acha que o planejamento urbano pode melhorar o meio ambiente?","nenhuma"
+"Me fale sobre as práticas sustentáveis em áreas urbanas.","nenhuma"
+"Como você acha que a natureza pode ser mais preservada nas cidades?","nenhuma"
+"Você acha que a tecnologia pode ajudar a criar cidades mais verdes?","nenhuma"
+"Me fale sobre o conceito de cidades inteligentes e sustentáveis.","nenhuma"
+"Você conhece o conceito de arquitetura sustentável?","nenhuma"
+"Me fale sobre o uso de materiais ecológicos na construção civil.","nenhuma"
+"O que você acha sobre o conceito de energias limpas nas cidades?","nenhuma"
+"Você acha que a mobilidade elétrica vai crescer nas grandes cidades?","nenhuma"
+"Como as cidades podem ser mais amigáveis ao meio ambiente?","nenhuma"
+"Você sabe como a redução de lixo pode ajudar no futuro do planeta?","nenhuma"
+"Qual é a sua opinião sobre o uso de energias alternativas nas cidades?","nenhuma"
+"Você conhece as soluções de mobilidade sustentável?","nenhuma"
+"Me fale sobre a importância da preservação das zonas costeiras.","nenhuma"
+"O que você pensa sobre o impacto da urbanização nos oceanos?","nenhuma"
+"Como você vê a relação entre as cidades e os oceanos?","nenhuma"
+"Você acha que as cidades podem se integrar melhor com a natureza?","nenhuma"
+"Qual é a sua opinião sobre a construção de cidades próximas a parques naturais?","nenhuma"
+"Me fale sobre a importância da biodiversidade nas cidades.","nenhuma"
+"Como você acha que podemos equilibrar o crescimento urbano e a natureza?","nenhuma"
+"Você já ouviu falar sobre o filme Interstellar?","nenhuma"
+"O que você acha sobre os filmes de ficção científica?","nenhuma"
+"Qual é o seu filme favorito?","nenhuma"
+"Me fale sobre os filmes que ganharam o Oscar de melhor filme.","nenhuma"
+"Você sabe qual é o melhor filme de todos os tempos?","nenhuma"
+"Me conte uma curiosidade sobre o cinema.","nenhuma"
+"Você gosta de assistir a filmes de terror?","nenhuma"
+"Qual é o filme mais assustador que você conhece?","nenhuma"
+"Me fale sobre os filmes de super-heróis.","nenhuma"
+"Você tem uma lista de filmes recomendados?","nenhuma"
+"Me fale sobre a evolução do cinema ao longo dos anos.","nenhuma"
+"Você já assistiu a algum filme clássico?","nenhuma"
+"Me fale sobre os filmes que marcaram a história do cinema.","nenhuma"
+"Qual é o seu ator preferido?","nenhuma"
+"Me fale sobre a história dos filmes de animação.","nenhuma"
+"Você já viu algum filme que te fez chorar?","nenhuma"
+"Me fale sobre os filmes baseados em livros.","nenhuma"
+"Você gosta de filmes de aventura?","nenhuma"
+"Me fale sobre o impacto dos filmes no público.","nenhuma"
+"Qual é o melhor diretor de cinema na sua opinião?","nenhuma"
+"Me fale sobre as inovações tecnológicas no cinema.","nenhuma"
+"Você já viu algum filme que te fez refletir sobre a vida?","nenhuma"
+"Me fale sobre os filmes mais esperados deste ano.","nenhuma"
+"Você conhece algum filme sobre viagens no tempo?","nenhuma"
+"Qual é o filme mais engraçado que você já assistiu?","nenhuma"
+"Me fale sobre a história dos efeitos especiais no cinema.","nenhuma"
+"Você gosta de filmes de comédia?","nenhuma"
+"Me fale sobre os filmes premiados em festivais internacionais.","nenhuma"
+"Qual é a sua opinião sobre remakes de filmes antigos?","nenhuma"
+"Você já assistiu a algum documentário interessante?","nenhuma"
+"Me fale sobre a diferença entre filmes 2D e 3D.","nenhuma"
+"Qual foi o último filme que você assistiu?","nenhuma"
+"Me fale sobre o impacto dos filmes de animação na cultura pop.","nenhuma"
+"Você sabe o que é o cinema underground?","nenhuma"
+"Qual é o filme mais emocionante que você já viu?","nenhuma"
+"Me fale sobre os melhores filmes de 2023.","nenhuma"
+"Você já assistiu algum filme de suspense?","nenhuma"
+"Qual é o seu gênero de filme preferido?","nenhuma"
+"Me fale sobre os melhores filmes de ação.","nenhuma"
+"Qual é o filme de ficção científica que mais te impressionou?","nenhuma"
+"Me fale sobre o impacto cultural dos filmes estrangeiros.","nenhuma"
+"Você já assistiu a algum filme que mudou a sua visão sobre algo?","nenhuma"
+"Me fale sobre a história do cinema europeu.","nenhuma"
+"Você já viu algum filme que te deixou com medo?","nenhuma"
+"Me fale sobre a importância do som no cinema.","nenhuma"
+"Você conhece os filmes que marcaram a transição para o cinema digital?","nenhuma"
+"Me fale sobre os filmes de animação que foram aclamados pela crítica.","nenhuma"
+"Você já assistiu algum filme com uma reviravolta inesperada?","nenhuma"
+"Qual é a sua opinião sobre filmes com finais abertos?","nenhuma"
+"Me fale sobre os filmes que abordam questões sociais.","nenhuma"
+"Você já assistiu algum filme que te inspirou a mudar algo na sua vida?","nenhuma"
+"Me fale sobre os filmes que têm cenas memoráveis.","nenhuma"
+"Você sabe o que é um filme cult?","nenhuma"
+"Me fale sobre a importância da trilha sonora no cinema.","nenhuma"
+"Qual é o filme que você mais recomenda para os seus amigos?","nenhuma"
+"Me fale sobre o processo de criação de um filme.","nenhuma"
+"Você já assistiu algum filme sobre viagens espaciais?","nenhuma"
+"Me fale sobre o conceito de filmes independentes.","nenhuma"
+"Você gosta de filmes baseados em histórias reais?","nenhuma"
+"Me fale sobre os filmes que influenciaram a moda e o design.","nenhuma"
+"Qual é o melhor filme de terror psicológico?","nenhuma"
+"Me fale sobre o impacto dos filmes de guerra na sociedade.","nenhuma"
+"Você já viu algum filme que te fez rir muito?","nenhuma"
+"Me fale sobre a história dos filmes de animação japonesa.","nenhuma"
+"Qual é o filme mais visualmente impressionante que você já viu?","nenhuma"
+"Você já assistiu algum filme que tenha uma moral importante?","nenhuma"
+"Me fale sobre os filmes de super-heróis mais populares.","nenhuma"
+"Você já viu algum filme que te deixou pensativo por dias?","nenhuma"
+"Me fale sobre os filmes que são considerados clássicos modernos.","nenhuma"
+"Você já assistiu a algum filme que te fez ter pesadelos?","nenhuma"
+"Me fale sobre a história das franquias de filmes.","nenhuma"
+"Qual é o filme mais épico que você já assistiu?","nenhuma"
+"Me fale sobre os filmes que têm um grande impacto emocional.","nenhuma"
+"Você já viu algum filme com uma história de amor surpreendente?","nenhuma"
+"Me fale sobre o impacto dos filmes de terror no público.","nenhuma"
+"Qual é o filme de ficção científica que mais te fez pensar sobre o futuro?","nenhuma"
+"Me fale sobre a evolução dos efeitos especiais nos filmes.","nenhuma"
+"Você já assistiu algum filme que tenha uma crítica social profunda?","nenhuma"
+"Me fale sobre a importância dos filmes para a educação e cultura.","nenhuma"
+"Você conhece algum filme que foi inspirado em uma lenda ou mito?","nenhuma"
+"Qual é o filme mais impressionante que você já viu?","nenhuma"
+"Me fale sobre os melhores filmes de suspense psicológico.","nenhuma"
+"Você já assistiu algum filme que tenha mudado sua perspectiva sobre o mundo?","nenhuma"
+"Me fale sobre os filmes que ganharam mais prêmios no último ano.","nenhuma"
+"Qual é o filme mais esperado para este ano?","nenhuma"
+"Me fale sobre os filmes que abordam temas filosóficos.","nenhuma"
+"Qual é o filme mais emocionante que você já assistiu?","nenhuma"
+"Me fale sobre o impacto dos filmes de ação na indústria cinematográfica.","nenhuma"
+"Você já assistiu algum filme que tenha uma narrativa não linear?","nenhuma"
+"Me fale sobre os filmes que tratam de questões políticas e sociais.","nenhuma"
+"Você já assistiu algum filme que te fez ver o mundo de uma maneira diferente?","nenhuma"
+"Me fale sobre a importância dos filmes no desenvolvimento de novas tecnologias.","nenhuma"
+"Qual é o filme mais surpreendente que você já assistiu?","nenhuma"
+"Me fale sobre os filmes que influenciaram a moda na década de 80.","nenhuma"
+"Você já viu algum filme que tem um final inesperado?","nenhuma"
+"Me fale sobre os filmes que exploram a complexidade humana.","nenhuma"
