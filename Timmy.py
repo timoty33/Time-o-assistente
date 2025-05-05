@@ -64,6 +64,8 @@ def processar_comando(comando):
 
     if "assistente" in comando or "Assistente" in comando or "tente" in comando: # Nome do seu assistente
 
+        contagem = True
+
         textoFormatado1 = comando.find("assistente")
         textoFormatado2 = comando.find("Assistente")
         textoFormatado3 = comando.find("tente")
@@ -83,71 +85,99 @@ def processar_comando(comando):
 
             if comando == "ver_horas": #basico
                 horas()
+                contagem = False
             elif comando == "ver_data":
                 hoje()
+                contagem = False
 
             if estado.EXPERIMENTAL == "True":
                 if comando == "aumentar_volume":
                     aumentarVolume(passo=0.1)
+                    contagem = False
                 elif comando == "diminuir_volume":
                     diminuirVolume(passo=0.1)
+                    contagem = False
                 elif comando == "alternar_mudo":
                     alternar_mudo()
+                    contagem = False
             
             elif comando == "aumentar_brilho":
                 aumentarBrilho()
+                contagem = False
             elif comando == "diminuir_brilho":
                 diminuirBrilho()
+                contagem = False
             elif comando == "abrir_chatgpt":
                 abrirGPT()
+                contagem = False
             elif comando == "tocar_lofi":
                 tocarLofi()
+                contagem = False
             elif comando == "tocar_musica_animada":
                 tocarMusicaAnimada()
+                contagem = False
             elif comando == "abrir_cronometro":
                 cronometro()
+                contagem = False
             elif comando == "traduzir_texto":
                 texto = input("Digite o texto")
                 traduzirTexto(texto)
+                contagem = False
             elif comando == "ver_receitas_bebida":
                 nome = input("Digite o nome da bebida: ")
                 receitaDrink(nome)
+                contagem = False
             elif comando == "ver_cotacoes":
                 obter_cotacoes()
+                contagem = False
             elif comando == "ver_imagens_gato":
                 abrir_imagem_de_gato()
+                contagem = False
             elif comando == "fazer_lembrete":
                 lembrete(comando)
+                contagem = False
             elif comando == "ver_clima":
                 clima()
+                contagem = False
             elif comando == "lançar_moeda":
                 jogarMoeda()
+                contagem = False
             elif comando == "agradecer":
                 obrigado()
+                contagem = False
             elif comando == "cumprimento":
                 comoEsta()
+                contagem = False
 
             #IA
             elif comando == "ver_frase_motivacional":
                 fraseMotivacional()
+                contagem = False
             elif comando == "ver_curiosidade":
                 curiosidade()
+                contagem = False
             elif comando == "ver_piada":
                 piadas()
+                contagem = False
             elif comando == "ativar_assistente_ia":
                 chatBot()
+                contagem = False
 
             #rotinas
             elif comando == "rotina_bom_dia":
                 diretorio_base = os.path.dirname(os.path.abspath(__file__))
                 bomDia(diretorio_base)
+                contagem = False
             elif comando == "rotina_boa_noite":
                 boaNoite()
+                contagem = False
             elif comando == "rotina_lembrete_hidratacao":
                 hidratacao()
+                contagem = False
             elif comando == "desativar_lembrete_hidratacao":
                 pausas = False
                 falar("Hidratação interrompida!")
+                contagem = False
             # elif comando == "":
             #     modoCinema()
 
@@ -159,15 +189,19 @@ def processar_comando(comando):
                     message=f"O assistente está desligado, para ligar ele de novo, você precisa executar: 'main.py'",
                     timeout=10
                 )
+                contagem = False
                 exit()
             elif comando == "modo_repouso":
                 modoRepouso()
+                contagem = False
             # elif "assistente" in comando or "Assistente" in comando:
             #     falar("Olá, me chamou")
-            elif comando == "nenhuma":
-                naoEntendi()
-            else:
-                naoEntendi()
+
+            if contagem == True:
+                if comando == "nenhuma":
+                    naoEntendi()
+                else:
+                    naoEntendi()
 
     elif "Time" in comando or "time" in comando:
 
