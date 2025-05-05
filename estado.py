@@ -21,3 +21,4 @@ if not os.getenv('USER'):
 API_GEMINI = os.getenv("GEMINI_KEY")
 API_CLIMA = os.getenv("API_KEY_CLIMA")
 USER = os.getenv("USER")
+EXPERIMENTAL=os.getenv("EXPERIMENTAL")

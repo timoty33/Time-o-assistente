@@ -25,7 +25,9 @@ def prever_intencao(frase, modelo='svm'):
     return intencao[0]
 
 # Testar a previsão
-while True:
-    frase_teste = input("Digite a frase: ")
-    intencao_prevista = prever_intencao(frase_teste, modelo='lr')  # ou 'svm'
-    print(f"Intenção prevista: {intencao_prevista}")
+
+if __name__ == "__main__":
+    while True:
+        frase_teste = input("Digite a frase: ")
+        intencao_prevista = prever_intencao(frase_teste, modelo='lr')  # ou 'svm'
+        print(f"Intenção prevista: {intencao_prevista}")

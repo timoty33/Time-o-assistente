@@ -44,7 +44,7 @@ print(f"Acurácia - Logistic Regression: {acuracia_lr:.2f}")
 print(f"Acurácia - SVM: {acuracia_svm:.2f}")
 
 # Função para predizer com threshold de confiança
-def predizer_com_threshold(frase, modelo, threshold=0.7):
+def predizer_com_threshold(frase, modelo, threshold=0.5):
     # Predizer com probabilidades
     probabilidade = modelo.predict_proba([frase])
     classe_predita = probabilidade.argmax()  # A classe com a maior probabilidade

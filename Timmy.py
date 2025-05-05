@@ -6,6 +6,7 @@ from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
 import estado
 from plyer import notification
 import os
+from model.TimmyIA import prever_intencao
 
 def modoRepouso():
     falar("Modo repouso")
@@ -63,88 +64,110 @@ def processar_comando(comando):
 
     if "assistente" in comando or "Assistente" in comando or "tente" in comando: # Nome do seu assistente
 
-        if "hora" in comando or "horas" in comando: #basico
-            horas()
-        elif "data" in comando or "hoje" in comando:
-            hoje()
-        elif "aumentar" in comando or "Aumente" and ("volume" in comando or "som" in comando):
-            aumentarVolume(passo=0.1)
-        elif "diminuir" in comando and ("volume" in comando or "som" in comando):
-            diminuirVolume(passo=0.1)
-        elif "silenciar" in comando or "silencio" in comando:
-            alternar_mudo()
-        elif "aumentar" in comando or "mais" in comando and("brilho" in comando):
-            aumentarBrilho()
-        elif "diminuir" in comando or "menos" in comando and("brilho" in comando):
-            diminuirBrilho()
-        elif "abrir chat" in comando:
-            abrirGPT()
-        elif "lofi" in comando or "música relaxante" in comando:
-            tocarLofi()
-        elif "música" in comando and "animada" in comando:
-            tocarMusicaAnimada()
-        elif "cronômetro" in comando:
-            cronometro()
-        elif "traduzir" in comando or "tradução" in comando:
-            texto = input("Digite o texto")
-            traduzirTexto(texto)
-        elif "receita" in comando and ("bebida" in comando or "drink" in comando):
-            nome = input("Digite o nome da bebida: ")
-            receitaDrink(nome)
-        elif "cotação" in comando or "cotações" in comando:
-            obter_cotacoes()
-        elif "gato" in comando:
-            abrir_imagem_de_gato()
-        elif "lembrete" in comando:
-            lembrete(comando)
-        elif "clima" in comando:
-            clima()
-        elif "moeda" in comando:
-            jogarMoeda()
-        elif "obrigado" in comando:
-            obrigado()
-        elif "como" in comando and "está" in comando:
-            comoEsta()
+        textoFormatado1 = comando.find("assistente")
+        textoFormatado2 = comando.find("Assistente")
+        textoFormatado3 = comando.find("tente")
 
-        #IA
-        elif "frase motivacional" in comando:
-            fraseMotivacional()
-        elif "curiosidade" in comando:
-            curiosidade()
-        elif "piada" in comando or "piadas" in comando:
-            piadas()
-        elif "inteligente" in comando:
-            chatBot()
+        texto = ""
 
-        #rotinas
-        elif "Bom dia" in comando:
-            diretorio_base = os.path.dirname(os.path.abspath(__file__))
-            bomDia(diretorio_base)
-        elif "boa noite" in comando:
-            boaNoite()
-        elif ("ativar" in comando or "iniciar" in comando) and "hidratação" in comando:
-            hidratacao()
-        elif ("desligar" in comando or "parar" in comando) and "hidratação" in comando:
-            pausas = False
-            falar("Hidratação interrompida!")
-        elif "modo cinema" in comando:
-            modoCinema()
+        if textoFormatado1:
+            texto = comando.replace("assistente", "")
+        elif textoFormatado2:
+            texto = comando.replace("Assistente", "")
+        elif textoFormatado3:
+            texto = comando.replace("tente", "")
 
-        #outros
-        elif "sair" in comando:
-            falar("Encerrando. Até logo!")
-            notification.notify(
-                title="🥺 Assistente Desligado",
-                message=f"O assistente está desligado, para ligar ele de novo, você precisa executar: 'main.py'",
-                timeout=10
-            )
-            exit()
-        elif "dormir" in comando or "descansar" in comando or "repouso" in comando:
-            modoRepouso()
-        elif "assistente" in comando or "Assistente" in comando:
-            falar("Olá, me chamou")
-        else:
-            naoEntendi()
+        comando = prever_intencao(comando)
+
+        if comando != "nenhuma":
+
+            if comando == "ver_horas": #basico
+                horas()
+            elif comando == "ver_data":
+                hoje()
+
+            if estado.EXPERIMENTAL == "True":
+                if comando == "aumentar_volume":
+                    aumentarVolume(passo=0.1)
+                elif comando == "diminuir_volume":
+                    diminuirVolume(passo=0.1)
+                elif comando == "alternar_mudo":
+                    alternar_mudo()
+            
+            elif comando == "aumentar_brilho":
+                aumentarBrilho()
+            elif comando == "diminuir_brilho":
+                diminuirBrilho()
+            elif comando == "abrir_chatgpt":
+                abrirGPT()
+            elif comando == "tocar_lofi":
+                tocarLofi()
+            elif comando == "tocar_musica_animada":
+                tocarMusicaAnimada()
+            elif comando == "abrir_cronometro":
+                cronometro()
+            elif comando == "traduzir_texto":
+                texto = input("Digite o texto")
+                traduzirTexto(texto)
+            elif comando == "ver_receitas_bebida":
+                nome = input("Digite o nome da bebida: ")
+                receitaDrink(nome)
+            elif comando == "ver_cotacoes":
+                obter_cotacoes()
+            elif comando == "ver_imagens_gato":
+                abrir_imagem_de_gato()
+            elif comando == "fazer_lembrete":
+                lembrete(comando)
+            elif comando == "ver_clima":
+                clima()
+            elif comando == "lançar_moeda":
+                jogarMoeda()
+            elif comando == "agradecer":
+                obrigado()
+            elif comando == "cumprimento":
+                comoEsta()
+
+            #IA
+            elif comando == "ver_frase_motivacional":
+                fraseMotivacional()
+            elif comando == "ver_curiosidade":
+                curiosidade()
+            elif comando == "ver_piada":
+                piadas()
+            elif comando == "ativar_assistente_ia":
+                chatBot()
+
+            #rotinas
+            elif comando == "rotina_bom_dia":
+                diretorio_base = os.path.dirname(os.path.abspath(__file__))
+                bomDia(diretorio_base)
+            elif comando == "rotina_boa_noite":
+                boaNoite()
+            elif comando == "rotina_lembrete_hidratacao":
+                hidratacao()
+            elif comando == "desativar_lembrete_hidratacao":
+                pausas = False
+                falar("Hidratação interrompida!")
+            # elif comando == "":
+            #     modoCinema()
+
+            #outros
+            elif comando == "desligar_assistente":
+                falar("Encerrando. Até logo!")
+                notification.notify(
+                    title="🥺 Assistente Desligado",
+                    message=f"O assistente está desligado, para ligar ele de novo, você precisa executar: 'main.py'",
+                    timeout=10
+                )
+                exit()
+            elif comando == "modo_repouso":
+                modoRepouso()
+            # elif "assistente" in comando or "Assistente" in comando:
+            #     falar("Olá, me chamou")
+            elif comando == "nenhuma":
+                naoEntendi()
+            else:
+                naoEntendi()
 
     elif "Time" in comando or "time" in comando:
 
