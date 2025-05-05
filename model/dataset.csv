@@ -24,6 +24,29 @@ frase,intencao
 "qual o horário neste momento?",ver_horas
 "que horas temos agora?",ver_horas
 "informa as horas pra mim",ver_horas
+"Qual é o horário agora?",ver_horas
+"Me diga a hora atual",ver_horas
+"qual o horário exato?",ver_horas
+"Você consegue me falar as horas?",ver_horas
+"me informe o horário exato",ver_horas
+"que horas são agora exatamente?",ver_horas
+"qual é a hora neste momento?",ver_horas
+"qual é a hora agora?",ver_horas
+"você pode me dar a hora exata?",ver_horas
+"Me diga a hora do dia",ver_horas
+"Qual hora é?",ver_horas
+"Tem como me passar a hora?",ver_horas
+"Fala pra mim as horas",ver_horas
+"Me fala a hora agora",ver_horas
+"Que horas estão no relógio agora?",ver_horas
+"Você tem a hora exata?",ver_horas
+"Me diz o horário agora, por favor",ver_horas
+"Você pode me mostrar as horas?",ver_horas
+"Qual é a hora do dia?",ver_horas
+"Qual horário estamos?",ver_horas
+"Pode me falar as horas agora?",ver_horas
+"Que horas são agora exatamente, por favor?",ver_horas
+"Você sabe que hora é agora?",ver_horas
 "qual é a data de hoje?",ver_data
 "me diga a data atual",ver_data
 "que dia é hoje?",ver_data
@@ -49,279 +72,356 @@ frase,intencao
 "pode mostrar a data de hoje?",ver_data
 "que dia estamos hoje?",ver_data
 "qual data estamos hoje?",ver_data
-"Quero aumentar o volume","aumentar_volume"
-"Aumenta o som","aumentar_volume"
-"Volume, por favor","aumentar_volume"
-"Aumente o som um pouco","aumentar_volume"
-"Por favor, aumente o som","aumentar_volume"
-"Aumente um pouco o som","aumentar_volume"
-"Aumenta um pouco o volume","aumentar_volume"
-"Precisamos de mais som","aumentar_volume"
-"Aumenta o volume pra mim","aumentar_volume"
-"coloca o volume no máximo","aumentar_volume"
-"Aumente o volume da música","aumentar_volume"
-"Aumenta o som para mim","aumentar_volume"
+"Qual é a data hoje?",ver_data
+"Me diga qual é a data hoje",ver_data
+"Hoje é que data?",ver_data
+"Pode me dizer a data de hoje?",ver_data
+"Qual é o dia de hoje?",ver_data
+"Me fala a data de hoje",ver_data
+"Qual a data do dia de hoje?",ver_data
+"Você sabe qual é a data de hoje?",ver_data
+"Que data é essa?",ver_data
+"Me mostre a data de hoje",ver_data
+"Qual o dia de hoje no calendário?",ver_data
+"Pode me informar a data completa de hoje?",ver_data
+"Você pode me falar a data agora?",ver_data
+"Hoje, qual é a data?",ver_data
+"Me diga o calendário de hoje",ver_data
+"Hoje, qual é a data completa?",ver_data
+"Qual é a data do dia?",ver_data
+"Você sabe que data é essa?",ver_data
+"Me diga o dia de hoje",ver_data
+"Que data é agora?",ver_data
+"Hoje é que dia da semana?",ver_data
+"Você pode me dar a data exata?",ver_data
+"Qual é a data completa de hoje?",ver_data
+"Me diz a data do calendário de hoje",ver_data
+"pode abaixar o som?","diminuir_volume"
+"tá alto demais, diminui","diminuir_volume"
+"deixa o volume mais baixo","diminuir_volume"
+"me incomoda esse volume alto, diminui","diminuir_volume"
+"quero o som mais baixo","diminuir_volume"
+"baixa o volume pra mim","diminuir_volume"
+"reduz esse áudio","diminuir_volume"
+"volume, por favor","diminuir_volume"
+"tá muito alto, abaixa aí","diminuir_volume"
+"coloca o volume no mínimo","diminuir_volume"
+"pode diminuir o som?","diminuir_volume"
 "volume mais alto","aumentar_volume"
-"Aumente o volume, por favor","aumentar_volume"
-"Já aumentou o volume?","aumentar_volume"
-"Aumenta o volume mais um pouco","aumentar_volume"
+"coloca o volume no máximo","aumentar_volume"
+"quero o som mais alto","aumentar_volume"
+"me ajuda e aumenta o volume","aumentar_volume"
+"aumente o volume, por favor","aumentar_volume"
+"suba o volume agora","aumentar_volume"
+"aumenta o som dessa música","aumentar_volume"
 "aumente o som do vídeo","aumentar_volume"
-"Eu quero o volume mais alto","aumentar_volume"
-"Pode colocar o som mais alto?","aumentar_volume"
-"Coloca o volume no máximo","aumentar_volume"
-"Aumenta o volume agora","aumentar_volume"
-"Quero aumentar o som","aumentar_volume"
-"Dá pra aumentar o volume?","aumentar_volume"
-"Deixa o volume mais alto","aumentar_volume"
-"Aumenta o volume até o máximo","aumentar_volume"
-"Aumenta um pouco mais o volume","aumentar_volume"
-"Quero mais volume","aumentar_volume"
-"Aumenta o som dessa música","aumentar_volume"
-"Pode aumentar o volume?","aumentar_volume"
-"Me dá mais som","aumentar_volume"
-"Faz o volume subir","aumentar_volume"
-"Me ajuda e aumenta o volume","aumentar_volume"
-"Suba o volume agora","aumentar_volume"
-"Aumente um pouco o volume","aumentar_volume"
-"abaixa o volume",diminuir_volume
-"pode diminuir o som?",diminuir_volume
-"tá muito alto, abaixa aí",diminuir_volume
-"deixa o volume mais baixo",diminuir_volume
-"reduz o volume",diminuir_volume
-"tá alto demais, diminui",diminuir_volume
-"diminui o som agora",diminuir_volume
-"baixa o volume pra mim",diminuir_volume
-"diminui o volume do sistema",diminuir_volume
-"quero o som mais baixo",diminuir_volume
-"tá estourando, diminui o som",diminuir_volume
-"deixa o som mais baixo",diminuir_volume
-"reduz esse áudio",diminuir_volume
-"pode abaixar o som?",diminuir_volume
-"baixa o áudio aí",diminuir_volume
-"controla o volume pra baixo",diminuir_volume
-"coloca o som no mínimo",diminuir_volume
-"me incomoda esse volume alto, diminui",diminuir_volume
-"diminui o volume, por favor",diminuir_volume
-"tá gritando, reduz o som",diminuir_volume
-"diminui o som do computador",diminuir_volume
-"pode deixar mais baixo?",diminuir_volume
-"volume tá alto, abaixa",diminuir_volume
-"quero menos volume",diminuir_volume
-"diminui o som do sistema",diminuir_volume
-"silencia o som",alternar_mudo
-"pode mutar o áudio?",alternar_mudo
-"tira o som",alternar_mudo
-"desliga o áudio",alternar_mudo
-"quero o dispositivo no mudo",alternar_mudo
-"deixa no silencioso",alternar_mudo
-"coloca o volume no mudo",alternar_mudo
-"silencia tudo",alternar_mudo
-"quero mutar",alternar_mudo
-"pode silenciar agora?",alternar_mudo
-"mute o som",alternar_mudo
-"bota no mudo",alternar_mudo
-"ativa o som",alternar_mudo
-"tira do mudo",alternar_mudo
-"liga o som",alternar_mudo
-"pode tirar do silencioso?",alternar_mudo
-"desmuta aí",alternar_mudo
-"modo silencioso",alternar_mudo
-"desativa o som",alternar_mudo
-"reativa o som",alternar_mudo
-"liga o áudio",alternar_mudo
-"volume zero, por favor",alternar_mudo
-"liga o som por favor",alternar_mudo
-"liga ou desliga o som",alternar_mudo
-"troca entre mudo e som",alternar_mudo
-"quero ativar ou silenciar o som",alternar_mudo
-"coloca ou tira do mudo",alternar_mudo
-"alternar o mudo",alternar_mudo
-"deixa no mudo ou volta com o som",alternar_mudo
-"coloca o som no silencioso ou liga",alternar_mudo
-"quero alternar o estado do som",alternar_mudo
-"interrompe o áudio ou ativa",alternar_mudo
-"silencia ou reativa o som",alternar_mudo
-"quero alternar entre som e silêncio",alternar_mudo
-"muda o estado do som",alternar_mudo
-"ativa ou desativa o som",alternar_mudo
-"silêncio por favor, ou liga o som",alternar_mudo
-"liga o som se estiver mudo",alternar_mudo
-"desliga o som se estiver ativado",alternar_mudo
-"alternar modo mudo",alternar_mudo
-"aumenta o brilho",aumentar_brilho
-"pode aumentar o brilho?",aumentar_brilho
-"coloca o brilho mais alto",aumentar_brilho
-"aumenta a luminosidade",aumentar_brilho
-"deixa o brilho mais forte",aumentar_brilho
-"intensifica o brilho",aumentar_brilho
-"meu brilho está baixo, aumenta",aumentar_brilho
-"eleva o brilho",aumentar_brilho
-"coloca o brilho no máximo",aumentar_brilho
-"pode deixar o brilho mais forte?",aumentar_brilho
-"dá pra aumentar o brilho?",aumentar_brilho
-"brilho mais alto, por favor",aumentar_brilho
-"deixa o brilho mais intenso",aumentar_brilho
-"bota o brilho no máximo",aumentar_brilho
-"quero o brilho no máximo",aumentar_brilho
-"coloca o brilho no mais alto",aumentar_brilho
-"pode subir o brilho?",aumentar_brilho
-"deixa o brilho mais alto",aumentar_brilho
-"ajusta o brilho pra mais",aumentar_brilho
-"eleva a luminosidade",aumentar_brilho
-"aumenta o nível de brilho",aumentar_brilho
-"quero o brilho mais alto",aumentar_brilho
-"brilho mais forte, por favor",aumentar_brilho
-"me dá mais brilho",aumentar_brilho
-"suba o brilho pra mim",aumentar_brilho
-"diminui o brilho",diminuir_brilho
-"pode diminuir o brilho?",diminuir_brilho
-"coloca o brilho mais baixo",diminuir_brilho
-"baixa a luminosidade",diminuir_brilho
-"deixa o brilho mais fraco",diminuir_brilho
-"reduz o brilho",diminuir_brilho
-"meu brilho está muito alto, diminui",diminuir_brilho
-"diminue o brilho",diminuir_brilho
-"coloca o brilho no mínimo",diminuir_brilho
-"pode diminuir o brilho um pouco?",diminuir_brilho
-"faz o brilho ficar mais baixo",diminuir_brilho
-"diminui o brilho aí",diminuir_brilho
-"bota o brilho mais fraco",diminuir_brilho
-"quero o brilho mais baixo",diminuir_brilho
-"coloca o brilho no mínimo possível",diminuir_brilho
-"pode reduzir o brilho?",diminuir_brilho
-"dá pra baixar o brilho?",diminuir_brilho
-"baixa a intensidade do brilho",diminuir_brilho
-"diminuir a luminosidade",diminuir_brilho
-"quero o brilho bem baixo",diminuir_brilho
-"reduza o brilho",diminuir_brilho
-"coloca o brilho no mais baixo",diminuir_brilho
-"ajusta o brilho para menos",diminuir_brilho
-"diminui a intensidade do brilho",diminuir_brilho
-"faz o brilho mais fraco",diminuir_brilho
-"abre o chat",abrir_chatgpt
-"pode abrir o chat?",abrir_chatgpt
+"pode aumentar o volume?","aumentar_volume"
+"aumenta o som","aumentar_volume"
+"quero mais volume","aumentar_volume"
+"dá pra aumentar o volume?","aumentar_volume"
+"tá muito baixo, aumenta o volume","aumentar_volume"
+"aumenta um pouco mais o som","aumentar_volume"
+"desce o volume um pouco","diminuir_volume"
+"me ajuda a baixar o volume","diminuir_volume"
+"diminui o som agora","diminuir_volume"
+"diminui o volume por favor","diminuir_volume"
+"sube o volume para mim","aumentar_volume"
+"desce um pouco o volume","diminuir_volume"
+"silencia o som", alternar_mudo  
+"pode mutar o áudio?", alternar_mudo  
+"tira o som", alternar_mudo  
+"desliga o áudio", alternar_mudo  
+"quero o dispositivo no mudo", alternar_mudo  
+"deixa no silencioso", alternar_mudo  
+"coloca o volume no mudo", alternar_mudo  
+"silencia tudo", alternar_mudo  
+"quero mutar", alternar_mudo  
+"pode silenciar agora?", alternar_mudo  
+"mute o som", alternar_mudo  
+"bota no mudo", alternar_mudo  
+"Ativa o som", alternar_mudo  
+"tira do mudo", alternar_mudo  
+"Liga o som", alternar_mudo  
+"pode tirar do silencioso?", alternar_mudo  
+"desmuta aí", alternar_mudo  
+"Modo silencioso", alternar_mudo  
+"desativa o som", alternar_mudo  
+"reativa o som", alternar_mudo  
+"liga o áudio", alternar_mudo  
+"volume zero, por favor", alternar_mudo  
+"Liga o som por favor", alternar_mudo  
+"liga ou desliga o som", alternar_mudo  
+"troca entre mudo e som", alternar_mudo  
+"quero ativar ou silenciar o som", alternar_mudo  
+"coloca ou tira do mudo", alternar_mudo  
+"alternar o mudo", alternar_mudo  
+"deixa no mudo ou volta com o som", alternar_mudo  
+"coloca o som no silencioso ou liga", alternar_mudo  
+"quero alternar o estado do som", alternar_mudo  
+"interrompe o áudio ou ativa", alternar_mudo  
+"silencia ou reativa o som", alternar_mudo  
+"quero alternar entre som e silêncio", alternar_mudo  
+"muda o estado do som", alternar_mudo  
+"Ativa ou desativa o som", alternar_mudo  
+"silêncio por favor, ou liga o som", alternar_mudo  
+"liga o som se estiver mudo", alternar_mudo  
+"desliga o som se estiver ativado", alternar_mudo  
+"alternar modo mudo", alternar_mudo  
+"ativa o som", alternar_mudo  
+"coloca no mudo", alternar_mudo  
+"pode deixar o som no mudo?", alternar_mudo  
+"volta o som para o estado normal", alternar_mudo  
+"quero o áudio no silencioso", alternar_mudo  
+"recoloca o som", alternar_mudo  
+"bota o som no modo mudo", alternar_mudo  
+"muda para o mudo", alternar_mudo  
+"coloca o áudio no silencioso", alternar_mudo  
+"quero o som desligado", alternar_mudo  
+"ativa o áudio", alternar_mudo  
+"quero o som sem volume", alternar_mudo  
+"faça o som voltar", alternar_mudo  
+"alternar o áudio para o modo mudo", alternar_mudo  
+"desative o áudio agora", alternar_mudo  
+"coloca no modo de silêncio", alternar_mudo  
+"tire o som agora", alternar_mudo    
+"ajusta o brilho para menos", diminuir_brilho
+"suba o brilho pra mim", aumentar_brilho
+"pode deixar o brilho mais forte?", aumentar_brilho
+"faz o brilho ficar mais baixo", diminuir_brilho
+"eleva o brilho", aumentar_brilho
+"meu brilho está muito alto, diminui", diminuir_brilho
+"coloca o brilho no mínimo possível", diminuir_brilho
+"dá pra aumentar o brilho?", aumentar_brilho
+"bota o brilho no máximo", aumentar_brilho
+"coloca o brilho mais baixo", diminuir_brilho
+"reduza o brilho", diminuir_brilho
+"ajusta o brilho para menos", diminuir_brilho
+"me dá mais brilho", aumentar_brilho
+"diminui o brilho aí", diminuir_brilho
+"brilho mais forte, por favor", aumentar_brilho
+"bota o brilho mais fraco", diminuir_brilho
+"coloca o brilho no mais alto", aumentar_brilho
+"ajusta o brilho pra mais", aumentar_brilho
+"reduz o brilho", diminuir_brilho
+"pode aumentar o brilho?", aumentar_brilho
+"que o brilho mais alto", aumentar_brilho
+"faz o brilho mais fraco", diminuir_brilho
+"coloca o brilho no mínimo", diminuir_brilho
+"intensifica o brilho", aumentar_brilho
+"pode reduzir o brilho?", diminuir_brilho
+"eleva a luminosidade", aumentar_brilho
+"deixa o brilho mais fraco", diminuir_brilho
+"deixa o brilho mais intenso", aumentar_brilho
+"diminui o brilho", diminuir_brilho
+"quero o brilho mais alto", aumentar_brilho
+"coloca o brilho no máximo", aumentar_brilho
+"pode aumentar o brilho?", aumentar_brilho
+"quero o brilho no máximo", aumentar_brilho
+"coloca o brilho no mínimo", diminuir_brilho
+"coloca o brilho mais baixo", diminuir_brilho
+"deixa o brilho mais forte", aumentar_brilho
+"quero o brilho bem baixo", diminuir_brilho
+"suba o brilho pra mim", aumentar_brilho
+"aumenta o brilho", aumentar_brilho
+"pode diminuir o brilho um pouco?", diminuir_brilho
+"quero o brilho no máximo", aumentar_brilho
+"coloca o brilho no mais alto", aumentar_brilho
+"pode diminuir o brilho?", diminuir_brilho
+"ajusta o brilho pra mais", aumentar_brilho
+"meu brilho está baixo, aumenta", aumentar_brilho
+"quero mais brilho", aumentar_brilho
+"bota o brilho no máximo", aumentar_brilho
+"coloca o brilho no mais baixo", diminuir_brilho
+"meu brilho está baixo, aumenta", aumentar_brilho
+"pode aumentar o brilho?", aumentar_brilho
+"bota o brilho mais fraco", diminuir_brilho
+"reduz a luminosidade", diminuir_brilho
+"coloca o brilho no mínimo", diminuir_brilho
+"faz o brilho mais fraco", diminuir_brilho
+"ajusta o brilho para menos", diminuir_brilho
+"coloca o brilho mais baixo", diminuir_brilho
+"me dá mais brilho", aumentar_brilho
+"coloca o brilho no máximo", aumentar_brilho
+"deixa o brilho mais forte", aumentar_brilho
+"pode aumentar o brilho?", aumentar_brilho
 "quero usar o chat",abrir_chatgpt
-"me leve para o chat",abrir_chatgpt
 "abre o chat pra mim",abrir_chatgpt
-"abre o chat de novo",abrir_chatgpt
+"pode abrir o chat?",abrir_chatgpt
 "começa o chat",abrir_chatgpt
-"inicia o chat",abrir_chatgpt
-"me coloca no chat",abrir_chatgpt
-"vai para o chat",abrir_chatgpt
 "abre a conversa do chat",abrir_chatgpt
-"pode iniciar o chat?",abrir_chatgpt
-"começa o chat com o chatgpt",abrir_chatgpt
-"me mostra o chat",abrir_chatgpt
-"pode abrir a conversa do chat?",abrir_chatgpt
 "me coloca no chat agora",abrir_chatgpt
-"abre o chat para conversar",abrir_chatgpt
-"quero falar no chat",abrir_chatgpt
+"quero acessar o chat",abrir_chatgpt
+"abre o chat",abrir_chatgpt
 "acessa o chat",abrir_chatgpt
 "me dá acesso ao chat",abrir_chatgpt
-"pode abrir o chat para mim?",abrir_chatgpt
-"quero acessar o chat",abrir_chatgpt
+"me mostra o chat",abrir_chatgpt
+"me coloca no chat",abrir_chatgpt
+"pode abrir a conversa do chat?",abrir_chatgpt
+"quero falar no chat",abrir_chatgpt
+"me leve para o chat",abrir_chatgpt
+"vai para o chat",abrir_chatgpt
+"abre o chat de novo",abrir_chatgpt
+"começa o chat com o chatgpt",abrir_chatgpt
 "entra no chat",abrir_chatgpt
+"abre o chat para conversar",abrir_chatgpt
+"pode iniciar o chat?",abrir_chatgpt
 "pode me conectar ao chat?",abrir_chatgpt
-"toque música relaxante",tocar_lofi
-"coloca um lofi pra mim",tocar_lofi
-"pode tocar música calma?",tocar_lofi
-"quero ouvir lofi",tocar_lofi
-"coloca uma música relaxante",tocar_lofi
-"toca um lofi tranquilo",tocar_lofi
-"me coloca numa vibe calma",tocar_lofi
-"toca música suave",tocar_lofi
-"bota um lofi aí",tocar_lofi
-"pode colocar uma música relaxante?",tocar_lofi
-"me toca uma música de fundo tranquila",tocar_lofi
-"bota um som calmo",tocar_lofi
-"coloca uma música calma de fundo",tocar_lofi
-"toca música relaxante de lofi",tocar_lofi
-"pode colocar um lofi calmo?",tocar_lofi
-"quero ouvir música tranquila",tocar_lofi
-"toca uma música calma",tocar_lofi
-"me dá uma música relaxante",tocar_lofi
-"pode tocar uma música relaxante de fundo?",tocar_lofi
-"coloca um som de lofi",tocar_lofi
-"toca algo calmo",tocar_lofi
-"quero ouvir música de relaxamento",tocar_lofi
-"me coloca uma música suave",tocar_lofi
-"coloca uma música de lofi tranquila",tocar_lofi
-"toca uma música ambiente calma",tocar_lofi
-"toque música animada",tocar_musica_animada
-"coloca uma música divertida",tocar_musica_animada
-"pode tocar uma música animada?",tocar_musica_animada
-"quero ouvir uma música agitada",tocar_musica_animada
-"coloca uma música alegre",tocar_musica_animada
-"toca uma música divertida",tocar_musica_animada
-"bota uma música para animar",tocar_musica_animada
-"toca música energética",tocar_musica_animada
-"me coloca uma música animada",tocar_musica_animada
-"pode colocar uma música mais alegre?",tocar_musica_animada
-"quero música para dançar",tocar_musica_animada
-"toca uma música para agitar",tocar_musica_animada
-"coloca uma música animada e divertida",tocar_musica_animada
-"me toca uma música animada",tocar_musica_animada
-"pode tocar uma música animada e alegre?",tocar_musica_animada
-"coloca um som mais divertido",tocar_musica_animada
-"quero ouvir uma música empolgante",tocar_musica_animada
-"toca uma música mais agitada",tocar_musica_animada
-"bota uma música para animar o dia",tocar_musica_animada
+"quero usar o chat agora",abrir_chatgpt
+"abre o chat imediatamente",abrir_chatgpt
+"me leva ao chat",abrir_chatgpt
+"inicia o chat",abrir_chatgpt
+"me coloca no chat rápido",abrir_chatgpt
+"abre o chat de forma rápida",abrir_chatgpt
+"quero entrar no chat",abrir_chatgpt
+"pode abrir o chat para mim?",abrir_chatgpt
+"me dê acesso ao chat agora",abrir_chatgpt
+"quero falar no chat agora",abrir_chatgpt
+"entra já no chat",abrir_chatgpt
+"pode me conectar ao chat rápido?",abrir_chatgpt
+"me coloca na conversa",abrir_chatgpt
+"me dá acesso ao chat agora",abrir_chatgpt
+"inicia a conversa do chat",abrir_chatgpt
+"abre o chat sem demora",abrir_chatgpt
+"abre o chat para mim agora",abrir_chatgpt
+"começa a conversa",abrir_chatgpt
+"abre a conversa",abrir_chatgpt
+"me coloca direto no chat",abrir_chatgpt
+"quero abrir o chat",abrir_chatgpt
+"pode iniciar o chat para mim?",abrir_chatgpt
+"abre o chat rapidamente",abrir_chatgpt
+"Coloca uma música relaxante",tocar_lofi
 "me coloca numa vibe animada",tocar_musica_animada
-"pode colocar uma música animada para dançar?",tocar_musica_animada
-"coloca uma música mais divertida",tocar_musica_animada
-"me toca algo animado",tocar_musica_animada
+"quero ouvir música tranquila",tocar_lofi
+"me coloca numa vibe tranquila",tocar_lofi
+"bota uma música para animar",tocar_musica_animada
+"toca uma música relaxante",tocar_lofi
+"coloca um som de lofi",tocar_lofi
+"coloca uma música tranquila",tocar_lofi
 "quero ouvir algo para animar",tocar_musica_animada
 "toca uma música com ritmo",tocar_musica_animada
-"abra o cronômetro",abrir_cronometro
-"inicia o cronômetro",abrir_cronometro
-"começa o cronômetro",abrir_cronometro
-"pode iniciar o cronômetro?",abrir_cronometro
-"coloca o cronômetro para contar",abrir_cronometro
-"começa a contagem do cronômetro",abrir_cronometro
-"abre o cronômetro aí",abrir_cronometro
-"me ajuda a iniciar o cronômetro",abrir_cronometro
-"pode colocar o cronômetro no ar?",abrir_cronometro
+"quero ouvir lofi",tocar_lofi
+"toca uma música agitada",tocar_musica_animada
+"me dá uma música relaxante",tocar_lofi
+"Toca uma música divertida",tocar_musica_animada
+"Coloca uma música de fundo tranquila",tocar_lofi
+"me coloca uma música animada",tocar_musica_animada
+"me coloca numa vibe calma",tocar_lofi
+"toca música suave",tocar_lofi
+"pode tocar música animada?",tocar_musica_animada
+"bota uma música animada",tocar_musica_animada
+"coloca uma música animada e energética",tocar_musica_animada
+"coloca uma música relaxante",tocar_lofi
+"Toca uma música agitada",tocar_musica_animada
+"me coloca numa vibe animada",tocar_musica_animada
+"bota um lofi aí",tocar_lofi
+"toca uma música relaxante",tocar_lofi
+"pode colocar uma música animada e alegre?",tocar_musica_animada
+"coloca uma música alegre",tocar_musica_animada
+"quero música para dançar",tocar_musica_animada
+"toca algo calmo",tocar_lofi
+"me toca uma música animada",tocar_musica_animada
+"me coloca uma música suave",tocar_lofi
+"coloca uma música de lofi tranquila",tocar_lofi
+"toca música energética",tocar_musica_animada
+"coloca um som calmo",tocar_lofi
+"quero ouvir uma música animada",tocar_musica_animada
+"me coloca uma música relaxante",tocar_lofi
+"coloca uma música alegre",tocar_musica_animada
+"me coloca numa vibe relaxante",tocar_lofi
+"toca uma música calma",tocar_lofi
+"toca música relaxante de lofi",tocar_lofi
+"coloca uma música mais divertida",tocar_musica_animada
+"me coloca numa vibe animada",tocar_musica_animada
+"me toca uma música tranquila",tocar_lofi
+"coloca uma música relaxante",tocar_lofi
+"pode tocar uma música mais alegre?",tocar_musica_animada
+"coloca uma música de fundo tranquila",tocar_lofi
+"bota uma música para animar o dia",tocar_musica_animada
+"toca uma música relaxante",tocar_lofi
+"bota uma música animada",tocar_musica_animada
+"coloca uma música mais divertida",tocar_musica_animada
+"coloca uma música de lofi tranquila",tocar_lofi
+"Me ajuda a iniciar o cronômetro",abrir_cronometro
+"comece o cronômetro",abrir_cronometro
 "abre o cronômetro para mim",abrir_cronometro
 "quero iniciar o cronômetro",abrir_cronometro
+"bota o cronômetro para funcionar",abrir_cronometro
+"Começa a contagem do cronômetro",abrir_cronometro
+"abre o cronômetro aí",abrir_cronometro
+"coloca o cronômetro para contar",abrir_cronometro
 "pode iniciar o cronômetro agora?",abrir_cronometro
+"abre o cronômetro",abrir_cronometro
+"começa o cronômetro",abrir_cronometro
+"me coloca no cronômetro",abrir_cronometro
 "coloca o cronômetro para funcionar",abrir_cronometro
 "me dá o cronômetro para começar",abrir_cronometro
-"inicia a contagem do tempo",abrir_cronometro
-"bota o cronômetro para funcionar",abrir_cronometro
+"Poderia colocar o cronômetro no ar?",abrir_cronometro
 "comece o cronômetro",abrir_cronometro
-"pode abrir o cronômetro?",abrir_cronometro
-"dá pra colocar o cronômetro em andamento?",abrir_cronometro
-"começa o tempo",abrir_cronometro
-"abre o temporizador",abrir_cronometro
-"me coloca no cronômetro",abrir_cronometro
+"inicia o cronômetro",abrir_cronometro
 "pode colocar o cronômetro para contar o tempo?",abrir_cronometro
-"inicia a contagem do cronômetro agora",abrir_cronometro
+"pode abrir o cronômetro?",abrir_cronometro
+"abre o cronômetro para mim",abrir_cronometro
 "bota o cronômetro para rodar",abrir_cronometro
-"traduza este texto",traduzir_texto
-"pode traduzir isso pra mim?",traduzir_texto
-"me traduza isso",traduzir_texto
-"traduz esse texto",traduzir_texto
-"pode me ajudar a traduzir?",traduzir_texto
-"traduz isso aqui",traduzir_texto
-"quero a tradução desse texto",traduzir_texto
-"me diga a tradução de tudo isso",traduzir_texto
+"coloca o cronômetro para contar",abrir_cronometro
+"começa o tempo",abrir_cronometro
+"inicia a contagem do cronômetro agora",abrir_cronometro
+"coloca o cronômetro para funcionar",abrir_cronometro
+"abre o temporizador",abrir_cronometro
+"me ajuda a iniciar o cronômetro",abrir_cronometro
+"dá pra colocar o cronômetro em andamento?",abrir_cronometro
+"começa a contagem do cronômetro",abrir_cronometro
+"coloca o cronômetro para funcionar",abrir_cronometro
+"me dá o cronômetro para começar",abrir_cronometro
+"comece o cronômetro",abrir_cronometro
+"pode iniciar o cronômetro?",abrir_cronometro
+"abre o cronômetro para mim",abrir_cronometro
+"coloca o cronômetro para funcionar",abrir_cronometro
+"Me traduza isso",traduzir_texto
 "como fica isso em português?",traduzir_texto
-"me traduz isso para o português",traduzir_texto
-"pode traduzir isso para mim?",traduzir_texto
+"Poderia traduzir isso para mim?",traduzir_texto
+"me mostra a tradução",traduzir_texto
+"me ajude a traduzir",traduzir_texto
+"traduz esse texto",traduzir_texto
+"quero a tradução desse texto",traduzir_texto
+"me fale a tradução",traduzir_texto
+"como traduz isso?",traduzir_texto
+"me diga a tradução de tudo isso",traduzir_texto
+"traduz esse parágrafo",traduzir_texto
 "traduz para o português",traduzir_texto
-"qual é a tradução disso?",traduzir_texto
-"pode traduzir esse trecho?",traduzir_texto
+"me traduz isso para o português",traduzir_texto
 "como fica isso em inglês?",traduzir_texto
 "me diga a tradução dessa frase",traduzir_texto
-"me ajude a traduzir",traduzir_texto
-"me mostra a tradução",traduzir_texto
-"traduz esse parágrafo",traduzir_texto
-"como traduz isso?",traduzir_texto
-"me fale como é isso em outro idioma",traduzir_texto
-"pode me mostrar a tradução?",traduzir_texto
+"pode me ajudar a traduzir?",traduzir_texto
+"me fala como é isso em outro idioma",traduzir_texto
+"pode traduzir esse trecho?",traduzir_texto
+"me dá a tradução disso",traduzir_texto
+"pode traduzir isso pra mim?",traduzir_texto
+"me traduza isso",traduzir_texto
+"traduz para o português",traduzir_texto
 "traduza isso para mim, por favor",traduzir_texto
-"me dê a tradução disso",traduzir_texto
-"me fala a tradução",traduzir_texto
+"me coloca a tradução",traduzir_texto
+"qual é a tradução disso?",traduzir_texto
+"me mostra a tradução disso",traduzir_texto
+"me traduz esse texto",traduzir_texto
+"como fica isso em outro idioma?",traduzir_texto
+"traduza esse texto",traduzir_texto
+"pode traduzir isso para mim?",traduzir_texto
+"traduz esse texto para mim",traduzir_texto
+"me dá a tradução desse trecho",traduzir_texto
+"qual a tradução de tudo isso?",traduzir_texto
+"pode me mostrar a tradução?",traduzir_texto
+"traduza esse parágrafo",traduzir_texto
+"me diga o que significa isso",traduzir_texto
+"Como traduzir isso?",traduzir_texto
+"Você pode me ajudar com a tradução?",traduzir_texto
+"Me explique o significado disso",traduzir_texto
+"Qual é a tradução dessa palavra?",traduzir_texto
+"Me diga como fica em outro idioma",traduzir_texto
+"Você pode me passar a tradução?",traduzir_texto
+"Qual a tradução dessa frase?",traduzir_texto
+"Como seria isso em outro idioma?",traduzir_texto
+"Pode traduzir isso de novo?",traduzir_texto
+"Me traduz isso para outro",traduzir_texto
 "me mostre receitas de bebida",ver_receitas_bebida
 "quero ver receitas de drinks",ver_receitas_bebida
 "me dê uma receita de drink",ver_receitas_bebida
@@ -1111,3 +1211,8 @@ frase,intencao
 "Me fale sobre os filmes que influenciaram a moda na década de 80.","nenhuma"
 "Você já viu algum filme que tem um final inesperado?","nenhuma"
 "Me fale sobre os filmes que exploram a complexidade humana.","nenhuma"
+"jnefonasfn",nenhuma
+"knfk",nenhuma
+"nfjlpij",nenhuma
+"odofonob",nenhuma
+"knsdgp[n",nenhuma
