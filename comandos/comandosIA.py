@@ -116,7 +116,7 @@ def verTela():
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content([
         image,
-        "Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e escrever a reposta com base no que o usuário está tentando saber, já que o usuário está fazendo uma pesquisa!! Lembre-se de ser claro e resumido"
+        "Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e escrever a reposta com base no que o usuário está tentando saber, já que o usuário está fazendo uma pesquisa, se tiver textos na imagem, você precisa traduzir para o português!! Lembre-se de ser claro e resumido"
     ])
 
     # Mostra a resposta
