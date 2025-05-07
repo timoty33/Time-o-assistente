@@ -1,8 +1,8 @@
 import speech_recognition as sr 
 import threading
 from comandos.comandosBasicos import *
-from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas, chatBotAutomatico)
-from comandos.rotinas import (bomDia, boaNoite, hidratacao, modoCinema)
+from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas, chatBotAutomatico, verTela)
+from comandos.rotinas import (bomDia, boaNoite, hidratacao)
 import estado
 from plyer import notification
 import os
@@ -161,6 +161,9 @@ def processar_comando(comando):
                 contagem = False
             elif comando == "ativar_assistente_ia":
                 chatBot()
+                contagem = False
+            elif comando == "ver_tela":
+                verTela()
                 contagem = False
 
             #rotinas

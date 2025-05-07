@@ -2,7 +2,11 @@ import speech_recognition as sr
 import google.generativeai as genai
 from comandos.comandosBasicos import falar, ouvir
 import estado
-        
+import pyautogui
+import os
+from PIL import Image
+from time import sleep
+
 GEMINI_KEY = estado.API_GEMINI
 genai.configure(api_key=GEMINI_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
@@ -93,3 +97,31 @@ def chatBotAutomatico(mensagem):
         resposta = chat.send_message(mensagem)
         resposta = resposta.text.replace("*", "")
         falar(resposta)
+
+def verTela():
+
+    falar("Analisando tela")
+
+    sleep(0.5)
+
+    # Tira o screenshot e salva como PNG
+    screenshot_path = "temp_screenshot.png"
+    screenshot = pyautogui.screenshot()
+    screenshot.save(screenshot_path)
+
+    # Carrega a imagem
+    image = Image.open(screenshot_path)
+
+    # Envia para o Gemini
+    model = genai.GenerativeModel("gemini-2.0-flash")
+    response = model.generate_content([
+        image,
+        "Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e escrever a reposta com base no que o usuário está tentando saber, já que o usuário está fazendo uma pesquisa!! Lembre-se de ser claro e resumido"
+    ])
+
+    # Mostra a resposta
+    falar(response.text.replace("*", ""))
+
+    # Apaga o arquivo temporário
+    image.close()
+    os.remove(screenshot_path)
