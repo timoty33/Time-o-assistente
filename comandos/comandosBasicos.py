@@ -54,6 +54,18 @@ volume = cast(interface, POINTER(IAudioEndpointVolume))
 texto_para_exibir = ""
 
 @eel.expose
+def receberVolume(volume):
+    try:
+        volume = int(volume)
+        if 0 <= volume <= 100:
+            engine.Volume = volume
+            print(f"Volume ajustado para: {volume}")
+        else:
+            print("Volume fora do intervalo permitido (0-100)")
+    except ValueError:
+        print("Valor de volume inválido recebido.")
+
+@eel.expose
 def enviarTexto():
     return texto_para_exibir
 
@@ -67,7 +79,6 @@ def falar(texto):
 
 engine = comtypes.client.CreateObject("SAPI.SpVoice")
 engine.Rate = 2
-engine.Volume = 70
 
 def ouvir():
     estado.ligar = False

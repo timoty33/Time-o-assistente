@@ -17,10 +17,70 @@ body {
 }
 
 .logo {
-  width: 370px;
-  height: 370px;
+  width: 350px;
+  height: 350px;
   position: relative;
   bottom: 80px;
+  right: 10px;
+}
+
+.volume {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.volume-button {
+  width: 65px;
+  height: 65px;
+  border-radius: 15px;
+
+  border: solid 4px #4f6e6c;
+  border-bottom: solid 10px #4f6e6c;
+  background-color: #789997;
+
+  cursor: pointer;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+
+  transition: 0.2s ease;
+}
+.volume-button:hover {
+  border-bottom: solid 10px #4f6e6c;
+  transform: translateY(-4px);
+}
+.volume-button:active {
+  border-bottom: solid 4px #4f6e6c;
+  transform: translateY(6px) scale(0.95);
+}
+
+.volume-painel {
+  width: 162.5px;
+  height: 97.5px;
+  border-radius: 20px;
+
+  border: solid 4px #4f6e6c;
+  border-bottom: solid 10px #4f6e6c;
+  background-color: #789997;
+
+  cursor: pointer;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+
+  transition: 0.2s ease;
+}
+
+.volume-button i {
+  font-size: 170%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.desligado {
+  display: none;
 }
 
 .circle {
@@ -152,6 +212,10 @@ body {
   cursor: pointer;
 
   transition: 0.2s ease;
+}
+
+.buttons .desativado {
+  display: none;
 }
 
 .buttons .mic {

@@ -17,6 +17,17 @@
   <body>
     <img src="../images/Timmy.png" class="logo" />
 
+    <button class="volume-button" onclick="volume()" id="buttonVolume">
+      <div id="iconeVolume">
+        <i class="fa-solid fa-sliders"></i>
+      </div>
+
+      <div class="desligado" id="painelVolume">
+        <label for="volume" class="volume">Volume:</label>
+        <input type="range" class="inputVolume" min="0" max="100" />
+      </div>
+    </button>
+
     <div class="circle" id="circle"></div>
 
     <div class="box">
@@ -26,10 +37,10 @@
     </div>
 
     <div class="buttons">
-      <button class="play" onclick="trocarPlay(); ativar()">
+      <button class="play" onclick="ativarAssistente()" id="botaoPlay">
         <i class="fa-solid fa-play" id="iconPlay"></i>
       </button>
-      <button class="mic" onclick="trocarMic()">
+      <button class="desativado" onclick="trocarMic()" id="botaoMic">
         <i class="fa-solid fa-microphone" id="iconMic"></i>
       </button>
     </div>
