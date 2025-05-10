@@ -15,6 +15,9 @@ from comtypes import CLSCTX_ALL
 import estado
 import google.generativeai as genai
 import eel
+import keyboard
+
+volume_fala = 100  # Valor inicial do volume
 
 API_KEY = estado.API_GEMINI
 genai.configure(api_key=API_KEY)
@@ -55,11 +58,13 @@ texto_para_exibir = ""
 
 @eel.expose
 def receberVolume(volume):
+    global volume_fala  # Acessa a variável global
     try:
-        volume = int(volume)
+        volume = int(volume)  # Converte o valor de entrada para inteiro
         if 0 <= volume <= 100:
-            engine.Volume = volume
-            print(f"Volume ajustado para: {volume}")
+            volume_fala = volume  # Atualiza o volume global
+            engine.Volume = volume_fala  # Aplica o volume à engine
+            print(f"Volume ajustado para: {volume_fala}")
         else:
             print("Volume fora do intervalo permitido (0-100)")
     except ValueError:
@@ -69,16 +74,43 @@ def receberVolume(volume):
 def enviarTexto():
     return texto_para_exibir
 
+parar = False
+
+def monitorar_tecla():
+    global parar
+    while True:
+        keyboard.wait("f10")
+        engine.Volume = 80
+        sleep(0.3)
+        engine.Volume = 60
+        sleep(0.3)
+        engine.Volume = 40
+        sleep(0.3)
+        engine.Volume = 0
+        sleep(0.3)
+        parar = True
+        engine.Speak("", 2)
+
 def falar(texto):
-    global texto_para_exibir
+    global texto_para_exibir, parar, volume_fala
+    engine.Volume = volume_fala  # Usa o volume atualizado
     texto_para_exibir = texto
-    print(texto)
-    engine.Speak(texto)
-    sleep(2)
+    enviarTexto()
+    parar = False
+    print(f"Falando: {texto}")
+    engine.Speak(texto, 1) 
+
+    while engine.Status.RunningState == 2 and not parar:
+        sleep(0.1)
+
+    sleep(3)
+
     texto_para_exibir = ""
 
 engine = comtypes.client.CreateObject("SAPI.SpVoice")
 engine.Rate = 2
+
+threading.Thread(target=monitorar_tecla, daemon=True).start()
 
 def ouvir():
     estado.ligar = False

@@ -1,37 +1,41 @@
-import pyautogui
-import os
-import google.generativeai as genai
-from PIL import Image
+import comtypes.client
 from time import sleep
-from comandos.comandosBasicos import falar
+import threading
+import keyboard
 
-# Configura a API
-genai.configure(api_key="AIzaSyB0L7UvfgKhNAwKduIdAaPWlfRC4uu3l4s")
+engine = comtypes.client.CreateObject("SAPI.SpVoice")
+engine.Rate = 2
 
-def verTela():
+parar = False
 
-    falar("Analisando tela")
+def monitorar_tecla():
+    global parar
+    while True:
+        keyboard.wait("f10")
+        engine.Volume = 80
+        sleep(0.3)
+        engine.Volume = 60
+        sleep(0.3)
+        engine.Volume = 40
+        sleep(0.3)
+        engine.Volume = 0
+        sleep(0.3)
+        parar = True
+        engine.Speak("", 2)
 
-    sleep(5)
+def falar(texto):
+    global parar
+    parar = False
+    engine.Volume = 100
+    print(f"Falando: {texto}")
+    engine.Speak(texto, 1)
+    while engine.Status.RunningState == 2 and not parar:
+        sleep(0.1)
 
-    # Tira o screenshot e salva como PNG
-    screenshot_path = "temp_screenshot.png"
-    screenshot = pyautogui.screenshot()
-    screenshot.save(screenshot_path)
+threading.Thread(target=monitorar_tecla, daemon=True).start()
 
-    # Carrega a imagem
-    image = Image.open(screenshot_path)
-
-    # Envia para o Gemini
-    model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content([
-        image,
-        "Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e explicativa, já que o usuário está fazendo uma pesquisa!! Lembre-se de ser claro e resumido"
-    ])
-
-    # Mostra a resposta
-    print(response.text)
-
-    # Apaga o arquivo temporário
-    image.close()
-    os.remove(screenshot_path)
+while True:
+    texto = input("Digite o texto para falar (ou 'sair'): ")
+    if texto.lower() == "sair":
+        break
+    falar(texto)
