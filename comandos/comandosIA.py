@@ -98,7 +98,7 @@ def chatBotAutomatico(mensagem):
         resposta = resposta.text.replace("*", "")
         falar(resposta)
 
-def verTela():
+def verTela(prompt):
 
     falar("Analisando tela")
 
@@ -116,7 +116,7 @@ def verTela():
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content([
         image,
-        "Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e escrever a reposta com base no que o usuário está tentando saber, já que o usuário está fazendo uma pesquisa, se tiver textos na imagem, você precisa traduzir para o português!! Lembre-se de ser claro e resumido"
+        f"Descreva essa captura de tela, em português sempre. Por você fazer parte de um assistente virtual, você precisa escrever uma resposta direto ao ponto e escrever a reposta com base no que o usuário está tentando saber, ou seja, apenas o que ele está pedindo, já que o usuário está fazendo uma pesquisa!! Lembre-se de ser claro e resumido. Talvez você pode receber um prompt. Esse é o prompt: {prompt}. Seja direto e só fale o que o usuário está perguntando!! Você precisa entender palavras com duplo sentido como mouse que pode representar tanto o periférico quanto o cursor do mouse na tela"
     ])
 
     # Mostra a resposta

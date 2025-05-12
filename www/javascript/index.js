@@ -19,11 +19,18 @@ function volume() {
   }
 }
 
+let textoAtual = "";
+
 async function receberTexto() {
   const boxText = document.getElementById("text");
+
   while (true) {
-    var texto = await eel.enviarTexto()();
-    boxText.textContent = texto;
+    var novoTexto = await eel.enviarTexto()();
+
+    if (novoTexto && novoTexto !== textoAtual) {
+      textoAtual = novoTexto;
+      boxText.textContent = novoTexto;
+    }
 
     await sleep(1000);
   }

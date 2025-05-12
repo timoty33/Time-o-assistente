@@ -60,6 +60,7 @@ def iniciarThread():
     thread.start()
     estado.ligar = True
 
+comando_salvo = ""
 def processar_comando(comando):
 
     if "assistente" in comando or "Assistente" in comando or "tente" in comando: # Nome do seu assistente
@@ -78,6 +79,8 @@ def processar_comando(comando):
             texto = comando.replace("Assistente", "")
         elif textoFormatado3:
             texto = comando.replace("tente", "")
+
+        comando_salvo = comando
 
         comando = prever_intencao(comando)
 
@@ -163,7 +166,7 @@ def processar_comando(comando):
                 chatBot()
                 contagem = False
             elif comando == "ver_tela":
-                verTela()
+                verTela(comando_salvo)
                 contagem = False
 
             #rotinas
@@ -185,7 +188,7 @@ def processar_comando(comando):
             #     modoCinema()
 
             #outros
-            elif comando == "desligar_assistente":
+            elif "desligar" in comando_salvo or "sair" in comando_salvo:
                 falar("Encerrando. Até logo!")
                 notification.notify(
                     title="🥺 Assistente Desligado",

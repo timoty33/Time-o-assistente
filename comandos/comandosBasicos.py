@@ -93,19 +93,18 @@ def monitorar_tecla():
 
 def falar(texto):
     global texto_para_exibir, parar, volume_fala
-    engine.Volume = volume_fala  # Usa o volume atualizado
+    engine.Volume = volume_fala
     texto_para_exibir = texto
-    enviarTexto()
     parar = False
     print(f"Falando: {texto}")
-    engine.Speak(texto, 1) 
+
+    # Envia o texto ANTES de começar a falar
+    enviarTexto()
+
+    engine.Speak(texto, 1)
 
     while engine.Status.RunningState == 2 and not parar:
         sleep(0.1)
-
-    sleep(3)
-
-    texto_para_exibir = ""
 
 engine = comtypes.client.CreateObject("SAPI.SpVoice")
 engine.Rate = 2
