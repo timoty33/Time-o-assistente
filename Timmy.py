@@ -3,6 +3,7 @@ import threading
 from comandos.comandosBasicos import *
 from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas, chatBotAutomatico, verTela)
 from comandos.rotinas import (bomDia, boaNoite, hidratacao)
+from comandos.comandosAutomacoes import (buscarMaps)
 import estado
 from plyer import notification
 import os
