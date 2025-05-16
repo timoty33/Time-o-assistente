@@ -3,7 +3,7 @@ import threading
 from comandos.comandosBasicos import *
 from comandos.comandosIA import (fraseMotivacional, chatBot, curiosidade, piadas, chatBotAutomatico, verTela)
 from comandos.rotinas import (bomDia, boaNoite, hidratacao)
-from comandos.comandosAutomacoes import (buscarMaps)
+from comandos.comandosAutomacoes import buscarMaps
 import estado
 from plyer import notification
 import os
@@ -187,6 +187,10 @@ def processar_comando(comando):
                 contagem = False
             # elif comando == "":
             #     modoCinema()
+
+            #Automações
+            elif comando == "pesquisar_maps":
+                buscarMaps(comando_salvo)
 
             #outros
             elif "desligar" in comando_salvo or "sair" in comando_salvo:

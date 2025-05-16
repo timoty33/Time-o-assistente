@@ -846,54 +846,54 @@ frase,intencao
 "desative todos os lembretes de pausa",desativar_lembrete_hidratacao
 "não me avise mais sobre hidratação",desativar_lembrete_hidratacao
 "pare de me lembrar de tomar água",desativar_lembrete_hidratacao
-"buscar no mapa o parque da cidade","pesquisar_maps"
-"onde fica a praça dos três poderes","pesquisar_maps"
-"mostrar no mapa o palácio do planalto","pesquisar_maps"
-"procura no mapa a catedral de brasília","pesquisar_maps"
-"buscar no mapa o congresso nacional","pesquisar_maps"
-"onde fica o jardim botânico","pesquisar_maps"
-"mostrar no mapa o pontão do lago sul","pesquisar_maps"
-"procura no mapa a torre de tv digital","pesquisar_maps"
-"buscar no mapa o museu nacional","pesquisar_maps"
-"onde fica o lago paranoá","pesquisar_maps"
-"mostrar no mapa o aeroporto de brasília","pesquisar_maps"
-"procura no mapa a estação rodoviária","pesquisar_maps"
-"buscar no mapa o parque nacional de brasília","pesquisar_maps"
-"onde fica a esplanada dos ministérios","pesquisar_maps"
-"mostrar no mapa a universidade de brasília","pesquisar_maps"
-"procura no mapa o palácio da alvorada","pesquisar_maps"
-"buscar no mapa a feira da torre","pesquisar_maps"
-"onde fica a ponte jk","pesquisar_maps"
-"mostrar no mapa o zoológico de brasília","pesquisar_maps"
-"procura no mapa o centro histórico","pesquisar_maps"
-"buscar no mapa a universidade católica de brasília","pesquisar_maps"
-"onde fica o estádio mané garrincha","pesquisar_maps"
-"mostrar no mapa o centro de convenções","pesquisar_maps"
-"procura no mapa o teatro nacional","pesquisar_maps"
-"buscar no mapa o shopping via parque","pesquisar_maps"
-"onde fica o parque do povo","pesquisar_maps"
-"mostrar no mapa o lago sul","pesquisar_maps"
-"procura no mapa a estação de metrô central","pesquisar_maps"
-"buscar no mapa a biblioteca nacional","pesquisar_maps"
-"onde fica o museu da república","pesquisar_maps"
-"mostrar no mapa o parque ecológico","pesquisar_maps"
-"procura no mapa a estação ferroviária","pesquisar_maps"
-"buscar no mapa o mercado municipal","pesquisar_maps"
-"onde fica a igreja matriz","pesquisar_maps"
-"mostrar no mapa o hospital das clínicas","pesquisar_maps"
-"procura no mapa o shopping boulevard","pesquisar_maps"
-"buscar no mapa o parque olímpico","pesquisar_maps"
-"onde fica a praça da árvore","pesquisar_maps"
-"mostrar no mapa a catedral metropolitana","pesquisar_maps"
-"procura no mapa a rota para o aeroporto internacional","pesquisar_maps"
-"buscar no mapa o museu de arte moderna","pesquisar_maps"
-"onde fica o centro de exposições","pesquisar_maps"
-"mostrar no mapa o parque industrial","pesquisar_maps"
-"procura no mapa o bairro jardim américa","pesquisar_maps"
-"buscar no mapa o estádio municipal","pesquisar_maps"
-"onde fica o parque da cidade norte","pesquisar_maps"
-"mostrar no mapa o terminal rodoviário","pesquisar_maps"
-"procura no mapa o cemitério municipal","pesquisar_maps"
+"buscar no mapa o parque da cidade",pesquisar_maps
+"onde fica a praça dos três poderes",pesquisar_maps
+"mostrar no mapa o palácio do planalto",pesquisar_maps
+"procura no mapa a catedral de brasília",pesquisar_maps
+"buscar no mapa o congresso nacional",pesquisar_maps
+"onde fica o jardim botânico",pesquisar_maps
+"mostrar no mapa o pontão do lago sul",pesquisar_maps
+"procura no mapa a torre de tv digital",pesquisar_maps
+"buscar no mapa o museu nacional",pesquisar_maps
+"onde fica o lago paranoá",pesquisar_maps
+"mostrar no mapa o aeroporto de brasília",pesquisar_maps
+"procura no mapa a estação rodoviária",pesquisar_maps
+"buscar no mapa o parque nacional de brasília",pesquisar_maps
+"onde fica a esplanada dos ministérios",pesquisar_maps
+"mostrar no mapa a universidade de brasília",pesquisar_maps
+"procura no mapa o palácio da alvorada",pesquisar_maps
+"buscar no mapa a feira da torre",pesquisar_maps
+"onde fica a ponte jk",pesquisar_maps
+"mostrar no mapa o zoológico de brasília",pesquisar_maps
+"procura no mapa o centro histórico",pesquisar_maps
+"buscar no mapa a universidade católica de brasília",pesquisar_maps
+"onde fica o estádio mané garrincha",pesquisar_maps
+"mostrar no mapa o centro de convenções",pesquisar_maps
+"procura no mapa o teatro nacional",pesquisar_maps
+"buscar no mapa o shopping via parque",pesquisar_maps
+"onde fica o parque do povo",pesquisar_maps
+"mostrar no mapa o lago sul",pesquisar_maps
+"procura no mapa a estação de metrô central",pesquisar_maps
+"buscar no mapa a biblioteca nacional",pesquisar_maps
+"onde fica o museu da república",pesquisar_maps
+"mostrar no mapa o parque ecológico",pesquisar_maps
+"procura no mapa a estação ferroviária",pesquisar_maps
+"buscar no mapa o mercado municipal",pesquisar_maps
+"onde fica a igreja matriz",pesquisar_maps
+"mostrar no mapa o hospital das clínicas",pesquisar_maps
+"procura no mapa o shopping boulevard",pesquisar_maps
+"buscar no mapa o parque olímpico",pesquisar_maps
+"onde fica a praça da árvore",pesquisar_maps
+"mostrar no mapa a catedral metropolitana",pesquisar_maps
+"procura no mapa a rota para o aeroporto internacional",pesquisar_maps
+"buscar no mapa o museu de arte moderna",pesquisar_maps
+"onde fica o centro de exposições",pesquisar_maps
+"mostrar no mapa o parque industrial",pesquisar_maps
+"procura no mapa o bairro jardim américa",pesquisar_maps
+"buscar no mapa o estádio municipal",pesquisar_maps
+"onde fica o parque da cidade norte",pesquisar_maps
+"mostrar no mapa o terminal rodoviário",pesquisar_maps
+"procura no mapa o cemitério municipal",pesquisar_maps
 "coloque o assistente em repouso",modo_repouso
 "entre em modo repouso",modo_repouso
 "ative o modo de espera",modo_repouso
