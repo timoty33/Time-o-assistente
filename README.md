@@ -14,6 +14,8 @@ Timmy foi desenvolvido para ajudar em tarefas tanto básicas, mas também em tar
 
 Este é o manual de comandos do **assistente virtual Timmy**, desenvolvido para interagir com você por meio de comandos de voz ou texto. Cada comando ativa uma funcionalidade específica que vai desde informar a hora até tocar músicas, traduzir textos, criar lembretes, interagir com APIs e muito mais.
 
+Ao instalar o assistente você precisa seguir o passo a passo no arquivo: 'como_usar.txt'. Só depois de configurar tudo é que o assistente poderá ser usado!
+
 Abaixo, você encontrará uma lista detalhada de comandos disponíveis, com:
 
 - 📝 **Descrição**: O que o comando faz.
